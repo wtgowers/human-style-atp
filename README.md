@@ -1,4 +1,4 @@
-# human-style-atp.github.io
+# human-style-atp
 
 Automatic theorem proving is the branch of computer science devoted to trying to program computers to find proofs of theorems. For a long time the field appeared to reach a plateau, with even quite simple proofs (for humans) remaining stubbornly out of reach for computers, at least for programs that did not in some sense "cheat" by having problem-specific heuristics hard-coded in. More recently, machine learning has had a significant impact, and there are some researchers in that area who are optimistic that computers will surpass humans at mathematics within the next ten to twenty years.
 
