@@ -8,9 +8,11 @@ mathjax: true
 
 <!-- style help from: https://stackoverflow.com/questions/27174946/how-to-use-css-in-markdown -->
 <!-- comments help from: https://gist.github.com/jonikarppinen/47dc8c1d7ab7e911f4c9 --> 
+<!-- link format help from: https://stackoverflow.com/questions/62028300/how-do-i-add-an-underline-for-all-the-links-on-the-website-when-i-click-the-butt --> 
 <style>
 a{text-decoration: underline}
 body.underline a{text-decoration: underline}
+li a {display: inline-block; height: 100%; width: 100%; }
 </style> 
 
 <p>This page is under construction. It contains a list of possible ways to participate in the project, but the list is currently incomplete. Even when it is complete, it will continually be updated as the status of our short-term goals changes.</p>
