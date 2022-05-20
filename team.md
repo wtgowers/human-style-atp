@@ -6,4 +6,4 @@ background: '/img/maths_background.png'
 mathjax: true
 ---
 
-<p>Under construction! Primary team members' bios will be listed here shortly. </p> 
+Under construction! Primary team members' bios will be listed here shortly.
