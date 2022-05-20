@@ -9,9 +9,8 @@ mathjax: true
 <!-- style help from: https://stackoverflow.com/questions/27174946/how-to-use-css-in-markdown -->
 <!-- comments help from: https://gist.github.com/jonikarppinen/47dc8c1d7ab7e911f4c9 --> 
 <style>
-  a {
-  text-decoration: none;
-  border-bottom: #EA215A 0.125em solid;
+a:link {
+  color: red;
 }
 </style> 
 
