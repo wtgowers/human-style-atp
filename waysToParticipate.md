@@ -9,13 +9,8 @@ mathjax: true
 <!-- style help from: https://stackoverflow.com/questions/27174946/how-to-use-css-in-markdown -->
 <!-- comments help from: https://gist.github.com/jonikarppinen/47dc8c1d7ab7e911f4c9 --> 
 <style>
-a,
-a:link,
-a:visited,
-a:hover,
-a:active{
-    text-decoration: blue;
-}
+a{text-decoration: none}
+body.underline a{text-decoration: underline}
 </style> 
 
 <p>This page is under construction. It contains a list of possible ways to participate in the project, but the list is currently incomplete. Even when it is complete, it will continually be updated as the status of our short-term goals changes.</p>
