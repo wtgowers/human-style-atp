@@ -2,8 +2,8 @@ title:              Extreme Human-Oriented Automatic Theorem Proving
 email:              wtg10@dpmms.cam.ac.uk
 description:        Webpage for the Extreme Human-Oriented Automatic Theorem Proving (ATP) project
 author:             Extreme Human-Oriented ATP Team (modified from Start Bootstrap Theme)
-baseurl:            "/human_oriented_atp"
-url:                "https://collinskatie.github.io/human_oriented_atp/"
+baseurl:            "/human-style-atp"
+url:                "https://wtgowers.github.io/human-style-atp/"
 
 # Social Profiles
 twitter_username:
