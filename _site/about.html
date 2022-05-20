@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    About - Extreme Human-Oriented Automatic Theorem Proving
+    
+  </title>
+
+  <meta name="description" content="Webpage for the Extreme Human-Oriented Automatic Theorem Proving (ATP) project">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/human_oriented_atp/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/human_oriented_atp/about.html">
+  <link rel="alternate" type="application/rss+xml" title="Extreme Human-Oriented Automatic Theorem Proving" href="/human_oriented_atp/feed.xml">
+
+  
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/human_oriented_atp/">Extreme Human-Oriented Automatic Theorem Proving</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/human_oriented_atp/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/human_oriented_atp/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/human_oriented_atp/team">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/human_oriented_atp/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/human_oriented_atp/waysToParticipate">Ways of Participating</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/human_oriented_atp/resources">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/human_oriented_atp/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
+>
+</script>
+
+
+<!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/human_oriented_atp/img/maths_background.png')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>About</h1>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>Automatic theorem proving is the branch of computer science devoted to trying to program computers to find proofs of theorems. For a long time the field appeared to reach a plateau, with even quite simple proofs (for humans) remaining stubbornly out of reach for computers, at least for programs that did not in some sense "cheat" by having problem-specific heuristics hard-coded in. More recently, machine learning has had a significant impact, and there are some researchers in that area who are optimistic that computers will surpass humans at mathematics within the next ten to twenty years.</p>
+
+<p>The aim of this project is slightly counterintuitive: it is to go back to more old-fashioned methods and try to push them further. More precisely, the aim is to understand in detail how humans find proofs, and then to use that understanding to program computers to find proofs in the same way. We go into the project with our eyes open, in the sense that we are well aware that there may be important aspects of the proof-finding process that rely on the kind of pattern recognition that machine learning and statistical methods are much better suited to than deterministic rule-based algorithms. However, it is also clear that much of the proof-finding process also involves search methods that can be clearly explained and programmed in a rule-based way: one of the aims of the project is to design a theorem-proving program that makes minimal use of black boxes.</p>
+
+<p>One reason for doing this is to try to improve our theoretical understanding of how mathematicians find proofs. It is easy to show that the general problem of determining whether a given mathematical statement has a proof of up to a given length is NP-complete. Since it is also an observable fact that human mathematicians are capable of finding long and complicated proofs, the question naturally arises of what the features are of the statements we prove and the proofs we find that make finding them more tractable than solving worst-case instances of the general problem. This seems like an obviously interesting and important problem, but it has received surprisingly little attention.</p>
+
+<p>A second reason is that it is hard to predict at this point what mix of rule-based programming and machine learning is likely to be best suited for automatic theorem proving. Given that, it seems sensible to develop both approaches as far as we can. There are already several teams wroking on machine-learning approaches (which is not to say that they have no rule-based component, but simply that the emphasis is different), so the expected additional value of pursuing a different approach seems greater than that of trying to do something more similar to existing work.</p>
+
+<p>A third reason is that even if this project reaches a point where it is hard to do without machine learning, it may be that that point will be in a different place from where it is now. One possible outcome that would count as a success for this project would be if we could design a prover that was not fully automatic but that instead required the user to make choices from time to time from some limited set of possibilities. That would open up the possibility of training a machine to make those choices instead. This would not be the first hybrid approach to the problem, but it might be an interestingly different one.</p>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:wtg10@dpmms.cam.ac.uk">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Extreme Human-Oriented ATP Team (modified from Start Bootstrap Theme) 2022</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/human_oriented_atp/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/human_oriented_atp/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-XXXXXXXXX-X');
+</script>
+
+
+
+</body>
+
+</html>

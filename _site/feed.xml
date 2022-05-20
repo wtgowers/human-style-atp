@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/human_oriented_atp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/human_oriented_atp/" rel="alternate" type="text/html" /><updated>2022-05-20T11:38:35+01:00</updated><id>http://localhost:4000/human_oriented_atp/feed.xml</id><title type="html">Extreme Human-Oriented Automatic Theorem Proving</title><subtitle>Webpage for the Extreme Human-Oriented Automatic Theorem Proving (ATP) project</subtitle><author><name>Extreme Human-Oriented ATP Team (modified from Start Bootstrap Theme)</name></author><entry><title type="html">Second testing of the blog!</title><link href="http://localhost:4000/human_oriented_atp/2022/05/17/testblog2.html" rel="alternate" type="text/html" title="Second testing of the blog!" /><published>2022-05-17T13:00:00+01:00</published><updated>2022-05-17T13:00:00+01:00</updated><id>http://localhost:4000/human_oriented_atp/2022/05/17/testblog2</id><content type="html" xml:base="http://localhost:4000/human_oriented_atp/2022/05/17/testblog2.html"><![CDATA[<!--Thanks to <a href="url">https://benlansdell.github.io/computing/mathjax/</a> and <a href = "url">http://sgeos.github.io/github/jekyll/2016/08/21/adding_mathjax_to_a_jekyll_github_pages_blog.html</a> for MathJax help!-->
+<p>This is (another) testing the blog functionality.
+
+  $$
+  K(a,b) = \int \mathcal{D}x(t) \exp(2\pi i S[x]/\hbar)
+  $$
+
+</p>
+
+<h2 class="section-heading">Testing out section header</h2>
+
+<p>Sample text</p>
+
+<h2 class="section-heading">Sample header 2</h2>
+
+<p>More sample text</p>]]></content><author><name>Katie Collins</name></author><summary type="html"><![CDATA[This is (another) testing the blog functionality.]]></summary></entry><entry><title type="html">Testing out blog post for ATP project!</title><link href="http://localhost:4000/human_oriented_atp/2022/05/17/testblog.html" rel="alternate" type="text/html" title="Testing out blog post for ATP project!" /><published>2022-05-17T11:00:00+01:00</published><updated>2022-05-17T11:00:00+01:00</updated><id>http://localhost:4000/human_oriented_atp/2022/05/17/testblog</id><content type="html" xml:base="http://localhost:4000/human_oriented_atp/2022/05/17/testblog.html"><![CDATA[<p>This is testing the first blog!
+
+  $$
+  K(a,b) = \int \mathcal{D}x(t) \exp(2\pi i S[x]/\hbar)
+  $$
+</p>
+
+<h2 class="section-heading">Testing out section header</h2>
+
+<p>Sample text</p>
+
+<h2 class="section-heading">Sample header 2</h2>
+
+<p>More sample text</p>]]></content><author><name>ATP Team</name></author><summary type="html"><![CDATA[This is testing the first blog!]]></summary></entry></feed>

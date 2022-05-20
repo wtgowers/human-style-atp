@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/human_oriented_atp/2022/05/17/testblog.html</loc>
+<lastmod>2022-05-17T11:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/human_oriented_atp/2022/05/17/testblog2.html</loc>
+<lastmod>2022-05-17T13:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/human_oriented_atp/about.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/human_oriented_atp/contact.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/human_oriented_atp/posts/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/human_oriented_atp/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/human_oriented_atp/motivatedproofs.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/human_oriented_atp/resources.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/human_oriented_atp/team.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/human_oriented_atp/waysToParticipate.html</loc>
+</url>
+</urlset>
