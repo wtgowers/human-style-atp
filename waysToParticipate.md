@@ -6,6 +6,15 @@ background: '/img/maths_background.png'
 mathjax: true
 ---
 
+<!-- style help from: https://stackoverflow.com/questions/27174946/how-to-use-css-in-markdown -->
+<!-- comments help from: https://gist.github.com/jonikarppinen/47dc8c1d7ab7e911f4c9 --> 
+<style>
+  a {
+  text-decoration: none;
+  border-bottom: #EA215A 0.125em solid;
+}
+</style> 
+
 <p>This page is under construction. It contains a list of possible ways to participate in the project, but the list is currently incomplete. Even when it is complete, it will continually be updated as the status of our short-term goals changes.</p>
 
 <p>For this project there will be a team of people based in Cambridge, some funded by the project and working on it full time, and others funded in different ways and devoting a proportion of their time to it. See our <a href="{{site.baseurl}}/team.html">participants page</a> for more details.</p>
