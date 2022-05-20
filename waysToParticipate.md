@@ -9,8 +9,12 @@ mathjax: true
 <!-- style help from: https://stackoverflow.com/questions/27174946/how-to-use-css-in-markdown -->
 <!-- comments help from: https://gist.github.com/jonikarppinen/47dc8c1d7ab7e911f4c9 --> 
 <style>
-a:link {
-  color: red;
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: blue;
 }
 </style> 
 
