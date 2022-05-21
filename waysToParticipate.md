@@ -29,9 +29,7 @@ body.underline a{text-decoration: underline} -->
 <!-- local style help from: https://stackoverflow.com/questions/21493029/applying-a-stylesheet-within-one-div-only -->
 <div id="goals">
   <style scoped>
-    a{text-decoration: underline}
-<!--     body.underline a{text-decoration: underline} -->
-    li a {display: inline-block; height: 100%; width: 100%;
+    li a {display: inline-block; height: 100%; width: 100%; text-decoration: underline}
   </style> 
 <p>
 <ol>
