@@ -27,7 +27,7 @@ body.underline a{text-decoration: underline} -->
 <p>We would very much like to have satisfactory answers to the following questions. In the first instance, the priority will be the first question, but any advances on any of the others would be very welcome.</p>
 
 <div id="goals">
-  <style>
+  <style scoped>
     li a {display: inline-block; height: 100%; width: 100%;
   </style> 
 <p>
