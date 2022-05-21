@@ -13,6 +13,10 @@ mathjax: true
 <style> 
   nav a{text-decoration: none;}
   link a{text-decoration: underline;}
+  
+  link. a:link {
+text-decoration: underline;
+  }
 </style>  
 
 <p>This page is under construction. It contains a list of possible ways to participate in the project, but the list is currently incomplete. Even when it is complete, it will continually be updated as the status of our short-term goals changes.</p>
@@ -29,7 +33,7 @@ mathjax: true
 <div id="goals">
 <p>
 <ol>
-  <li><div id="link"><a href="{{site.baseurl}}/motivatedproofs.html">What does it mean for a proof step to be fully motivated?</a></div></li>
+  <li><div id="link"><a class="item-link" href="{{site.baseurl}}/motivatedproofs.html">What does it mean for a proof step to be fully motivated?</a></div></li>
   <li>Is there a good way of measuring the difficulty of an individual problem?</li>
   <li>What is a subtask and why do subtasks help?</li>
   <li>What are the computational constraints on a human mathematician?</li>
