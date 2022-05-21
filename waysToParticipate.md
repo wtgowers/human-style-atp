@@ -26,8 +26,11 @@ body.underline a{text-decoration: underline} -->
 
 <p>We would very much like to have satisfactory answers to the following questions. In the first instance, the priority will be the first question, but any advances on any of the others would be very welcome.</p>
 
+<!-- local style help from: https://stackoverflow.com/questions/21493029/applying-a-stylesheet-within-one-div-only -->
 <div id="goals">
   <style scoped>
+    a{text-decoration: underline}
+    body.underline a{text-decoration: underline}
     li a {display: inline-block; height: 100%; width: 100%;
   </style> 
 <p>
