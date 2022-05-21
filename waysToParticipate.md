@@ -41,7 +41,7 @@ text-decoration: underline;
 <p>
 <div id="goals">
 <ol>
-  <li><a id="item_link" href="{{site.baseurl}}/motivatedproofs.html">What does it mean for a proof step to be fully motivated?</a></li>
+  <li><a href="{{site.baseurl}}/motivatedproofs.html">What does it mean for a proof step to be fully motivated?</a></li>
   <li>Is there a good way of measuring the difficulty of an individual problem?</li>
   <li>What is a subtask and why do subtasks help?</li>
   <li>What are the computational constraints on a human mathematician?</li>
