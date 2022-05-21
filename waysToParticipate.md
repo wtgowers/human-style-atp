@@ -18,7 +18,7 @@ mathjax: true
   
   #goals > ol > li> a
     {
-     color: red;
+     text-decoration:underline;
     }
   
 <!--   goals > p > ol > li a{
