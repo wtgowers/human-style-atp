@@ -12,9 +12,9 @@ mathjax: true
 <!-- more link help from: https://stackoverflow.com/questions/13745347/make-whole-li-as-link-with-proper-html -->
 <style> 
   nav a{text-decoration: none;}
-<!-- a{text-decoration: underline}
-body.underline a{text-decoration: underline} -->
-<!-- #goals li a {display: inline-block; height: 100%; width: 100%; }-->
+  .goals > * {
+    text-decoration: underline;
+  }
 </style>  
 
 <p>This page is under construction. It contains a list of possible ways to participate in the project, but the list is currently incomplete. Even when it is complete, it will continually be updated as the status of our short-term goals changes.</p>
@@ -29,9 +29,6 @@ body.underline a{text-decoration: underline} -->
 
 <!-- local style help from: https://stackoverflow.com/questions/21493029/applying-a-stylesheet-within-one-div-only -->
 <div id="goals">
-  <style scoped>
-    li a {display: inline-block; height: 100%; width: 100%; text-decoration: underline}
-  </style> 
 <p>
 <ol>
   <li><a href="{{site.baseurl}}/motivatedproofs.html">What does it mean for a proof step to be fully motivated?</a></li>
