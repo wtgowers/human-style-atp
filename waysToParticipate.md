@@ -10,11 +10,11 @@ mathjax: true
 <!-- comments help from: https://gist.github.com/jonikarppinen/47dc8c1d7ab7e911f4c9 --> 
 <!-- link format help from: https://stackoverflow.com/questions/62028300/how-do-i-add-an-underline-for-all-the-links-on-the-website-when-i-click-the-butt --> 
 <!-- more link help from: https://stackoverflow.com/questions/13745347/make-whole-li-as-link-with-proper-html -->
-<style>
+<!-- <style> --> 
 <!-- a{text-decoration: underline}
 body.underline a{text-decoration: underline} -->
-#goals li a {display: inline-block; height: 100%; width: 100%; }
-</style> 
+<!-- #goals li a {display: inline-block; height: 100%; width: 100%; }
+</style>  -->
 
 <p>This page is under construction. It contains a list of possible ways to participate in the project, but the list is currently incomplete. Even when it is complete, it will continually be updated as the status of our short-term goals changes.</p>
 
@@ -27,6 +27,9 @@ body.underline a{text-decoration: underline} -->
 <p>We would very much like to have satisfactory answers to the following questions. In the first instance, the priority will be the first question, but any advances on any of the others would be very welcome.</p>
 
 <div id="goals">
+  <style>
+    li a {display: inline-block; height: 100%; width: 100%;
+  </style> 
 <p>
 <ol>
   <li><a href="{{site.baseurl}}/motivatedproofs.html">What does it mean for a proof step to be fully motivated?</a></li>
