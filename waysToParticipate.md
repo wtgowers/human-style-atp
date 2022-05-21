@@ -12,11 +12,17 @@ mathjax: true
 <!-- more link help from: https://stackoverflow.com/questions/13745347/make-whole-li-as-link-with-proper-html -->
 <style> 
   nav a{text-decoration: none;}
-  link a{text-decoration: underline;}
   
-  goals > p > ol > li a{
+  a.item-link{text-decoration:underline;}
+  
+  #goals > ol > li> a
+    {
+     color: red;
+    }
+  
+<!--   goals > p > ol > li a{
 text-decoration: underline;
-  }
+  } -->
 
 </style>  
 
@@ -31,17 +37,17 @@ text-decoration: underline;
 <p>We would very much like to have satisfactory answers to the following questions. In the first instance, the priority will be the first question, but any advances on any of the others would be very welcome.</p>
 
 <!-- local style help from: https://stackoverflow.com/questions/21493029/applying-a-stylesheet-within-one-div-only -->
-<div id="goals">
 <p>
+<div id="goals">
 <ol>
-  <li><a class="item-link" href="{{site.baseurl}}/motivatedproofs.html">What does it mean for a proof step to be fully motivated?</a></li>
+  <li><a id="item_link" href="{{site.baseurl}}/motivatedproofs.html">What does it mean for a proof step to be fully motivated?</a></li>
   <li>Is there a good way of measuring the difficulty of an individual problem?</li>
   <li>What is a subtask and why do subtasks help?</li>
   <li>What are the computational constraints on a human mathematician?</li>
   <li>How do we learn from experience when solving problems?</li>
 </ol>
-</p>
 </div> 
+</p>
 
 <h2>Designing algorithms for broad classes of problems</h2>
 
