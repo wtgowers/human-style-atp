@@ -13,7 +13,7 @@ mathjax: true
 <style>
 a{text-decoration: underline}
 body.underline a{text-decoration: underline}
-li a {display: inline-block; height: 100%; width: 100%; }
+#goals li a {display: inline-block; height: 100%; width: 100%; }
 </style> 
 
 <p>This page is under construction. It contains a list of possible ways to participate in the project, but the list is currently incomplete. Even when it is complete, it will continually be updated as the status of our short-term goals changes.</p>
@@ -26,7 +26,9 @@ li a {display: inline-block; height: 100%; width: 100%; }
 
 <p>We would very much like to have satisfactory answers to the following questions. In the first instance, the priority will be the first question, but any advances on any of the others would be very welcome.</p>
 
-<p><ol>
+<div id="goals">
+<p>
+<ol>
   <li><a href="{{site.baseurl}}/motivatedproofs.html">What does it mean for a proof step to be fully motivated?</a></li>
   <li>Is there a good way of measuring the difficulty of an individual problem?</li>
   <li>What is a subtask and why do subtasks help?</li>
@@ -34,6 +36,7 @@ li a {display: inline-block; height: 100%; width: 100%; }
   <li>How do we learn from experience when solving problems?</li>
 </ol>
 </p>
+</div> 
 
 <h2>Designing algorithms for broad classes of problems</h2>
 
