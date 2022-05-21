@@ -30,7 +30,7 @@ body.underline a{text-decoration: underline} -->
 <div id="goals">
   <style scoped>
     a{text-decoration: underline}
-    body.underline a{text-decoration: underline}
+<!--     body.underline a{text-decoration: underline} -->
     li a {display: inline-block; height: 100%; width: 100%;
   </style> 
 <p>
