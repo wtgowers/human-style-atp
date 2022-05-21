@@ -11,8 +11,8 @@ mathjax: true
 <!-- link format help from: https://stackoverflow.com/questions/62028300/how-do-i-add-an-underline-for-all-the-links-on-the-website-when-i-click-the-butt --> 
 <!-- more link help from: https://stackoverflow.com/questions/13745347/make-whole-li-as-link-with-proper-html -->
 <style>
-a{text-decoration: underline}
-body.underline a{text-decoration: underline}
+<!-- a{text-decoration: underline}
+body.underline a{text-decoration: underline} -->
 #goals li a {display: inline-block; height: 100%; width: 100%; }
 </style> 
 
