@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Finding a formal notion of a motivated proof
+title: Minutes
 description:
 background: '/img/maths_background.png'
 mathjax: true
