@@ -23,7 +23,9 @@ This is a public record of what is discussed in our face-to-face meetings, partl
 
 <BUTTON ONCLICK="ShowAndHide()">Click to reveal/hide</BUTTON>
 
-<DIV ID="'SectionName'" STYLE="display:none">Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.
+<DIV ID="'SectionName'" STYLE="display:none">This is a test</DIV>
+    
+Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.
 
 This was mainly an introductory meeting where those present got to know each other. Amongst the topics discussed were what our short-term targets might be, when we wanted to start in earnest, how an associated website might be designed and what platform it might run on, how best to organize ourselves to get the benefits of being a team, and what further skills we might be looking for when recruiting. The meeting took place half an hour or so after TG announced the project online.
 
@@ -34,7 +36,6 @@ Not too many firm conclusions were reached. Here are a few scattered thoughts th
 3. It was felt that the approach we were likely to take was sufficiently different from the approaches taken in various formalization communities that it would be better to create such a platform from scratch than to write it on top of a prover such as Lean, Isabelle or Coq. (However, we would make the design public, to make it as easy as possible for anyone who wanted to build a similar platform in Lean, say.) 
 4. The suggestion was made that Sledgehammer would be useful for identifying problems that are beyond the scope of current provers, to give us some challenges to work towards.
 5. Github pages was suggested as a good platform for a website. It was felt that we might need various different kinds of page. For example, a wiki could be useful as a way of organizing what we had done so far, and helping others to join in at a later stage. Something like a blog could be good for shorter-term interactions. And it would be good to have repositories for things like attempts to find "fully motivated proofs" of theorems, bits of code, accounts of technical difficulties that are holding us up (that is, "open problems" but not in the usual mathematical sense), possible approaches to some of the theoretical questions, and so on.
-  </DIV>
 
 # Thursday 5th May 2022
 
