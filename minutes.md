@@ -8,7 +8,7 @@ mathjax: true
 
 This is a public record of what is discussed in our face-to-face meetings, partly to remind ourselves of avenues that we started exploring but temporarily abandoned, but more importantly as a way of being more inclusive to people who are participating remotely.
 
-# Thursday 28th April 2022
+## Thursday 28th April 2022
     
 Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.
 
@@ -22,7 +22,7 @@ Not too many firm conclusions were reached. Here are a few scattered thoughts th
 4. The suggestion was made that Sledgehammer would be useful for identifying problems that are beyond the scope of current provers, to give us some challenges to work towards.
 5. Github pages was suggested as a good platform for a website. It was felt that we might need various different kinds of page. For example, a wiki could be useful as a way of organizing what we had done so far, and helping others to join in at a later stage. Something like a blog could be good for shorter-term interactions. And it would be good to have repositories for things like attempts to find "fully motivated proofs" of theorems, bits of code, accounts of technical difficulties that are holding us up (that is, "open problems" but not in the usual mathematical sense), possible approaches to some of the theoretical questions, and so on.
 
-# Thursday 5th May 2022
+## Thursday 5th May 2022
 
 Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Mateja Jamnik, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.
 
@@ -36,7 +36,7 @@ BM introduced a functional equation $f(x^3+y^3)=xf(x^2)+y^2f(y)$ (where $f:\math
 
 The website was again discussed but the discussion was rather brief and not much progress was made. However, KC had made useful suggestions during the preceding week: among the options considered (for very different purposes) were GitHub pages and Slack.
 
-# Thursday 12th May 2022
+## Thursday 12th May 2022
 
 Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas. Apologies received from Mateja Jamnik.
 
@@ -54,7 +54,7 @@ We talked about post-mortems of proofs, which are important for human mathematic
 
 AK-A mentioned Nitpick and Quickcheck, two counterexample-finding tools in Isabelle.
 
-# Thursday 19th May 2022
+## Friday 20th May 2022
 
 We met in person for the first time. In the late morning Katie Collins, Bhavik Mehta and Timothy Gowers mainly discussed technical details of the website. We then went to lunch in Churchill, where we had arranged to meet members of Larry Paulson's group. Wills Wynn-Thomas joined us there. After lunch, TG, BM and WW-T went back to CMS (the Centre for Mathematical Sciences) with Angeliki Koutsoukou-Argyraki, where for the first time we were able to have a mathematical discussion with the help of a whiteboard (and also a glass table top). We discussed how a proof of Ramsey's theorem might be generated using a finite set of moves, and also, following on from the discussion initiated by Matei Mandache two weeks earlier, how the proof of the intermediate value theorem that produces the rabbit $\sup\{x\in\mathbb R: x^2<2\}$ could be fully motivated. Some progress was made.
 
