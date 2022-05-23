@@ -21,12 +21,9 @@ This is a public record of what is discussed in our face-to-face meetings, partl
 
 # Thursday 28th April 2022
 
-<BUTTON ID="Show" VALUE="Click to show" ONCLICK=" document.getElementById('Show').style.display='none'; document.getElementById('Hide').style.display='block'; document.getElementById('SectionName').style.display='block'">
-
-<BUTTON ID="Hide" VALUE="Click to hide" ONCLICK=" document.getElementById('Show').style.display='block'; document.getElementById('Hide').style.display='none'; document.getElementById('SectionName').style.display='none'">
+<BUTTON ONCLICK="ShowAndHide()">Click to reveal/hide</BUTTON>
 
 <DIV ID="'SectionName'" STYLE="display:none">Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.
-
 
 This was mainly an introductory meeting where those present got to know each other. Amongst the topics discussed were what our short-term targets might be, when we wanted to start in earnest, how an associated website might be designed and what platform it might run on, how best to organize ourselves to get the benefits of being a team, and what further skills we might be looking for when recruiting. The meeting took place half an hour or so after TG announced the project online.
 
