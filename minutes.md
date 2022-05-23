@@ -1,3 +1,10 @@
+---
+layout: page
+title: Finding a formal notion of a motivated proof
+description:
+background: '/img/maths_background.png'
+mathjax: true
+---
 
 This is a public record of what is discussed in our face-to-face meetings, partly to remind ourselves of avenues that we started exploring but temporarily abandoned, but more importantly as a way of being more inclusive to people who are participating remotely.
 
