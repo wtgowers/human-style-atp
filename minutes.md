@@ -24,7 +24,7 @@ Not too many firm conclusions were reached. Here are a few scattered thoughts th
 
 ### Thursday 5th May 2022
 
-*Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Mateja Jamnik, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.*
+*Present (on Zoom): Katie Collins, Timothy Gowers, Mateja Jamnik, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.*
 
 I am writing this almost a week later, and have only a rather incomplete memory of the meeting. We welcomed Mateja Jamnik, who underlined the importance of having clear criteria for what would constitute success with the project. TG pointed out that this was partially addressed in the 54-page document accompanying the announcement of the project. However, the criteria there were focused mainly on extending the range of proofs that can be found without cheating, and while sufficient progress in that direction would certainly count as success, there are more theoretical goals that would do so as well, if attained, so further thought is needed here. 
 
