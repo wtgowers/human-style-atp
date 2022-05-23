@@ -6,24 +6,9 @@ background: '/img/maths_background.png'
 mathjax: true
 ---
 
-<SCRIPT>
-function ShowAndHide() {
-    var x = document.getElementById('SectionName');
-    if (x.style.display == 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-}
-</SCRIPT>
-
 This is a public record of what is discussed in our face-to-face meetings, partly to remind ourselves of avenues that we started exploring but temporarily abandoned, but more importantly as a way of being more inclusive to people who are participating remotely.
 
 # Thursday 28th April 2022
-
-<BUTTON ONCLICK="ShowAndHide()">Click to reveal/hide</BUTTON>
-
-<DIV ID="'SectionName'" STYLE="display:none">This is a test</DIV>
     
 Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.
 
