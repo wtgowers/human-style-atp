@@ -10,7 +10,7 @@ This is a public record of what is discussed in our face-to-face meetings, partl
 
 ### Thursday 28th April 2022
     
-Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.
+*Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.*
 
 This was mainly an introductory meeting where those present got to know each other. Amongst the topics discussed were what our short-term targets might be, when we wanted to start in earnest, how an associated website might be designed and what platform it might run on, how best to organize ourselves to get the benefits of being a team, and what further skills we might be looking for when recruiting. The meeting took place half an hour or so after TG announced the project online.
 
@@ -24,7 +24,7 @@ Not too many firm conclusions were reached. Here are a few scattered thoughts th
 
 ### Thursday 5th May 2022
 
-Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Mateja Jamnik, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.
+*Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Mateja Jamnik, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.*
 
 I am writing this almost a week later, and have only a rather incomplete memory of the meeting. We welcomed Mateja Jamnik, who underlined the importance of having clear criteria for what would constitute success with the project. TG pointed out that this was partially addressed in the 54-page document accompanying the announcement of the project. However, the criteria there were focused mainly on extending the range of proofs that can be found without cheating, and while sufficient progress in that direction would certainly count as success, there are more theoretical goals that would do so as well, if attained, so further thought is needed here. 
 
@@ -38,7 +38,7 @@ The website was again discussed but the discussion was rather brief and not much
 
 ### Thursday 12th May 2022
 
-Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas. Apologies received from Mateja Jamnik.
+*Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas. Apologies received from Mateja Jamnik.*
 
 We started out by discussing what we wanted from a website. TG had sent round some ideas during the week. BM, KC and TG agreed to discuss it further, with MM also expressing an interest, and revealing that he had some knowledge of Javascript.
 
@@ -55,6 +55,8 @@ We talked about post-mortems of proofs, which are important for human mathematic
 AK-A mentioned Nitpick and Quickcheck, two counterexample-finding tools in Isabelle.
 
 ### Friday 20th May 2022
+
+*Present (in person, at different moments): Katie Collins, Timothy Gowers, Angeliki Kousoukou-Argyraki, Bhavik Mehta, Wills Wynn-Thomas.*
 
 We met in person for the first time. In the late morning Katie Collins, Bhavik Mehta and Timothy Gowers mainly discussed technical details of the website. We then went to lunch in Churchill, where we had arranged to meet members of Larry Paulson's group. Wills Wynn-Thomas joined us there. After lunch, TG, BM and WW-T went back to CMS (the Centre for Mathematical Sciences) with Angeliki Koutsoukou-Argyraki, where for the first time we were able to have a mathematical discussion with the help of a whiteboard (and also a glass table top). We discussed how a proof of Ramsey's theorem might be generated using a finite set of moves, and also, following on from the discussion initiated by Matei Mandache two weeks earlier, how the proof of the intermediate value theorem that produces the rabbit $\sup\lbrace x\in\mathbb R: x^2<2\rbrace$ could be fully motivated. Some progress was made.
 
