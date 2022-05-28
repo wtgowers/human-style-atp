@@ -13,7 +13,7 @@ Under construction! Primary team members' bios will be listed here shortly.
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" src="/img/maths_background.png">  Timothy Gowers |  <img width="1604" src="/img/maths_background.png"> Bhavik Metha |<img width="1604" src="/img/maths_background.png"> Matei Mandache |
-|<img width="1604" src="/img/maths_background.png"> Angeliki Koutsoukou-Argyraki |  <img width="1604" src="/img/maths_background.png">  Katie Collins |<img width="1604" src="/img/maths_background.png"> Wills Wynn Thomas |
-|<img width="1604" src="/img/maths_background.png"> Mateja Jamnick |  <img width="1604" src="/img/maths_background.png"> Adrian Weller| |
+|<img width="1604" src="/img/tim.jpg">  Timothy Gowers |  <img width="1604" src="/img/bhavik.jpg"> Bhavik Metha |<img width="1604" src="/img/maths_background.png"> Matei Mandache |
+|<img width="1604" src="/img/maths_background.png"> Angeliki Koutsoukou-Argyraki |  <img width="1604" src="/img/katie.png">  Katie Collins |<img width="1604" src="/img/maths_background.png"> Wills Wynn Thomas |
+|<img width="1604" src="/img/maths_background.png"> Mateja Jamnik|  <img width="1604" src="/img/maths_background.png"> Adrian Weller| |
 
