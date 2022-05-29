@@ -6,7 +6,8 @@ background: '/img/maths_background.png'
 mathjax: true
 ---
 <!-- dropdown help from: https://gist.github.com/pierrejoubert73/902cc94d79424356a8d20be2b382e1ab -->
-
+<!-- markdown help from: https://stackoverflow.com/questions/15917463/embedding-markdown-in-jekyll-html --> 
+<div markdown="1">
 This is a public record of what is discussed in our face-to-face meetings, partly to remind ourselves of avenues that we started exploring but temporarily abandoned, but more importantly as a way of being more inclusive to people who are participating remotely.
 
 <details>
@@ -79,3 +80,4 @@ We met in person for the first time. In the late morning Katie Collins, Bhavik M
 
 </details> 
 
+ </div> 
