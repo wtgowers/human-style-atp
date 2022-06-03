@@ -24,6 +24,8 @@ This idea does not make much sense without a fuller discussion, but to give an i
 
 <p>That example is given mainly as a useful analogy. The idea is that moves such as instantiating a quantifier should be done only using elements that are generated from the problem itself using "standard moves", just as, for instance, the coefficients in the expression \((x-23)^2-4\) were obtained using some standard algebraic manipulations. But what are these standard moves? Does there even exist a finite set of moves that is sufficient? What should be allowed as a move and what should be forbidden?</p>
 
-<p>Since these all seem to be hard questions and we are unlikely to be able just to write down a satisfactory set of moves without a great deal of thought, it is sensible to break down the question further.</p>
+<p>Since these all seem to be hard questions and we are unlikely to be able just to write down a satisfactory set of moves without a great deal of thought, it is sensible to break down the task further.</p>
 
-<p>To be continued.</p>
+##Creating a repository of informal examples of motivated proofs.
+
+
