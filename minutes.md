@@ -81,7 +81,7 @@ We met in person for the first time. In the late morning Katie Collins, Bhavik M
 </details> 
     
 <details> 
-    <summary><b>Friday 20th May 2022</b></summary> 
+    <summary><b>Thursday 30th June 2022</b></summary> 
     
 ### Thursday 30th June 2022
 
