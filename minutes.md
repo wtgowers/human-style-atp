@@ -79,5 +79,22 @@ AK-A mentioned Nitpick and Quickcheck, two counterexample-finding tools in Isabe
 We met in person for the first time. In the late morning Katie Collins, Bhavik Mehta and Timothy Gowers mainly discussed technical details of the website. We then went to lunch in Churchill, where we had arranged to meet members of Larry Paulson's group. Wills Wynn-Thomas joined us there. After lunch, TG, BM and WW-T went back to CMS (the Centre for Mathematical Sciences) with Angeliki Koutsoukou-Argyraki, where for the first time we were able to have a mathematical discussion with the help of a whiteboard (and also a glass table top). We discussed how a proof of Ramsey's theorem might be generated using a finite set of moves, and also, following on from the discussion initiated by Matei Mandache two weeks earlier, how the proof of the intermediate value theorem that produces the rabbit $\sup\lbrace x\in\mathbb R: x^2<2\rbrace$ could be fully motivated. Some progress was made.
 
 </details> 
+    
+<details> 
+    <summary><b>Friday 20th May 2022</b></summary> 
+    
+### Thursday 30th June 2022
+
+*Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Kousoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.*
+
+This is not the first meeting since 12th May, but the meetings since then have been on Slack, so we have complete transcripts of them. 
+
+We discussed the current state of the website: the upshot of the discussion was that soon it will be ready to be populated, and that it is a realistic target to have a fairly complete initial website by the end of July.
+
+TG gave an update on recruits: one postdoc is due to start in October and two PhD students in January.
+
+We discussed where we felt we had got to with defining move types. There is work needed to define individual move types more precisely, which also requires us to pin down what precisely is being ``moved", so there was some discussion about how we should define what a problem state is. It seemed like a realistic target to come up with a satisfactory notion of problem state by the end of the month, and to have a program that could implement at least some move types (but not necessarily with a nice interface). By the end of September, it might be reasonable to hope for more: a system that would allow us to implement all the move types that we have come up with so far, and moreover a system that would be readily extendable. Ideally the interface would be nice enough to be convenient to use even if it wasn't all that pretty.
+
+</details>     
 
  </div> 
