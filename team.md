@@ -6,7 +6,7 @@ background: '/img/maths_background.png'
 mathjax: true
 ---
 
-Under construction! Primary team members' bios will be listed here shortly.
+## Cambridge-Based Team (listed in alphabetical order)
 
 <!-- image grid modified from: https://gist.github.com/trusktr/93175b620d47827ffdedbf52433e3b37 --> 
 <!-- and help from: https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d--> 
@@ -36,27 +36,40 @@ td {
 <table>
   <tr>
     <td style="text-align:center">
-      <img src="/human-style-atp/img/katie.png" width=160>
+      <img src="/human-style-atp/img/katie.png" width=300>
       <p>Katie Collins</p>
     </td>
-    <td style="text-align:center"><img src="/human-style-atp/img/tim.jpg" width=160>
+    <td style="text-align:center"><img src="/human-style-atp/img/tim.jpg" width=300>
       <p>Timothy Gowers</p>
     </td>
-    <td style="text-align:center"><img src="/human-style-atp/img/mateja.jpg" width=160>
+    <td style="text-align:center"><img src="/human-style-atp/img/mateja.jpg" width=300>
       <p>Mateja Jamnik</p></td>
   <tr>
     <td style="text-align:center">
-      <img src="/human-style-atp/img/angeliki.jpg" width=160>
-      <p>Angeliki</p>
-      <p>Koutsoukou-Argyraki</p>
+      <img src="/human-style-atp/img/angeliki.jpg" width=300>
+      <p>Angeliki Koutsoukou-Argyraki</p>
+<!--       <p></p> -->
     </td>
-    <td style="text-align:center"><img src="/human-style-atp/img/matei.jpg" width=160>
+    <td style="text-align:center"><img src="/human-style-atp/img/matei.jpg" width=300>
       <p>Matei Mandache</p>
     </td>
-    <td style="text-align:center"><img src="/human-style-atp/img/bhavik.jpg" width=160>
+    <td style="text-align:center"><img src="/human-style-atp/img/bhavik.jpg" width=300>
       <p>Bhavik Mehta</p></td>
+  </tr>
+    <tr>
+    <td style="text-align:center">
+      <img src="/human-style-atp/img/adrian.jpg" width=300>
+      <p>Adrian Weller</p>
+<!--       <p></p> -->
+    </td>
+    <td style="text-align:center"><img src="/human-style-atp/img/wills.jpg" width=300>
+      <p>Wills Wynn Thomas</p>
+  </tr>
  </table>
 
+## External Team (listed in alphabetical order)
+
+To be updated as the external team members join the project! 
 
 <!-- |<p align="center"><img width="160" src="/human-style-atp/img/tim.jpg">  Timothy Gowers </p> |  <img width="160" src="/human-style-atp/img/bhavik.jpg"> Bhavik Mehta |<img width="160" src="/human-style-atp/img/matei.jpg"> Matei Mandache | -->
 
