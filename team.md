@@ -20,6 +20,22 @@ Under construction! Primary team members' bios will be listed here shortly.
 |<img width="160" src="/human-style-atp/img/mateja.jpg"> Mateja Jamnik|  <img width="160" src="/human-style-atp/img/adrian.jpg"> Adrian Weller|  -->
 
 
+<style>
+  table {
+  border: 1px solid black;
+  table-layout: fixed;
+  width: 200px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  width: 100px;
+  overflow: hidden;
+}
+  
+  </style> 
+
 <table>
   <tr>
     <td>
