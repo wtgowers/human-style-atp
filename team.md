@@ -11,6 +11,7 @@ Under construction! Primary team members' bios will be listed here shortly.
 <!-- image grid modified from: https://gist.github.com/trusktr/93175b620d47827ffdedbf52433e3b37 --> 
 <!-- and help from: https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d--> 
 <!-- and https://stackoverflow.com/questions/23228600/text-below-image-in-grid-made-with-divs-->
+<!-- and https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md-->
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
@@ -21,14 +22,14 @@ Under construction! Primary team members' bios will be listed here shortly.
 
 <table>
   <tr>
-      <td>Name 1</td>
-     <td>Name 2</td>
-     <td>Name 3</td>
+    <td><img src="/human-style-atp/img/katie.png" width=160></td>
+    <td><img src="/human-style-atp/img/tim.jpg" width=160></td>
+    <td><img src="/human-style-atp/img/angeliki.jpg" width=160></td>
   </tr>
-  <tr>
-    <td><img src="/human-style-atp/img/katie.png" width=270 height=480></td>
-    <td><img src="/human-style-atp/img/tim.jpg" width=270 height=480></td>
-    <td><img src="/human-style-atp/img/angeliki.jpg" width=270 height=480></td>
+    <tr>
+      <td>Katie Collins</td>
+     <td>Timothy Gowers</td>
+     <td>Angeliki Koutsoukou-Argyraki</td>
   </tr>
  </table>
 
