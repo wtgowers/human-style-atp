@@ -19,9 +19,8 @@ Under construction! Primary team members' bios will be listed here shortly.
 <!-- |<img width="160" src="/human-style-atp/img/angeliki.jpg"> Angeliki Koutsoukou-Argyraki |  <img width="160" src="/human-style-atp/img/katie.png">  Katie Collins |<img width="160" src="/human-style-atp/img/wills.jpg"> Wills Wynn Thomas |
 |<img width="160" src="/human-style-atp/img/mateja.jpg"> Mateja Jamnik|  <img width="160" src="/human-style-atp/img/adrian.jpg"> Adrian Weller|  -->
 
-
-<style>
-  table {
+<!-- <style>
+table {
   border: 1px solid black;
   table-layout: fixed;
   width: 200px;
@@ -32,30 +31,29 @@ td {
   border: 1px solid black;
   width: 100px;
   overflow: hidden;
-}
-  
-  </style> 
+} -->
 
 <table>
   <tr>
-    <td>
+    <td style="text-align:center">
       <img src="/human-style-atp/img/katie.png" width=160>
       <p>Katie Collins</p>
     </td>
-    <td><img src="/human-style-atp/img/tim.jpg" width=160>
+    <td style="text-align:center"><img src="/human-style-atp/img/tim.jpg" width=160>
       <p>Timothy Gowers</p>
     </td>
-    <td><img src="/human-style-atp/img/mateja.jpg" width=160>
+    <td style="text-align:center"><img src="/human-style-atp/img/mateja.jpg" width=160>
       <p>Mateja Jamnik</p></td>
   <tr>
-    <td>
-      <img src="/human-style-atp/img/angeliki.png" width=160>
-      <p>Angeliki Koutsoukou-Argyraki</p>
+    <td style="text-align:center">
+      <img src="/human-style-atp/img/angeliki.jpg" width=160>
+      <p>Angeliki</p>
+      <p>Koutsoukou-Argyraki</p>
     </td>
-    <td><img src="/human-style-atp/img/matei.jpg" width=160>
+    <td style="text-align:center"><img src="/human-style-atp/img/matei.jpg" width=160>
       <p>Matei Mandache</p>
     </td>
-    <td><img src="/human-style-atp/img/bhavik.jpg" width=160>
+    <td style="text-align:center"><img src="/human-style-atp/img/bhavik.jpg" width=160>
       <p>Bhavik Mehta</p></td>
  </table>
 
