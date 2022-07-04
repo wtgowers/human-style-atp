@@ -17,7 +17,10 @@ Under construction! Primary team members' bios will be listed here shortly.
 <!-- |<img width="160" src="/human-style-atp/img/tim.jpg">  Timothy Gowers |  <img width="160" src="/human-style-atp/img/bhavik.jpg"> Bhavik Mehta |<img width="160" src="/human-style-atp/img/matei.jpg"> Matei Mandache | -->
 <!-- |<img width="160" src="/human-style-atp/img/angeliki.jpg"> Angeliki Koutsoukou-Argyraki |  <img width="160" src="/human-style-atp/img/katie.png">  Katie Collins |<img width="160" src="/human-style-atp/img/wills.jpg"> Wills Wynn Thomas |
 |<img width="160" src="/human-style-atp/img/mateja.jpg"> Mateja Jamnik|  <img width="160" src="/human-style-atp/img/adrian.jpg"> Adrian Weller|  -->
-|<figure>
+
+|<p align="center"><img width="160" src="/human-style-atp/img/tim.jpg">  Timothy Gowers </p> |  <img width="160" src="/human-style-atp/img/bhavik.jpg"> Bhavik Mehta |<img width="160" src="/human-style-atp/img/matei.jpg"> Matei Mandache |
+
+<!-- |<figure>
     <img src="/human-style-atp/img/katie.png" />
     <figcaption>
       <p>Katie Collins</p>
@@ -32,4 +35,4 @@ Under construction! Primary team members' bios will be listed here shortly.
     <figcaption>
       <p>Angeliki Koutsoukou-Argyraki</p>
     </figcaption>
-  </figure> | 
+  </figure> |  -->
