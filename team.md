@@ -6,7 +6,7 @@ background: '/img/maths_background.png'
 mathjax: true
 ---
 
-## Cambridge-Based Team (listed in alphabetical order)
+<h2> Cambridge-Based Team (listed in alphabetical order) </h2> 
 
 <!-- image grid modified from: https://gist.github.com/trusktr/93175b620d47827ffdedbf52433e3b37 --> 
 <!-- and help from: https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d--> 
@@ -67,7 +67,7 @@ td {
   </tr>
  </table>
 
-## External Team (listed in alphabetical order)
+<h2> External Team (listed in alphabetical order) </h2> 
 
 To be updated as the external team members join the project! 
 
