@@ -4,6 +4,15 @@ layout: default
 {% include mathjax.html %}
 <!-- Page Header -->
 {% if page.background %}
+
+<style>
+  div.containerMain {
+    max-width: 2500px;
+    margin: auto;
+    border: 3px solid #73AD21;
+  }
+</style>
+
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
   <header class="masthead">
@@ -23,7 +32,7 @@ layout: default
     </div>
   </header>
 
-  <div class="container" max-width=2500>
+  <div class="containerMain" max-width=2500>
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
