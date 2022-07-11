@@ -95,6 +95,23 @@ TG gave an update on recruits: one postdoc is due to start in October and two Ph
 
 We discussed where we felt we had got to with defining move types. There is work needed to define individual move types more precisely, which also requires us to pin down what precisely is being ``moved", so there was some discussion about how we should define what a problem state is. It seemed like a realistic target to come up with a satisfactory notion of problem state by the end of the month, and to have a program that could implement at least some move types (but not necessarily with a nice interface). By the end of September, it might be reasonable to hope for more: a system that would allow us to implement all the move types that we have come up with so far, and moreover a system that would be readily extendable. Ideally the interface would be nice enough to be convenient to use even if it wasn't all that pretty.
 
-</details>     
+</details>
+    
+<details> 
+    <summary><b>Thursday 7th July 2022</b></summary> 
+    
+### Thursday 7th July 2022
 
+*Present (on Zoom): Timothy Gowers, Angeliki Kousoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas. Apologies received from Katie Collins.*
+
+We discussed whether it would be desirable to switch for a while from our current focus on theoretical questions (and in particular the question of pinning down a good notion of "motivated proof") to trying to design and implement an algorithm. The aim in the latter case would be to produce a program that was capable of solving problems that ROBOT had been unable to solve, and more generally to set ourselves a benchmark by seeing what we were able to achieve in a relatively short time before the project started in earnest in October.
+    
+The general feeling was that this would be a good idea. Of course, it raised subsidiary questions. One was what problems we would like the program to solve that ROBOT did not solve. TG is keen on trying to get a program that can prove that a uniform limit of continuous functions is continuous, which he judges to be an ambitious but not unrealistic target. It would also be good to try to identify problems that are just beyond what ROBOT could do -- one such example is to prove that if f is an injection then f(A cap B) = f(A) cap f(B).
+    
+AK-A brought up the question of how we wanted to go about populating the library that the program would draw on, making the suggestion that we might like to take an existing library and modify it for our purposes (which would include leaving out several of its statements, and also imposing some kind of partial order on the results). TG raised the issue that the way results are stated in textbooks is often not the way we use them in context: for example, if we see that d(x,y) < a and d(y,z) < b, we will typically go in one step to d(x,z) < a + b. So we may want several different formulations of key results so that the program doesn't have to keep working out the simple equivalences. 
+    
+It was agreed that at this stage the most efficient way to get a program up and running would be for those interested in programming to work closely together.
+    
+ </details>
+ 
  </div> 
