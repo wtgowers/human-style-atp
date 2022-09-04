@@ -1,3 +1,11 @@
+---
+layout: page
+title: Examples of motivated proofs
+description:
+background: '/img/maths_background.png'
+mathjax: true
+---
+
 <p>This page will mostly consist of links to files that contain examples that people have come up with of proofs (or more precisely proof write-ups) that we would like to count as "motivated". Informally, this means that it is clear where every proof step has come from. In particular, if an existential statement is to be proved, or a universally quantified statement is to be instantiated, it is not enough simply to substitute in an expression that works: the expression has to emerge as a "solution", often as a result of the problem being "reduced" to something significantly simpler.</p>
 
 <p>We illustrate this with a simple but non-trivial example: that of showing that there is no surjection from a set \(X\) to its power set \(\mathbb P X\). In order to prove this, it is sufficient to take an arbitrary function \(f:X\to\mathbb P X\) and exhibit a subset of \(X\) that does not belong to the image of \(f\). The usual "unmotivated" approach to this is simply to write, "Consider the subset \(Y=\{x\in X: x\notin f(x)\}\) of \(X\)," and then to proceed with the simple proof that shows that \(Y\) has no preimage under \(f\). We regard this as unmotivated because the definition of the set \(Y\) comes out of nowhere and "just happens to work".</p>
