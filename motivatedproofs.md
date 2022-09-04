@@ -32,4 +32,4 @@ mathjax: true
 
 <p>The hope is that this process will lead to a list of move types that is powerful enough to generate a wide range of interesting proofs, but not expressive enough to generate proof steps that human mathematicians would judge as being rabbits out of hats.</p>
 
-<p>The beginnings of a repository of motivated proofs can be found <a href="{{site.baseurl}}/motivatedproofexamples.md">here</a>. </p>
+<p>The beginnings of a repository of motivated proofs can be found <a href="{{site.baseurl}}/motivatedproofexamples.html">here</a>. </p>
