@@ -1,26 +1,10 @@
 ---
 layout: page
-title: Resources
+title: A list of problems
 description:
 background: '/img/maths_background.png'
 mathjax: true
----
-
-<style> 
-  nav a{text-decoration: none;}
-  
-  a.item-link{text-decoration:underline;}
-  
-  #goals > ol > li> a
-    {
-     text-decoration:underline;
-    }
-  
-<!--   goals > p > ol > li a{
-text-decoration: underline;
-  } -->
-
-</style>  
+--- 
 
 <strong>Topological spaces.</strong>
 
@@ -36,13 +20,13 @@ A composition of continuous functions is continuous.
 
 $\overline{\overline{A}}=\overline{A}$ for every set $A$.
 
-If \(f(\overline{A})\subset\overline{f(A)}\) for every \(A\) then \(f\) is continuous.
+If $f(\overline{A})\subset\overline{f(A)}$ for every $A$ then $f$ is continuous.
 
-If \(f\) is continuous then \(f(\overline{A})\subset\overline{f(A)}\) for every \(A\).
+If $f$ is continuous then $f(\overline{A})\subset\overline{f(A)}$ for every $A$.
 
-If \(f\) is continuous then for every neighbourhood \(N\) of \(f(x)\) there is a neighbourhood \(M\) of \(x\) such that \(f(M)\subset N\).
+If $f$ is continuous then for every neighbourhood $N$ of $f(x)$ there is a neighbourhood $M$ of $x$ such that $f(M)\subset N$.
 
-If for every \(x\) and for every neighbourhood \(N\) of \(f(x)\) there is a neighbourhood \(M\) of \(x\) such that \(f(M)\subset N\), then \(f\) is continuous.
+If for every $x$ and for every neighbourhood $N$ of $f(x)$ there is a neighbourhood $M$ of $x$ such that $f(M)\subset N$, then $f$ is continuous.
 
 <strong>Metric spaces.</strong>
 
@@ -74,7 +58,7 @@ Every closed set contains its limit points.
 
 Every set that contains all its limit points is closed.
 
-If X is compact and $f:X\to X$ is a map such that $d(f(x),f(y))<d(x,y)$ whenever $x\ne y,$ then $f$ has a fixed point.
+If X is compact and $f:X\to X$ is a map such that $d(f(x),f(y)) < d(x,y)$ whenever $x\ne y,$ then $f$ has a fixed point.
 
 Open balls are open.
 
