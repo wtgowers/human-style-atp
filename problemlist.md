@@ -76,4 +76,12 @@ If $f$ is an injection, then $f(A\cap B)=f(A)\cap f(B)$.
 
 An injection from a non-empty set has a left inverse.
 
-A surjection has a right inverse. <em>Uses choice.</em>
+A surjection has a right inverse. <em>[Uses choice.]</em>
+
+$A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$.
+
+$(A\cap B)^c=A^c\cup B^c$.
+
+<h3>Sequences and series.</h3>
+
+A sequence that is unbounded above has a subsequence that tends to infinity. <em>[Requires building a sequence. Involves induction.]</em>
