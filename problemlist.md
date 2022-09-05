@@ -6,7 +6,9 @@ background: '/img/maths_background.png'
 mathjax: true
 --- 
 
-<strong>Topological spaces.</strong>
+The problems here are ones that we would eventually like to be able to solve fully automatically. In that respect, they vary considerably in their difficulty, so they are annotated in such a way that we can get a clearer idea of what we will need to do in order to have a realistic chance of solving which problems. Some of the problems also come with links to detailed discussions of how a program might be expected to solve them. 
+
+<h3>Topological spaces.</h3>
 
 A union of two compact sets is compact.
 
