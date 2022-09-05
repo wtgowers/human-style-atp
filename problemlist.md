@@ -30,7 +30,7 @@ If $f$ is continuous then for every neighbourhood $N$ of $f(x)$ there is a neigh
 
 If for every $x$ and for every neighbourhood $N$ of $f(x)$ there is a neighbourhood $M$ of $x$ such that $f(M)\subset N$, then $f$ is continuous.
 
-<strong>Metric spaces.</strong>
+<h3>Metric spaces.</h3>
 
 A metric space is Hausdorff.
 
@@ -64,10 +64,16 @@ If X is compact and $f:X\to X$ is a map such that $d(f(x),f(y)) < d(x,y)$ whenev
 
 Open balls are open.
 
-<strong>Sets.</strong>
+<h3>Sets and functions.</h3>
 
 $f^{-1}(A\cup B)\subset f^{-1}(A)\cup f^{-1}(B).$
 
 $f(f^{-1}(B))\subset B.$
 
 $A\subset f^{-1}(f(A)).$
+
+If $f$ is an injection, then $f(A\cap B)=f(A)\cap f(B)$.
+
+An injection from a non-empty set has a left inverse.
+
+A surjection has a right inverse. <em>Uses choice.</em>
