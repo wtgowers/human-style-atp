@@ -24,27 +24,27 @@ mathjax: true
 
 <p>We do not yet have a formal definition of a motivated proof. The links here are to files that contain "attempted motivated proofs" in the following sense: they are presentations of proofs that aim to be easily convertible into motivated proofs in a more formal sense if we do manage to come up with an adequate definition. Not all of them are complete, but the failed attempts may still be interesting and may provoke more successful ones. We have experimented with different modes of presentation, and do not claim to have found an optimal one. We welcome feedback on these attempts. Also, if you think you can write a similar presentation of a proof for which some non-trivial "rabbit" is customarily used, then we would be very happy to include a link to it on this page (possibly after a bit of feedback and modification, just to make sure that it is indeed an example of what we are trying to do.</p>
 
-<p><a href="https://drive.google.com/file/d/1HYN2TqQG-8RP52OXl7lAeaLwb7qfMTW6/view?usp=sharing">Three questions from a sheet of discrete mathematics exercises for computer scientists at Cambridge.</a> The proofs are interspersed with comments in red that explain the motivation for each step.</p>
+<p><a href="https://drive.google.com/file/d/1HYN2TqQG-8RP52OXl7lAeaLwb7qfMTW6/view?usp=sharing" target="_blank">Three questions from a sheet of discrete mathematics exercises for computer scientists at Cambridge.</a> The proofs are interspersed with comments in red that explain the motivation for each step.</p>
 
-<p><a href="https://drive.google.com/file/d/12IQIhjIY-5_x8iOJlpiSh7PiqqxNftnC/view?usp=sharing">A question about Fibonacci numbers, also from a sheet of discrete mathematics exercises for computer scientists at Cambridge.</a> The proof steps are presented in one column with motivating comments next to them in another column.</p>
+<p><a href="https://drive.google.com/file/d/12IQIhjIY-5_x8iOJlpiSh7PiqqxNftnC/view?usp=sharing" target="_blank">A question about Fibonacci numbers, also from a sheet of discrete mathematics exercises for computer scientists at Cambridge.</a> The proof steps are presented in one column with motivating comments next to them in another column.</p>
 
-<p><a href="https://drive.google.com/file/d/17Q7uOoduRnLbLceohRxTZelmRuxD7zb_/view?usp=sharing">A question from the same source about a Collatz-like sequence.</a> The question is solved, but the motivation for the solution is incomplete. This time proof steps are numbered, and after each one there is a comment in red about the motivation. This format seems to strike quite a good balance between the labour of typesetting and the clarity of the result.</p>
+<p><a href="https://drive.google.com/file/d/17Q7uOoduRnLbLceohRxTZelmRuxD7zb_/view?usp=sharing" target="_blank">A question from the same source about a Collatz-like sequence.</a> The question is solved, but the motivation for the solution is incomplete. This time proof steps are numbered, and after each one there is a comment in red about the motivation. This format seems to strike quite a good balance between the labour of typesetting and the clarity of the result.</p>
 
-<p><a href="https://drive.google.com/file/d/1ZFPzJeMCASqYZFItzi9t2_lznSslm3QG/view?usp=sharing">A set-theoretic question from the same source.</a> Numbered steps with red comments about motivation.</p>
+<p><a href="https://drive.google.com/file/d/1ZFPzJeMCASqYZFItzi9t2_lznSslm3QG/view?usp=sharing" target="_blank">A set-theoretic question from the same source.</a> Numbered steps with red comments about motivation.</p>
   
-<p><a href="https://drive.google.com/file/d/1ysJe4UZW9AikYrYVETPXXPOuOQlrp6ya/view?usp=sharing">A motivation for the idea of completing the square.</a> Numbered steps with red comments. Some green comments too to indicate issues that need more thought.</p>
+<p><a href="https://drive.google.com/file/d/1ysJe4UZW9AikYrYVETPXXPOuOQlrp6ya/view?usp=sharing" target="_blank">A motivation for the idea of completing the square.</a> Numbered steps with red comments. Some green comments too to indicate issues that need more thought.</p>
 
-<p><a href="https://drive.google.com/file/d/187XcVlGfX4_1PT1h_4fMwvC_dGDo-ckk/view?usp=sharing">A 3-regular graph cannot have nine vertices.</a> This is done in 94 numbered steps with red comments about motivation. (The challenge is to "generate" the idea of considering the parity of the sum of the degrees rather than just to exhibit it. However, there may well be shorter routes.)</p>
+<p><a href="https://drive.google.com/file/d/187XcVlGfX4_1PT1h_4fMwvC_dGDo-ckk/view?usp=sharing" target="_blank">A 3-regular graph cannot have nine vertices.</a> This is done in 94 numbered steps with red comments about motivation. (The challenge is to "generate" the idea of considering the parity of the sum of the degrees rather than just to exhibit it. However, there may well be shorter routes.)</p>
 
-<p><a href="https://drive.google.com/file/d/15Jk0vJ5VW2_MIai_9BOJtWa7NP0T_V9O/view?usp=sharing">Lagrange's theorem (about subgroups).</a> Numbered steps with red comments.</p>
+<p><a href="https://drive.google.com/file/d/15Jk0vJ5VW2_MIai_9BOJtWa7NP0T_V9O/view?usp=sharing" target="_blank">Lagrange's theorem (about subgroups).</a> Numbered steps with red comments.</p>
 
-<p><a href="https://drive.google.com/file/d/1ZLO_8Q7EDneZm9sZxLX4bdH8-DpKxhoU/view?usp=sharing">A sequence that is unbounded above has a subsequence that tends to infinity.</a> Numbered steps. This turned out to be surprisingly hard, and the file contains a few attempts at it.</p>
+<p><a href="https://drive.google.com/file/d/1ZLO_8Q7EDneZm9sZxLX4bdH8-DpKxhoU/view?usp=sharing" target="_blank">A sequence that is unbounded above has a subsequence that tends to infinity.</a> Numbered steps. This turned out to be surprisingly hard, and the file contains a few attempts at it.</p>
 
-<p><a href="https://drive.google.com/file/d/1qL62Lay2k3-gT98VrEblfnvFkA8UaAW9/view?usp=sharing">Ramsey's theorem (for infinite graphs).</a> This is incomplete, and seems to be quite challenging. It is presented as a sequence of "tableaux" with explanations of how to get from each one to the next.</p>
+<p><a href="https://drive.google.com/file/d/1qL62Lay2k3-gT98VrEblfnvFkA8UaAW9/view?usp=sharing" target="_blank">Ramsey's theorem (for infinite graphs).</a> This is incomplete, and seems to be quite challenging. It is presented as a sequence of "tableaux" with explanations of how to get from each one to the next.</p>
 
-<p><a href="https://drive.google.com/file/d/1VHFPUOCBAqpj57DJg9AkrgjrsjO53odd/view?usp=sharing">The irrationality of $\sqrt 2$.</a> Numbered steps with accompanying motivations (not in red this time).</p>
+<p><a href="https://drive.google.com/file/d/1VHFPUOCBAqpj57DJg9AkrgjrsjO53odd/view?usp=sharing" target="_blank">The irrationality of $\sqrt 2$.</a> Numbered steps with accompanying motivations (not in red this time).</p>
 
-<p><a href="https://drive.google.com/file/d/1nKnQRhT6EaXK_fZhh6jgq5znRCx3mm03/view?usp=sharing">A uniform limit of continuous functions is continuous.</a> Numbered steps with accompanying motivations in red.</p>
+<p><a href="https://drive.google.com/file/d/1nKnQRhT6EaXK_fZhh6jgq5znRCx3mm03/view?usp=sharing" target="_blank">A uniform limit of continuous functions is continuous.</a> Numbered steps with accompanying motivations in red.</p>
 
 
 
