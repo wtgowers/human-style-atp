@@ -20,7 +20,7 @@ mathjax: true
 
 <p>In the second presentation, we did instantiate a quantifier when we chose to set $x$ to equal $y$. But that choice did not come out of nowhere, as $y$ was very much present in the problem -- indeed, as commented, it was the only element of $X$ that had been mentioned. As for the definition of the set $Y$, it was forced on us once the first instantiation had been made. So the whole proof came to seem natural and inevitable, rather than involving a little piece of magic.</p>
 
-<p>We stress that just as a statement can have more than one proof, so a proof can have more than one motivation. For example here, a motivation that probably reflects better how the result was actually discovered would be to start with a (motivated!) proof of Cantor's diagonal argument (in one of its standard formulations) and then to generalize it until one arrives at the result above.</p> 
+<p>We stress that just as a statement can have more than one proof, so a proof can have more than one motivation. For example here, a motivation that probably reflects better how the result was actually discovered would be to start with a (motivated!) proof of Cantor's diagonal argument in one of its standard formulations and then to generalize it until one arrives at the result above.</p> 
 
 <h3>Some attempts at motivated proofs</h3>
 
