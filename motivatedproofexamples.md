@@ -10,7 +10,7 @@ mathjax: true
 
 <p>This page will mostly consist of links to files that contain examples that people have come up with of proofs (or more precisely proof write-ups) that we would like to count as "motivated". Informally, this means that it is clear where every proof step has come from. In particular, if an existential statement is to be proved, or a universally quantified statement is to be instantiated, it is not enough simply to substitute in an expression that works: the expression has to emerge as a "solution", often as a result of the problem being "reduced" to something significantly simpler.</p>
 
-<p>As explained <a href="{{site.baseurl}}/motivatedproofs.md">in the parent page to this one</a>, we hope eventually to develop a formal definition of a "motivated proof". One of the reasons for creating a repository of examples is to help to narrow down what such a definition might look like.</p>
+<p>As explained <a href="{{site.baseurl}}/motivatedproofs.html">in the parent page to this one</a>, we hope eventually to develop a formal definition of a "motivated proof". One of the reasons for creating a repository of examples is to help to narrow down what such a definition might look like.</p>
 
 <h3>An example</h3>
 
