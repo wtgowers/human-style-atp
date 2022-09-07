@@ -62,7 +62,7 @@ $$\ \ \ \text{is_closed}(A,X)\ \wedge\ \text{is_closed}(B,X)\implies\text{is_clo
 <ol>
   <li>Expanding/unfolding a definition.</li>
   <li>Modus ponens using hypotheses.</li>
-  <li>Modus ponens using a hypotheses and library results.</li>
+  <li>Modus ponens using hypotheses and library results.</li>
   <li>Modus tollens using hypotheses.</li>
   <li>Modus tollens using conclusion and library results.</li>
   <li>Instantiating a quantifier with a term that is already present.</li>
@@ -71,6 +71,12 @@ $$\ \ \ \text{is_closed}(A,X)\ \wedge\ \text{is_closed}(B,X)\implies\text{is_clo
   <li>Basic equivalences using connectives.</li>
 </ol>
 
-<h3>Expanding/unfolding a definition.</h3>
+<h4>Expanding/unfolding a definition.</h4>
+
+<p>This is the process of taking a high-level statement such as "$f$ is continuous" and using a definition (which will be stored in the library) to convert it into a lower-level statement such as 
+  $$\forall\epsilon > 0\ \forall x\in X\ \exists\delta > 0\ \forall y\in X\ d(x,y) < \delta \implies d(f(x),f(y)) < \epsilon.$$
+It comes in various flavours. For example, it can also be used to convert the statement $x\in f^{-1}(A)$ into the statement $f(x)\in A$ or to convert a term $\tan\theta$ into a term $\sin\theta/\cos\theta$, or a term $e^x$ into a term $\sum_{n=0}^\infty x^n/n!$.</p>
+
+<h4>Modus ponens using hypotheses.</h4>
 
 
