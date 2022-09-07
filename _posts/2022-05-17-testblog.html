@@ -23,16 +23,34 @@ mathjax: true
   
 <p> In order to transform one problem statement into another, the algorithm has access to a collection of <em>move types</em>, which can be thought of as partial functions (or more generally, since a move type can sometimes be applied in more than one way, relations) defined on the set of all problem states. Thus, if we want to look at things in a very abstract way, we can think of the problem we wish to solve as that of finding a path in a directed graph. The vertices of the graph are all problem states, there is an edge from $S$ to $S'$ if and only if there is a move type $M$ such that $S\to_M S'$ (where this means that $S$ can be transformed to $S'$ using a move of move type $M$), and our aim is to find a directed path from an initial vertex $S_0$ to the vertex TRUE. However, while in full generality the question of how to find a shortest path in a graph is well understood, for this problem the graph has a lot of structure, coming from the interesting way that the vertices and edges are labelled. We thus face the problem of understanding how these labellings can enable us to find short paths much more quickly, and that is a much more challenging question.</p>
   
-<h2>Examples of problem states and move types</h2> 
+<h2>Problem states, tableaux, and move types</h2> 
 
 </p>While we do not always represent problem states this way, deep down they are just formulae built up in a standard way from variables, functions, predicates, relations of various arities, connectives, quantifiers, and so on. Returning to the example given earlier, the initial problem state if we want to prove that a union of two closed sets is closed might be the following.
 
-$$\forall X:\text{metric space}\ \ \forall A:\text{subset of }X\ \ \forall B:\text{subset of }X$$
+$$\forall (X,d):\text{metric space}\ \ \forall A:\text{subset of }X\ \ \forall B:\text{subset of }X$$
 
 $$\ \ \ \text{closed}(A)\ \wedge\ \text{closed}(B)\implies\text{closed}(A\cup B)$$
 </p>
 
+<p>There are a few choices that need to be made, which we briefly comment on here. For example, the above statement contains type declarations such as that $(X,d)$ is a metric space. An alternative might be to quantify over all sets $X$ (which of course form a proper class rather than a set) and all functions $d:X\times X\to\mathbb R$ and then to adopt the statement $\text{metric\_space}(X,d)$ as an assumption. Or we might prefer to fix once and for all a metric space $X$ instead of universally quantifying over them, to reflect the way a human mathematician would state the theorem starting with the words "Let $(X,d)$ be a metric space." But these are more like implementation details than fundamental aspects of the algorithm.</p> 
 
+<p>It is often convenient to represent a problem state by simply listing the type declarations, the assumptions, and the desired conclusion. For example, the above formula can be represented in the following way.
+  
+  $$\begin{array}{|c|}
+  \hline
+  (X,d): \text{metric space}\\
+  A: \text{subset of }X\\
+  B: \text{subset of }X\\
+  \hline
+  \hline
+  \text{is\_closed}(A,X)\\
+  \text{is\_closed}(B,X)\\
+  \hline
+  \hline
+  \text{is\_closed}(A\cup B,X)\\
+  \hline
+  \end{array}$$
+</p>
 
 
 
