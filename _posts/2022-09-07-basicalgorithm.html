@@ -23,7 +23,7 @@ mathjax: true
   
 <p> In order to transform one problem statement into another, the algorithm has access to a collection of <em>move types</em>, which can be thought of as partial functions (or more generally, since a move type can sometimes be applied in more than one way, relations) defined on the set of all problem states. Thus, if we want to look at things in a very abstract way, we can think of the problem we wish to solve as that of finding a path in a directed graph. The vertices of the graph are all problem states, there is an edge from $S$ to $S'$ if and only if there is a move type $M$ such that $S\to_M S'$ (where this means that $S$ can be transformed to $S'$ using a move of move type $M$), and our aim is to find a directed path from an initial vertex $S_0$ to the vertex TRUE. However, while in full generality the question of how to find a shortest path in a graph is well understood, for this problem the graph has a lot of structure, coming from the interesting way that the vertices and edges are labelled. We thus face the problem of understanding how these labellings can enable us to find short paths much more quickly, and that is a much more challenging question.</p>
   
-<h2>Problem states, tableaux, and move types</h2> 
+<h2>Problem states and tableaux</h2> 
 
 </p>While we do not always represent problem states this way, deep down they are just formulae built up in a standard way from variables, functions, predicates, relations of various arities, connectives, quantifiers, and so on. Returning to the example given earlier, the initial problem state if we want to prove that a union of two closed sets is closed might be the following.
 
@@ -52,4 +52,25 @@ $$\ \ \ \text{is_closed}(A,X)\ \wedge\ \text{is_closed}(B,X)\implies\text{is_clo
   \text{is_closed}(A\cup B,X)\\
   \hline
   \end{array}$$
-</p>
+
+  We call this kind of representation a <em>tableau</em>. It is important that tableaux and logical formulae should be interchangeable -- that is, a tableau should just be a convenient alternative notation for a formula, and we should have a simple algorithm that can convert formulae into tableaux and tableaux into formulae. This is straightforward for examples such as the one above, but can become more complicated for formulae that involve several connectives and/or alternations of universal and existential quantifiers. We have not yet developed a tableau notation that is sufficiently powerful to express all formulae, but we can deal with most of the formulae that arise in practice.</p>
+
+<h2>Move types</h2>
+
+<p>In this section, we give a list of basic move types (there are also some more advanced ones, but we shall not discuss them in this introductory post), followed by a brief explanation of each one. In the next section, as a way of demonstrating how the move types work in practice, we shall discuss how they can be used to solve the problem about closed sets.</p>
+
+<ol>
+  <li>Expanding/unfolding a definition.</li>
+  <li>Modus ponens using hypotheses.</li>
+  <li>Modus ponens using a hypotheses and library results.</li>
+  <li>Modus tollens using hypotheses.</li>
+  <li>Modus tollens using conclusion and library results.</li>
+  <li>Instantiating a quantifier with a term that is already present.</li>
+  <li>Creating a metavariable.</li>
+  <li>Peeling a quantifier.</li>
+  <li>Basic equivalences using connectives.</li>
+</ol>
+
+<h3>Expanding/unfolding a definition.</h3>
+
+
