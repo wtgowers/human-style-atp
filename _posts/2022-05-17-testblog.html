@@ -1,21 +1,23 @@
 ---
 layout: post
-title: "Testing out blog post for ATP project!"
-subtitle: "Sample subtitle"
+title: "Outline of a proof-finding algorithm"
+subtitle: "An introduction for people who would like to get up to speed quickly with the project"
 date: 2022-05-17 10:00:00
 background: '/img/maths_background.png'
 author: "ATP Team"
 mathjax: true
 ---
 
-<p>This is testing the first blog!
-
-  $$
-  K(a,b) = \int \mathcal{D}x(t) \exp(2\pi i S[x]/\hbar)
-  $$
+<p>The aim of this post is to describe a fully automatic proof-finding algorithm that is capable of finding proofs that are sufficiently routine. We hope that if you understand how it works, you will become familiar with many of the concepts and definitions that we will be working with when we design more advanced algorithms.
 </p>
 
-<h2 class="section-heading">Testing out section header</h2>
+<h2 class="section-heading">A high-level overview</h2>
+
+<p>A mathematics problem can be thought of as a statement that needs proving. Typically that statement involves some assumptions and a conclusion. For instance, the statement "A union of two closed sets is closed", when expressed more formally, gives us two sets $A$ and $B$ in a metric space, and we want to prove that $A\cup B$ is closed given the assumption that $A$ and $B$ are both closed.</p>
+
+<p>However, our proof will typically involve more than mere logical operations: in order to prove that $A\cup B$ is closed, we will use not just the assumptions that we are explicitly given, but also a bank of background knowledge such as the definition of a closed set, the definition of an open set, and the fact that if $\epsilon_1$ and $\epsilon_2$ are positive real numbers then $\min\{\epsilon_1,\epsilon_2\}$ is another positive real number that is less than or equal to both $\epsilon_1$ and $\epsilon_2$.</p>
+
+
 
 <p>Sample text</p>
 
