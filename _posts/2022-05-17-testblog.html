@@ -17,6 +17,10 @@ mathjax: true
 
 <p>However, our proof will typically involve more than mere logical operations: in order to prove that $A\cup B$ is closed, we will use not just the assumptions that we are explicitly given, but also a bank of background knowledge such as the definition of a closed set, the definition of an open set, and the fact that if $\epsilon_1$ and $\epsilon_2$ are positive real numbers then $\min\{\epsilon_1,\epsilon_2\}$ is another positive real number that is less than or equal to both $\epsilon_1$ and $\epsilon_2$.</p>
 
+<p>We therefore think of the algorithm as follows. The input consists of an <em>initial problem state</em> $S_0$, which is a suitably formal statement of what is to be proved, and a <em>library</em>, which is a bank of facts that can be assumed. The algorithm then produces a sequence of problem states $S_0,S_1,\dots,S_k$, each of which is a statement to be proved. This sequence must obey the rule that $S_{i+1}$ implies $S_i$ for each $i$: that is, if we can successfully prove the statement $S_{i+1}$, then that means we have proved the statement $S_i$. If $S_k$ is the trivial statement TRUE, then the algorithm has succeeded, and given us a proof of $S_0$.</p> 
+  
+<p> In order to transform one problem statement into another, the algorithm has access to a collection of <em>move types</em>, which can be thought of as partial functions (or more generally, since a move type can sometimes be applied in more than one way, relations) defined on the set of all problem states. We shall give examples of move types in a moment.</p> 
+
 
 
 <p>Sample text</p>
