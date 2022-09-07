@@ -53,7 +53,7 @@ $$\ \ \ \text{is_closed}(A,X)\ \wedge\ \text{is_closed}(B,X)\implies\text{is_clo
   \hline
   \end{array}$$
 
-  We call this kind of representation a <em>tableau</em>. It is important that tableaux and logical formulae should be interchangeable -- that is, a tableau should just be a convenient alternative notation for a formula, and we should have a simple algorithm that can convert formulae into tableaux and tableaux into formulae. This is straightforward for examples such as the one above, but can become more complicated for formulae that involve several connectives and/or alternations of universal and existential quantifiers. We have not yet developed a tableau notation that is sufficiently powerful to express all formulae, but we can deal with most of the formulae that arise in practice.</p>
+  We call this kind of representation a <em>tableau</em>. We call the assumptions <em>hypotheses</em> and the statement or statements to be proved <em>targets</em>. It is important that tableaux and logical formulae should be interchangeable -- that is, a tableau should just be a convenient alternative notation for a formula, and we should have a simple algorithm that can convert formulae into tableaux and tableaux into formulae. This is straightforward for examples such as the one above, but can become more complicated for formulae that involve several connectives and/or alternations of universal and existential quantifiers. We have not yet developed a tableau notation that is sufficiently powerful to express all formulae, but we can deal with most of the formulae that arise in practice. One important point is that the hypotheses are implicitly linked by "and" and so are the targets.</p>
 
 <h2>Move types</h2>
 
@@ -71,12 +71,57 @@ $$\ \ \ \text{is_closed}(A,X)\ \wedge\ \text{is_closed}(B,X)\implies\text{is_clo
   <li>Basic equivalences using connectives.</li>
 </ol>
 
-<h4>Expanding/unfolding a definition.</h4>
+<h4>1. Expanding/unfolding a definition.</h4>
 
 <p>This is the process of taking a high-level statement such as "$f$ is continuous" and using a definition (which will be stored in the library) to convert it into a lower-level statement such as 
   $$\forall\epsilon > 0\ \forall x\in X\ \exists\delta > 0\ \forall y\in X\ d(x,y) < \delta \implies d(f(x),f(y)) < \epsilon.$$
 It comes in various flavours. For example, it can also be used to convert the statement $x\in f^{-1}(A)$ into the statement $f(x)\in A$ or to convert a term $\tan\theta$ into a term $\sin\theta/\cos\theta$, or a term $e^x$ into a term $\sum_{n=0}^\infty x^n/n!$.</p>
 
-<h4>Modus ponens using hypotheses.</h4>
+<h4>2. Modus ponens using hypotheses.</h4>
 
+<p>If we have a hypothesis $\forall u\ P(u)\implies Q(u)$ and another hypothesis $P(x)$, this allows us to add a hypothesis $Q(x)$. More generally, if we have a hypothesis $\forall u\ P_1(u)\ \wedge\ \dots\ \wedge\ P_k(u)\implies Q(u)$ and for each $i$ we have the hypothesis $P_i(x)$, then again it allows us to add the hypothesis $Q(x)$.</p>
+
+<p>Modus ponens is usually presented as the deduction of $Q$ from the statements $P$ and $P\implies Q$. However, in practice it is almost always used in the above quantified form, to the point where "bare" modus ponens can be quite confusing.</p>
+
+<h4>3. Modus ponens using hypotheses and library results.</h4>
+
+<p>Logically this is the same as modus ponens, at least if we regard the results in the library as a huge collection of additional hypotheses that we are free to use, but in practice it feels quite different. Basically it's modus ponens as above, but where the result $\forall u\ P(u)\implies Q(u)$ is in the library rather than being stated as a hypothesis. For example, suppose that a human mathematician wishes to prove that a function $f:[0,1]\to\mathbb R$ is bounded and is given the information that $f$ is differentiable. They would feel free to argue first that $f$ must be continuous (using the library result $\forall g:\mathbb R\to\mathbb R\ \text{is_differentiable}(g)\implies\text{is_continuous}(g)$) and then, having observed that $[0,1]$ is a closed bounded interval, that $f$ must be bounded (using the library result that if $X\subset\mathbb R$ is a closed bounded interval and $g:X\to\mathbb R$ is continuous, then $g$ is bounded).</p>
+
+<h4>4. Modus tollens using hypotheses.</h4>
+
+<p>Also known as backwards reasoning, this is the process of replacing a target $Q(x)$ by the target $P(x)$ given the hypothesis $\forall u\ P(u)\implies Q(u)$. In a human write-up, one might say, "We would like to prove $Q(x)$. Since for every $u$, $P(u)\implies Q(u)$, it is sufficient to prove $P(x)$." Again, there is a "bare" form of modus tollens that rarely makes an appearance in a typical mathematical proof, though it is formally correct.</p>
+
+<h4>5. Modus tollens using hypotheses and library results.</h4>
+
+<p>This is to the previous move type as move type 3 was to move type 2. That is, the statement $\forall u\ P(u)\implies Q(u)$ belongs to the library instead of being stated as a hypothesis.</p>
+
+<h4>6. Instantiating a quantifier with a term that is already present.</h4>
+
+<p>Suppose our target statement is of the form $\exists u\ P(u)$ and we have some information about a variable or more complex term $x$ of the same type as $u$. Then we can replace the target by $P(x)$. (For those unfamiliar with the notion of type, you can think of it as simply being the kind of mathematical object you are talking about -- a metric space, an element of a given vector space, etc. If we want to prove that there exists an object $u$ of a certain kind that satisfies a property $P$ that applies to objects of that kind, then we will need to choose as $u$ an object of the same kind.) Similarly, if we have a hypothesis of the form $\forall u\ P(u)$ (where $P(u)$ might be of the form $Q(u)\implies R(u)$), and if we have an object $x$ of the same type as $u$, then we are free to replace the hypothesis by $P(x)$.</p>
+
+<p>Note that from the point of view of writing down a correct proof, the requirement that $x$ should be "already present" in the problem state is unnecessary: if we can somehow define a term $x$ of the right type, and if it does the job we want of it, then the proof is valid. However, this would not be a move type in the sense we are talking about here, since it is too open ended: we do not have a simple algorithm that will obey the command "Instantiate this variable in such a way that it will lead us to the problem state TRUE." Choosing how to instantiate variables in non-trivial ways is a major part of the challenge of solving mathematical problems, so it is a complex step that needs to be achieved only after a sequence of more basic move types has been used.</p>
+
+<h4>7.Creating a metavariable.</h4>
+
+<p>If we cannot immediately see how to instantiate a variable, an extremely useful technique is simply to behave as if it is chosen and to continue with other move types. Often the result is to convert the problem state into one for which the choice of variable becomes much more obvious. This technique is strongly analogous to what we do when solving a quadratic equation: we do not immediately try to choose a value for the variable, but instead apply techniques such as completing the square, with the result that the solutions eventually become obvious.</p>
+
+<p>How should we regard this as a logical operation? One way of thinking about it is as an application of the rule that the statement $P\implies\exists x\ Q(x)$ is equivalent to the statement $\exists x\ P\implies Q(x)$. So we start with the problem state $P\implies\exists x\ Q(x)$, and transform it into the problem state $\exists x\ P\implies Q(x)$ in order to allow ourselves to apply moves inside scope of the quantifier that would otherwise be blocked. This will become clearer with an example or two.</p>
+
+<p>A similar operation is sometimes useful with universally quantified hypotheses. We might be confident that we want to apply such a hypothesis but without quite being sure what we should apply it to. Again, it may help just to "pretend we have chosen it", apply some deductions and logical manipulations in order to simplify the requirements it should satisfy, and then choose it. We can regard the initial creation of a metavariable as replacing the statement $(\forall x\ P(x))\implies Q$ by the statement $\exists x\ (P(x)\implies Q)$. It is slightly counterintuitive that these two statements are equivalent, but they are (at least if there exists $x$ such that $P(x)$).</p>
+
+<h4>8. Peeling a quantifier.</h4>
+
+<p> If one has a target statement of the form $\forall x: \text{type T}\ Q(x)$, a first step is very often to write "Let $x$ be of type T" and to proceed to prove the statement $Q(x)$. That is, the focus switches from proving $Q(x)$ for <em>all</em> $x$ to proving one for <em>a single arbitrary</em> $x$. We can think of this as converting the statement $P\implies\forall x\ Q(x)$ into the equivalent statement $\forall x\ P\implies Q(x)$. On the other side, if we have a hypothesis of the form $\exists x\ P(x)$, we often write "Let $x$ be such that $P(x)$" and from that moment on we regard $x$ as fixed (but as something we know nothing about other than that it satisfies $P$). We can regard that as replacing $(\exists x\ P(x))\implies Q$ by $\forall x\ (P(x)\implies Q)$. </p>
+
+<h4>9. Basic equivalences using connectives.</h4>
+
+<p>A few examples of these are as follows. 
+  <ul>
+    <li>The statement $P\implies(Q\implies R)$ is equivalent to the statement $(P\ \wedge\ Q)\implies R$.</li> 
+    <li>The statement $((P\ \wedge\ Q)\ \wedge\ R)\implies S$ is equivalent to the statement $(P\ \wedge\ Q\ \wedge\ R)\implies S$. (This may seem uninteresting, but in tableau notation we sometimes want to replace a hypothesis of the form $P\ \wedge\ Q$ by two separate hypotheses $P$ and $Q$.)</li>     <li>The statement $\neg P\implies\neg Q$ is equivalent to the statement $Q\implies P$.</li></ul>
+</p>
+
+<h2>Using the above move types to prove that a union of two closed sets is closed.</h2>
+
+<p>There are two things left to explain. One is how a suitable sequence drawn from the above move types can be used to solve a simple problem. The other is to describe an algorithm that will select the right sequence of move types with (in this particular case, and for many other routine problems) no backtracking. In this section we concentrate on the first point.</p>
 
