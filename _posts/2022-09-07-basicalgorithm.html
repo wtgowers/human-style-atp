@@ -160,7 +160,7 @@ It comes in various flavours. For example, it can also be used to convert the st
 <p>Next, we peel the universal quantifier over $x$. In tableau form we can represent this peeling as follows.
   $$\begin{array}{|c|}
   \hline
-  $x: \text{element_of }X$\\
+  x: \text{element_of }X\\
   \hline
   \\
   \hline
@@ -176,6 +176,7 @@ It comes in various flavours. For example, it can also be used to convert the st
 
 <p>Applying the rule that allows us to replace $P\implies(Q\implies R)$ by $(P\ \wedge\ Q)\implies R$, we can transform this to
   $$\begin{array}{|c|}
+  \hline
   \text{is_closed}(A,X)\\
   \text{is_closed}(B,X)\\
   x\notin A\cup B\\
@@ -190,6 +191,7 @@ Again we have silently removed the type declaration.
 
 <p>A very basic expansion allows us to replace $u\notin U$ by $\neg(u\in U)$, so we do that.
   $$\begin{array}{|c|}
+  \hline
   \text{is_closed}(A,X)\\
   \text{is_closed}(B,X)\\
   \neg(x\in A\cup B)\\
@@ -203,6 +205,7 @@ Again we have silently removed the type declaration.
 
 <p>Expanding the definition of union, we obtain the following.
   $$\begin{array}{|c|}
+  \hline
   \text{is_closed}(A,X)\\
   \text{is_closed}(B,X)\\
   \neg(x\in A\ \vee x\in B)\\
@@ -216,6 +219,7 @@ Again we have silently removed the type declaration.
 
 <p>Applying de Morgan's law and also splitting up the resulting conjunction into two separate hypotheses (see the second example of move type 9) gives the following (after two moves, but we shall jump straight to the result).
   $$\begin{array}{|c|}
+  \hline
   \text{is_closed}(A,X)\\
   \text{is_closed}(B,X)\\
   \neg(x\in A)\\
