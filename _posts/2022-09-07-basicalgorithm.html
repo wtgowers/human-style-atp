@@ -125,3 +125,105 @@ It comes in various flavours. For example, it can also be used to convert the st
 
 <p>There are two things left to explain. One is how a suitable sequence drawn from the above move types can be used to solve a simple problem. The other is to describe an algorithm that will select the right sequence of move types with (in this particular case, and for many other routine problems) no backtracking. In this section we concentrate on the first point.</p>
 
+<p>Our initial problem state, in tableau form, is the following. 
+  $$\begin{array}{|c|}
+  \hline
+  (X,d): \text{metric space}\\
+  A: \text{subset of }X\\
+  B: \text{subset of }X\\
+  \hline
+  \\
+  \hline
+  \text{is_closed}(A,X)\\
+  \text{is_closed}(B,X)\\
+  \hline
+  \\
+  \hline
+  \text{is_closed}(A\cup B,X)\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>From this point on, we shall omit the type declarations for $X$, $A$ and $B$, though they should be thought of as present behind the scenes. Our first move type will be an expansion, which we apply to the predicate "is_closed" in the target. Already an important issue arises, which is that there are at least three expansions one might imagine using. One is that a set is closed if and only if its complement is open. Another bypasses that "intermediate" expansion and goes for a set $F$ being closed if and only if for every point not in the set there is a ball containing that point that is disjoint from the set. And a third is that a set is closed if and only if it is closed under taking limits of sequences. Any one of these choices leads to a sensible proof, so we will probably want most programs we write either to have a small degree of interactivity, to allow the user to choose when there is more than one sensible option, or to present several sensible proofs when they exist. (For the latter, one has to be careful if there are several choice points, as the number of proofs could then explode.) For this presentation let us go for the second of these expansions.
+  $$\begin{array}{|c|}
+  \hline
+  \text{is_closed}(A,X)\\
+  \text{is_closed}(B,X)\\
+  \hline
+  \\
+  \hline
+  \forall x\in X\ x\notin A\cup B\implies\exists\delta > 0\ B_\delta(x)\cap(A\cup B)=\emptyset\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>Next, we peel the universal quantifier over $x$. In tableau form we can represent this peeling as follows.
+  $$\begin{array}{|c|}
+  \hline
+  $x: \text{element_of }X$\\
+  \hline
+  \\
+  \hline
+  \text{is_closed}(A,X)\\
+  \text{is_closed}(B,X)\\
+  \hline
+  \\
+  \hline
+  x\notin A\cup B\implies\exists\delta > 0\ B_\delta(x)\cap(A\cup B)=\emptyset\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>Applying the rule that allows us to replace $P\implies(Q\implies R)$ by $(P\ \wedge\ Q)\implies R$, we can transform this to
+  $$\begin{array}{|c|}
+  \text{is_closed}(A,X)\\
+  \text{is_closed}(B,X)\\
+  x\notin A\cup B\\
+  \hline
+  \\
+  \hline
+  \exists\delta > 0\ B_\delta(x)\cap(A\cup B)=\emptyset\\
+  \hline
+  \end{array}$$
+Again we have silently removed the type declaration.  
+</p>
+
+<p>A very basic expansion allows us to replace $u\notin U$ by $\neg(u\in U)$, so we do that.
+  $$\begin{array}{|c|}
+  \text{is_closed}(A,X)\\
+  \text{is_closed}(B,X)\\
+  \neg(x\in A\cup B)\\
+  \hline
+  \\
+  \hline
+  \exists\delta > 0\ B_\delta(x)\cap(A\cup B)=\emptyset\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>Expanding the definition of union, we obtain the following.
+  $$\begin{array}{|c|}
+  \text{is_closed}(A,X)\\
+  \text{is_closed}(B,X)\\
+  \neg(x\in A\ \vee x\in B)\\
+  \hline
+  \\
+  \hline
+  \exists\delta > 0\ B_\delta(x)\cap(A\cup B)=\emptyset\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>Applying de Morgan's law and also splitting up the resulting conjunction into two separate hypotheses (see the second example of move type 9) gives the following (after two moves, but we shall jump straight to the result).
+  $$\begin{array}{|c|}
+  \text{is_closed}(A,X)\\
+  \text{is_closed}(B,X)\\
+  \neg(x\in A)\\
+  \neg(x\in B)\\
+  \hline
+  \\
+  \hline
+  \exists\delta > 0\ B_\delta(x)\cap(A\cup B)=\emptyset\\
+  \hline
+  \end{array}$$
+</p>
