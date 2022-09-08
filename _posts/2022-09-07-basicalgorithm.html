@@ -231,3 +231,53 @@ Again we have silently removed the type declaration.
   \hline
   \end{array}$$
 </p>
+
+<p>Next, we expand the two further instances of "is_closed", and then the two instances of "$\notin$" that result. (So again, the tableau shown is the result of several moves and not just one.)
+  $$\begin{array}{|c|}
+  \hline
+  \forall u\in X\ \neg(u\in A)\implies\exists\alpha > 0\ B_\alpha(u)\cap A=\emptyset\\
+  \forall v\in X\ \neg(v\in B)\implies\exists\beta > 0\ B_\beta(v)\cap B=\emptyset\\
+  \neg(x\in A)\\
+  \neg(x\in B)\\
+  \hline
+  \\
+  \hline
+  \exists\delta > 0\ B_\delta(x)\cap(A\cup B)=\emptyset\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>There are now two opportunities to apply modus ponens using hypotheses, so we do both of them. For tidiness of presentation we remove the hypotheses that were used and will not be used again.
+  $$\begin{array}{|c|}
+  \hline
+  \exists\alpha > 0\ B_\alpha(x)\cap A=\emptyset\\
+  \exists\beta > 0\ B_\beta(x)\cap B=\emptyset\\
+  \hline
+  \\
+  \hline
+  \exists\delta > 0\ B_\delta(x)\cap(A\cup B)=\emptyset\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>Next, we peel the existential quantifiers over $\alpha$ and $\beta$.
+  $$\begin{array}{|c|}
+  \hline
+  \alpha: \text{positive real number}\\
+  \beta: \text{positive real number}\\
+  \hline
+  \\
+  \hline
+  B_\alpha(x)\cap A=\emptyset\\
+  B_\beta(x)\cap B=\emptyset\\
+  \hline
+  \\
+  \hline
+  \exists\delta > 0\ B_\delta(x)\cap(A\cup B)=\emptyset\\
+  \hline
+  \end{array}$$
+There is a small issue here about whether the type of $\alpha$ should be "positive real number" or whether it should be "real number" with the positivity being a hypothesis. For many $\epsilon$-$\delta$ arguments, the first option seems a better reflection of how we think of these numbers.   
+</p>
+
+
+
