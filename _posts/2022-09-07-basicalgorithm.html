@@ -280,8 +280,6 @@ There is a small issue here about whether the type of $\alpha$ should be "positi
 </p>
 
 <p>Because we don't know what $\delta$ is, we're not in a good position to deduce the target statement, so this is a good time to turn $\delta$ into a metavariable. In the notation we are using here, we shall indicate this by removing the existential quantifier and attaching a bullet to $\delta$. (For more complicated problems, it becomes important to specify carefully which bulleted variables are allowed to depend on which other variables. The main thing here is that $\delta$ can, and indeed will, depend on $\alpha$ and $\beta$.)
-
-<p>Next, we peel the existential quantifiers over $\alpha$ and $\beta$.
   $$\begin{array}{|c|}
   \hline
   \\
@@ -294,7 +292,7 @@ There is a small issue here about whether the type of $\alpha$ should be "positi
   B_{\delta^\bullet}(x)\cap(A\cup B)=\emptyset\\
   \hline
   \end{array}$$
-There is a small issue here about whether the type of $\alpha$ should be "positive real number" or whether it should be "real number" with the positivity being a hypothesis. For many $\epsilon$-$\delta$ arguments, the first option seems a better reflection of how we think of these numbers.   
+Once again, we have removed the type declarations.  
 </p>
 
 <p>Now let us expand the target. There is some choice about how to do this, but the following one will turn out to be convenient.
@@ -443,4 +441,6 @@ then we find that we can instantiate it with $a=d(y,x)$, $b=\delta^\bullet$ and 
 
 <p>Creating a metavariable is something one tends to do when one needs to instantiate a quantified variable and there does not appear to be a variable or term that will do the job. If one is going to have to generate a new variable or build some more complex term, then very often one will want to manipulate the problem state quite a bit more before doing so, and that is where metavariables come into their own. This again has fairly low priority -- one does it when a bit "stuck" -- but low priority certainly doesn't mean that it happens rarely.</p>
 
-<p>The ROBOT algorithm worked by taking principles such as the above ones and simply listing move types in order of priority, repeatedly doing a move with move type of the highest availble priority. (The list of move types was a more refined -- for instance, expanding a target was given higher priority than expanding a hypothesis.)</p> 
+<p>The ROBOT algorithm worked by taking principles such as the above ones and simply listing move types in order of priority, repeatedly doing a move with move type of the highest availble priority. (The list of move types was a more refined -- for instance, expanding a target was given higher priority than expanding a hypothesis.) If you look back through the sequence of problem states in the previous section, you will see that the moves chosen at each stage are broadly speaking chosen with the priorities just suggested.</p>
+
+<p>Most of the time, that worked very smoothly, but occasionally small issues would arise such as which expansion to choose when there is more than one option, or what there is available in the library. A lot of the detailed work is in dealing with such issues, ideally not in ad hoc ways but in coming up with more sophisticated principles (that is, not just putting move types in order but also taking into account features of the problem state) that will deal with them in satisfactorily general ways.</p>
