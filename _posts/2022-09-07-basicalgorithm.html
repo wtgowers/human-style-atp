@@ -160,7 +160,7 @@ It comes in various flavours. For example, it can also be used to convert the st
 <p>Next, we peel the universal quantifier over $x$. In tableau form we can represent this peeling as follows.
   $$\begin{array}{|c|}
   \hline
-  x: \text{element_of }X\\
+  x: \text{element of }X\\
   \hline
   \\
   \hline
@@ -279,5 +279,156 @@ Again we have silently removed the type declaration.
 There is a small issue here about whether the type of $\alpha$ should be "positive real number" or whether it should be "real number" with the positivity being a hypothesis. For many $\epsilon$-$\delta$ arguments, the first option seems a better reflection of how we think of these numbers.   
 </p>
 
+<p>Because we don't know what $\delta$ is, we're not in a good position to deduce the target statement, so this is a good time to turn $\delta$ into a metavariable. In the notation we are using here, we shall indicate this by removing the existential quantifier and attaching a bullet to $\delta$. (For more complicated problems, it becomes important to specify carefully which bulleted variables are allowed to depend on which other variables. The main thing here is that $\delta$ can, and indeed will, depend on $\alpha$ and $\beta$.)
 
+<p>Next, we peel the existential quantifiers over $\alpha$ and $\beta$.
+  $$\begin{array}{|c|}
+  \hline
+  \\
+  \hline
+  B_\alpha(x)\cap A=\emptyset\\
+  B_\beta(x)\cap B=\emptyset\\
+  \hline
+  \\
+  \hline
+  B_{\delta^\bullet}(x)\cap(A\cup B)=\emptyset\\
+  \hline
+  \end{array}$$
+There is a small issue here about whether the type of $\alpha$ should be "positive real number" or whether it should be "real number" with the positivity being a hypothesis. For many $\epsilon$-$\delta$ arguments, the first option seems a better reflection of how we think of these numbers.   
+</p>
 
+<p>Now let us expand the target. There is some choice about how to do this, but the following one will turn out to be convenient.
+  $$\begin{array}{|c|}
+  \hline
+  \\
+  \hline
+  B_\alpha(x)\cap A=\emptyset\\
+  B_\beta(x)\cap B=\emptyset\\
+  \hline
+  \\
+  \hline
+  \forall y\in X\ y\in B_{\delta^\bullet}(x)\implies y\notin A\cup B\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>Next, we peel the universal quantifier and also turn the premise of the target implication into a hypothesis.
+  $$\begin{array}{|c|}
+  \hline
+  y: \text{element of }X\\
+  \hline
+  \\
+  \hline
+  B_\alpha(x)\cap A=\emptyset\\
+  B_\beta(x)\cap B=\emptyset\\
+  y\in B_{\delta^\bullet}(x)\\
+  \hline
+  \\
+  \hline
+  y\notin A\cup B\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>Now let us do some basic propositional calculus and expansion to reformulate the target.
+  $$\begin{array}{|c|}
+  \hline
+  \\
+  \hline
+  B_\alpha(x)\cap A=\emptyset\\
+  B_\beta(x)\cap B=\emptyset\\
+  y\in B_{\delta^\bullet}(x)\\
+  \hline
+  \\
+  \hline
+  \neg(y\in A)\\
+  \neg(y\in B)\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>Next, we expand the first two hypotheses.
+  $$\begin{array}{|c|}
+  \hline
+  \\
+  \hline
+  \forall u\in X\ u\in B_\alpha(x)\implies u\notin A\\
+  \forall v\in X\ v\in B_\beta(x)\implies v\notin B\\
+  y\in B_{\delta^\bullet}(x)\\
+  \hline
+  \\
+  \hline
+  \neg(y\in A)\\
+  \neg(y\in B)\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>Since we've been getting rid of $\notin$, we continue the process. (Alternatively we could reinstate it in the target statements.)
+  $$\begin{array}{|c|}
+  \hline
+  \\
+  \hline
+  \forall u\in X\ u\in B_\alpha(x)\implies\neg(u\in A)\\
+  \forall v\in X\ v\in B_\beta(x)\implies\neg(v\in B)\\
+  y\in B_{\delta^\bullet}(x)\\
+  \hline
+  \\
+  \hline
+  \neg(y\in A)\\
+  \neg(y\in B)\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>We can now do (straightforward, non-library) modus tollens twice, to change our target statements. For tidiness, we get rid of the statements that have been used in the process.
+  $$\begin{array}{|c|}
+  \hline
+  \\
+  \hline
+  y\in B_{\delta^\bullet}(x)\\
+  \hline
+  \\
+  \hline
+  y\in B_\alpha(x)\\
+  y\in B_\beta(x)\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>At this stage, maybe the library contains a result about open balls that says that if $\theta_1\leq\theta_2$ then $B_{\theta_1}(x)\subset B_{\theta_2}(x)$. But let's not assume that that's the case, and instead expand statements of the form $u\in B_\theta(v)$ as $d(u,v)<\theta$.
+  $$\begin{array}{|c|}
+  \hline
+  \\
+  \hline
+  d(y,x) < \delta^\bullet\\
+  \hline
+  \\
+  \hline
+  d(y,x) < \alpha\\
+  d(y,x) < \beta\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>Now comes a slightly complicated version of "library modus tollens". A human mathematician will look at the assumption $d(y,x) < \delta^\bullet$ and see easily that in order to be able to deduce that $d(y,x) < \alpha$ it will be sufficient if $\delta^\bullet\leq\alpha$. This isn't modus tollens, but if the library contains the result
+  $$\forall a,b,c\in\mathbb R\ a < b\ \wedge\ b\leq c\implies a < c$$
+then we find that we can instantiate it with $a=d(y,x)$, $b=\delta^\bullet$ and $c=\alpha$. That would give us exactly what we want, were it not for the fact that we are missing the hypothesis $\delta^\bullet\leq\alpha$. But modus tollens (in a version with multiple hypotheses) allows us to replace the target by the missing hypothesis. Applying this move twice, and removing the used up statement, we obtain the following problem state.
+  $$\begin{array}{|c|}
+  \hline
+  \\
+  \hline
+  \hline
+  \\
+  \hline
+  \delta^\bullet \leq \alpha\\
+  \delta^\bullet \leq \beta\\
+  \hline
+  \end{array}$$
+</p>
+
+<p>At this point, either one can try to solve the problem of finding a positive real number that is bounded above by two given positive real numbers (one approach is to try $\alpha$ and observe that the only way it can fail is if $\beta < \alpha$, in which case $\beta$ works), or one can just assume that there is an appopriate library result that tells us that $\min\{\alpha,\beta\}$ does the job. Since we have illustrated almost all the move types, we shall opt for the latter assumption and declare the problem solved at this point. (More precisely, we can use the library result to reduce the target statement, and hence the entire problem state, to TRUE.)</p>
+  
+<h2>Designing an algorithm that chooses sensible moves at each stage.</h2>
+
+<p>There are many potential ways of doing this, so the aim here is not to say how it <em>should</em> be done, but to give an idea of how it <em>can</em> be done in such a way as to solve problems that are sufficiently routine.
