@@ -413,7 +413,7 @@ There is a small issue here about whether the type of $\alpha$ should be "positi
 
 <p>Now comes a slightly complicated version of "library modus tollens". A human mathematician will look at the assumption $d(y,x) < \delta^\bullet$ and see easily that in order to be able to deduce that $d(y,x) < \alpha$ it will be sufficient if $\delta^\bullet\leq\alpha$. This isn't modus tollens, but if the library contains the result
   $$\forall a,b,c\in\mathbb R\ a < b\ \wedge\ b\leq c\implies a < c$$
-then we find that we can instantiate it with $a=d(y,x)$, $b=\delta^\bullet$ and $c=\alpha$. That would give us exactly what we want, were it not for the fact that we are missing the hypothesis $\delta^\bullet\leq\alpha$. But modus tollens (in a version with multiple hypotheses) allows us to replace the target by the missing hypothesis. Applying this move twice, and removing the used up statement, we obtain the following problem state.
+then we find that we can instantiate it with $a=d(y,x)$, $b=\delta^\bullet$ and $c=\alpha$. That would give us exactly what we want, were it not for the fact that we are missing the hypothesis $\delta^\bullet\leq\alpha$. But modus tollens (in a version with multiple hypotheses) allows us to replace the target by the missing hypothesis. Applying this move twice, and removing the used up statements, we obtain the following problem state.
   $$\begin{array}{|c|}
   \hline
   \\
@@ -431,4 +431,16 @@ then we find that we can instantiate it with $a=d(y,x)$, $b=\delta^\bullet$ and 
   
 <h2>Designing an algorithm that chooses sensible moves at each stage.</h2>
 
-<p>There are many potential ways of doing this, so the aim here is not to say how it <em>should</em> be done, but to give an idea of how it <em>can</em> be done in such a way as to solve problems that are sufficiently routine.
+<p>There are many potential ways of doing this, so the aim here is not to say how it <em>should</em> be done, but to give an idea of how it <em>can</em> be done in such a way as to solve problems that are sufficiently routine.</p>
+
+<p>A first comment is that there are certain "tidying" moves that are almost always worth doing without even thinking. The main examples are peeling and the move that takes a target of the form $P\implies Q$ and turns $P$ into a hypothesis and leaves $Q$ as the target. Another example is taking a hypothesis or target of the form $P\ \wedge\ Q$ and splitting it up into two hypotheses or targets $P$ and $Q$. So at least for a basic algorithm one can just get it to do those moves whenever they are possible.</p>
+
+<p>"Reasoning" moves such as modus ponens and modus tollens are nearly always a good idea if the problem is fairly routine and the library is not involved, so they can be of high priority, but less high than tidying moves. If library statements are involved, then the quality of a reasoning move depends to some extent on how well the library result fits the problem state. If, for example, there is a target $Q(x)$ and a library result of the form $\forall y\ P_1(y)\ \wedge\ P_2(y)\implies Q(y)$, then that will not be very appealing if neither $P_1(x)$ nor $P_2(x)$ is a hypothesis, as that would replace the target with two new targets. But if one of $P_1(x)$ and $P_2(x)$ is present (as was the case near the end of the proof given above), then it becomes a significantly better move.</p>
+
+<p>Instantiation of a quantified variable with a term of the same type that is already present is again quite a good move for routine problems, though for more complicated problems it is better to have some evidence that the instantiation will be fruitful. (Such evidence might be that the variable is required to satisfy a condition and the term satisfies that condition, or perhaps has a different property that gives one reason to hope that it might satisfy the condition.)</p>
+
+<p>It is nice to reason at a high level when that is possible, so expanding definitions is something of a last resort: when all else fails we try to prove the statement in a more complicated lower-level way. This applies more to expanding predicates. A more basic expansion such as replacing $x\in f^{-1}(A)$ by $f(x)\in A$ or $x\in A\cap B$ by $x\in A\ \wedge\ x\in B$ (a sign that these expansions are more basic is that they don't introduce quantifiers) has more of the flavour of a tidying move, so tends to have higher priority.</p>
+
+<p>Creating a metavariable is something one tends to do when one needs to instantiate a quantified variable and there does not appear to be a variable or term that will do the job. If one is going to have to generate a new variable or build some more complex term, then very often one will want to manipulate the problem state quite a bit more before doing so, and that is where metavariables come into their own. This again has fairly low priority -- one does it when a bit "stuck" -- but low priority certainly doesn't mean that it happens rarely.</p>
+
+<p>The ROBOT algorithm worked by taking principles such as the above ones and simply listing move types in order of priority, repeatedly doing a move with move type of the highest availble priority. (The list of move types was a more refined -- for instance, expanding a target was given higher priority than expanding a hypothesis.)</p> 
