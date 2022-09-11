@@ -21,10 +21,11 @@ header.masthead {
     .page-heading,
     .post-heading,
     .site-heading {
-        padding: 200px 0 150px;
+//         padding: 200px 0 150px;
+        padding: 100px 0 50px;
         color: white;
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 500px) {
             padding: 200px 0;
         }
     }
@@ -34,7 +35,7 @@ header.masthead {
         text-align: center;
 
         h1 {
-            font-size: 50px;
+            font-size: 30px;
             margin-top: 0;
         }
 
@@ -47,9 +48,9 @@ header.masthead {
             font-family: $headings-font-family;
         }
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 500px) {
             h1 {
-                font-size: 80px;
+                font-size: 50px;
             }
         }
     }
@@ -83,7 +84,7 @@ header.masthead {
             }
         }
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 500px) {
             h1 {
                 font-size: 5px;//55px;
             }
