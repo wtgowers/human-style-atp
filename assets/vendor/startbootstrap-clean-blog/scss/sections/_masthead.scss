@@ -35,7 +35,7 @@ header.masthead {
         text-align: center;
 
         h1 {
-            font-size: 40px;
+            font-size: 50px;
             margin-top: 0;
         }
 
@@ -50,14 +50,14 @@ header.masthead {
 
         @media only screen and (min-width: 100px) {
             h1 {
-                font-size: 40px;
+                font-size: 50px;
             }
         }
     }
 
     .post-heading {
         h1 {
-            font-size: 40px;
+            font-size: 50px;
         }
 
         .meta,
@@ -74,7 +74,7 @@ header.masthead {
         }
 
         .meta {
-            font-size: 40px;
+            font-size: 50px;
             font-weight: 300;
             font-style: italic;
             font-family: $font-family-base;
