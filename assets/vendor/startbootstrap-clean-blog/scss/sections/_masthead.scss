@@ -1,7 +1,7 @@
 // Styling for the masthead
 header.masthead {
     // TIP: Background images are set within the HTML using inline CSS!
-    margin-bottom: 5px;//50px;
+    margin-bottom: 10px;//50px;
     background: no-repeat center center;
     background-color: $gray-600;
     background-attachment: scroll;
@@ -35,7 +35,7 @@ header.masthead {
         text-align: center;
 
         h1 {
-            font-size: 25px;
+            font-size: 20px;
             margin-top: 0;
         }
 
@@ -50,14 +50,14 @@ header.masthead {
 
         @media only screen and (min-width: 200px) {
             h1 {
-                font-size: 50px;
+                font-size: 30px;
             }
         }
     }
 
     .post-heading {
         h1 {
-            font-size: 35px;
+            font-size: 30px;
         }
 
         .meta,
