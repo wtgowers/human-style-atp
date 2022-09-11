@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A problem about continuity and closures"
-subtitle: "What to do when a waterfall architecture is insufficient"
+subtitle: "A follow-up to the previous post"
 date: 2022-09-09 17:00:00
 background: '/img/maths_background.png'
 author: "Timothy Gowers"
