@@ -2,7 +2,7 @@
 
 header.masthead2 {
     // TIP: Background images are set within the HTML using inline CSS!
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     background: no-repeat center center;
     background-color: $gray-600;
     background-attachment: scroll;
