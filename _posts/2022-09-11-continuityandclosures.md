@@ -8,8 +8,6 @@ author: "Timothy Gowers"
 mathjax: true
 ---
 
-This post is not yet finished.
-
 ## Statement of the problem.
 
 In <a href="{{site.baseurl}}/2022/09/09/subtasks.html">the previous post</a>, which I recommend reading before this one, as much of it is relevant to this post and I don't plan to repeat that material here, I used as an example the problem of showing that if $X$ and $Y$ are topological spaces and $f:X\to Y$, then $f$ is continuous if it satisfies the property that $f(\overline A)\subset\overline{f(A)}$ for every subset $A$ of $X$. This implication is in fact an equivalence, so in this post I shall discuss how a program might discover a proof of the reverse implication, namely the following statement.
