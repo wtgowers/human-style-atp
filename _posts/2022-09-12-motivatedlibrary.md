@@ -48,4 +48,13 @@ I thought I was going to have more to say there, but actually I don't. I'm wonde
 
 To test that thought, let me try to think about the Baire category theorem example once more. If we had the statement $\exists x\in X\ \forall n\in\mathbb N\ P(n,x)$ as a target, the proposal above was that we would use library reasoning to convert that into a statement that would say something along the lines of "There is a notion of smallness such that for each $n$ the set of $x$ such that $\neg P(n,x)$ is small." But what intermediate goal would be achieved by reformulating the target in this way?
 
-As a human mathematician I might say something like this. "Typically, proving uniform statements is hard, and one needs suitable tools to do it. There aren't very many standard tools of this kind, so let's see if we can find one that works." But somehow that doesn't easily translate into the language of problem states and their features. 
+As a human mathematician I might say something like this. "Typically, proving uniform statements is hard, and one needs suitable tools to do it. There aren't very many standard tools of this kind, so let's see if we can find one that works." But somehow that doesn't easily translate into the language of problem states and their features. That is, what would make the target
+$$\exists\Sigma\ \forall n\in\mathbb N\ \text{is_small}_\Sigma\{x\in X:P(n,x)\}$$
+preferable to the target
+$$\exists x\in X\ \forall n\in\mathbb N\ P(n,x)?$$
+
+A possible answer comes if we invent a new notation, writing $\text{a.e.}_\Sigma\ x\ Q(x)$ to mean $\{x:\neg Q(x)\}\in\Sigma$. This would be read as "for almost all (in the sense of $\Sigma$) $x$, $Q(x)$". In this notation the first target would now read
+$$\exists\Sigma\ \forall n\in\mathbb N\ \text{a.e.}_\Sigma\ x\ P(n,x).$$
+This would be better than the first target because the quantifiers would have been reversed (at the cost of replacing "there exists" by the much stronger "for almost all (in the sense of $\Sigma$)".
+
+But that still feels unsatisfactory, because the improvement is not a syntactic feature of the problem state, but rather a mathematical one -- we somehow know from experience that replacing a uniform statement by a non-uniform one has a good chance of being helpful. Maybe that idea can itself be encoded as a formal statement in the library, though I'm not sure I see how to do it.
