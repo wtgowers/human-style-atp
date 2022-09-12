@@ -49,7 +49,7 @@ I thought I was going to have more to say there, but actually I don't. I'm wonde
 To test that thought, let me try to think about the Baire category theorem example once more. If we had the statement $\exists x\in X\ \forall n\in\mathbb N\ P(n,x)$ as a target, the proposal above was that we would use library reasoning to convert that into a statement that would say something along the lines of "There is a notion of smallness such that for each $n$ the set of $x$ such that $\neg P(n,x)$ is small." But what intermediate goal would be achieved by reformulating the target in this way?
 
 As a human mathematician I might say something like this. "Typically, proving uniform statements is hard, and one needs suitable tools to do it. There aren't very many standard tools of this kind, so let's see if we can find one that works." But somehow that doesn't easily translate into the language of problem states and their features. That is, what would make the target
-$$ \exists\Sigma\ \forall n\in\mathbb N\ \text{is_small}_\Sigma( \{ x\in X:P(n,x) \} ) $$
+$$ \exists\Sigma\ \forall n\in\mathbb N\ \mathrm{is)\_\mathrm{small}_\Sigma( \{ x\in X:P(n,x) \} ) $$
 preferable to the target
 $$\exists x\in X\ \forall n\in\mathbb N\ P(n,x)?$$
 
