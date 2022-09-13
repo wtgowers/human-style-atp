@@ -20,15 +20,17 @@ A closed subset of a compact set is compact. <em>[Requires creating an open cove
 
 A composition of continuous functions is continuous. <em>[Very routine -- could be solved easily by ROBOT]</em>
 
-$\overline{\overline{A}}=\overline{A}$ for every set $A$. <em>[Should be routine. Good test problem.]</em>
+$\overline{\overline{A}}=\overline{A}$ for every set $A$. <em>[Should be routine. Good test problem. Involves library reasoning.]</em>
 
-If $f(\overline{A})\subset\overline{f(A)}$ for every $A$ then $f$ is continuous. <em>[Routine but a bit tricky. Good test problem.]</em>
+If $f(\overline{A})\subset\overline{f(A)}$ for every $A$ then $f$ is continuous. <em>[Routine but a bit tricky. Good test problem. Involves library reasoning.]</em>
 
 If $f$ is continuous then $f(\overline{A})\subset\overline{f(A)}$ for every $A$. <em>[Routine but a bit tricky. Good test problem.]</em>
 
 If $f$ is continuous then for every neighbourhood $N$ of $f(x)$ there is a neighbourhood $M$ of $x$ such that $f(M)\subset N$. <em>[Should be routine. Good test problem.]</em>
 
 If for every $x$ and for every neighbourhood $N$ of $f(x)$ there is a neighbourhood $M$ of $x$ such that $f(M)\subset N$, then $f$ is continuous. <em>[Should be routine. Good test problem.]</em>
+
+A continuous bijection from a compact space to a Hausdorff space is a homeomorphism. <em>[Hard to do from first principles, but a good test of library-reasoning capabilities if the program is allowed to use facts such as that a continuous image of a compact set is compact or that a compact subset of a Hausdorff space is closed.]</em>
 
 <h3>Metric spaces.</h3>
 
@@ -85,3 +87,29 @@ $(A\cap B)^c=A^c\cup B^c$. <em>[Requires splitting into cases, so good test prob
 <h3>Sequences and series.</h3>
 
 A sequence that is unbounded above has a subsequence that tends to infinity. <em>[Requires building a sequence. Involves induction. This would be quite an ambitious target, though the sort of problem we'll need a system to be able to solve easily if it's going to be able to do even moderately interesting constructions in analysis.]</em>
+
+<h3>Groups.</h3>
+
+Lagrange's theorem. <em>[Probably hard for a fully automatic prover. But one could start with a motivated proof and take things from there.]</em>
+
+The kernel of a homomorphism is a normal subgroup. <em>[Should be pretty easy.]</em>
+  
+A normal subgroup is the kernel of a homomorphism. <em>[A lot harder, as it involves constructing the quotient group.]</em>
+
+If $ab=ac$ then $b=c$. <em>[A good test of subtasks.]</em>
+
+If $a^2=e$ for every element $a$, then $G$ is Abelian. <em>[Another good test of subtasks, but also of mixing equality with logic.]</em>
+
+$(ab)^{-1}=b^{-1}a^{-1}$. <em>[Another good subtasks exercise]</em>
+
+A normal subgroup of a normal subgroup need not be normal. <em>[A good test for an existence solver.]</em>
+
+A normal subgroup is a union of conjugacy classes. <em>[Should be easy.]</em>
+
+Every finite group is a subgroup of some permutation group $S_n$. <em>[I would hope that this would be easy, but I'm not absolutely sure.]</em>
+
+Two permutations are conjugate in $S_n$ if and only if they have the same cycle type. <em>[I would hope that the only if direction was easy. The if direction could be quite a bit more complicated.]</em>
+
+$A_4$ has no subgroup of index 2. <em>[This needs quite a lot of library reasoning -- to spot that such a subgroup would have to be normal, to see then that it would have to be a union of conjugacy classes, and to work out that it's not possible to find conjugacy classes (including $\\\{e\\\}$) with sizes adding up to 6. Part of this would require showing that the 4-cycles form two conjugacy classes, each of size 3, unless this too could be appealed to as a library result.]</em>
+
+The orbit-stabilizer theorem. <em>[This is a rather good example of a proof that is essentially routine but is found hard by beginners. So it would be a very good test problem for any algebraic reasoner.]</em>
