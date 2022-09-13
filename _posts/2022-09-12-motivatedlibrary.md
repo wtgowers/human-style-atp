@@ -8,8 +8,6 @@ author: "Timothy Gowers"
 mathjax: true
 ---
 
-Unfinished post.
-
 ## The problem
 
 One of the central theoretical aims of the project is to come up with a finite set of move types that can be used to generate all proofs that a human would judge to be "motivated", in the sense that they do not involve drawing a rabbit out of a hat. (For basic definitions we use, such as that of a "move type", see <a href="{{site.baseurl}}/2022/09/07/basicalgorithm.html">this post</a>.) This problem splits naturally into two subproblems: say more precisely what counts as a "rabbit out of a hat", and devise the set of move types.
