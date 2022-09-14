@@ -113,3 +113,17 @@ Two permutations are conjugate in $S_n$ if and only if they have the same cycle 
 $A_4$ has no subgroup of index 2. <em>[This needs quite a lot of library reasoning -- to spot that such a subgroup would have to be normal, to see then that it would have to be a union of conjugacy classes, and to work out that it's not possible to find conjugacy classes (including $\\\{e\\\}$) with sizes adding up to 6. Part of this would require showing that the 4-cycles form two conjugacy classes, each of size 3, unless this too could be appealed to as a library result.]</em>
 
 The orbit-stabilizer theorem. <em>[This is a rather good example of a proof that is essentially routine but is found hard by beginners. So it would be a very good test problem for any algebraic reasoner.]</em>
+
+<h3>Fields</h3>
+
+Using just the field axioms, prove that $0x=0$ for every $x$. <em>[Tricky for beginning undergraduates, so likely to be tricky for a non-cheating program.]</em>
+
+Using just the field axioms, prove that $(-x)(-y)=xy$ for every $x$ and $y$. <em>[Similar.]</em>
+
+Prove that $\mathbb Q(\sqrt 2)$ is a field. <em>[The question here is how a program would discover the trick of multiplying numerator and denominator by the conjugate of the denominator.]</em>
+
+Prove that left distributivity implies right distributivity. <em>[This should be a fairly easy question for a subtasks-based algorithm.]</em>
+
+Prove that if $xy=0$ then $x=0$ or $y=0$. <em>[The proof is easy, but this might be slightly tricky for a program, as it involves splitting into cases -- though the cases are obvious. Here I assume that it's allowed to use the result that anything multiplied by 0 gives 0.]</em>
+
+Define $n.1$ inductively by $0.1=0$ and $(n+1).1=n.1 + 1$ (where $n\in\mathbb N$ and the 1 on the right-hand side of the multiplication is the multiplicative identity element of the field). Suppose that there is a positive integer $n$ such that $n.1=0$. Prove that $n.x=0$ for every element $x$ of the field (defined in a similar way). Prove also that the minimal such $n$ is a prime. <em>[It might be a little bit tricky even to formulate these problems in a nice way. The proofs could be quite hard given the inductive definitions of $n.1$ and $n.x$ and the fact that one has to mix elementary number theory with the algebra.]</em>
