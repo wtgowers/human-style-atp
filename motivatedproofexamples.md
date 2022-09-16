@@ -54,7 +54,7 @@ mathjax: true
 
 <p><a href="https://drive.google.com/file/d/1iNRhDlgIzImipIEqD3v9Y4q6Fqo0A2Nu/view?usp=sharing" target="_blank">Some more questions from the same source.</a> This contains a couple of examples of symmetry-based reasoning, namely noticing that the problem has reduced to itself with different values, and using that as a motivation for doing a proof by induction.</p>
 
-<p><a href="https://drive.google.com/file/d/1N7PiwUGW_K_uM46DLE4-DXDmp4xKcpom/view?usp=sharing" target="_blank">A motivated proof of Cantor's Diagonal argument.</a></p>
+<p><a href="https://drive.google.com/file/d/1N7PiwUGW_K_uM46DLE4-DXDmp4xKcpom/view?usp=sharing" target="_blank">A motivated proof of Cantor's Diagonal argument.</a>Similar but not quite the same as the above</p>
 
 <p><a href="https://drive.google.com/file/d/1eMA6DaWzLEPsQMoB8ipWWy4SzKKA609g/view?usp=sharing" target="_blank">A Compact subset of a Hausdorff space is closed.</a></p>
 
