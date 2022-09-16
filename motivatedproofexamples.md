@@ -48,7 +48,14 @@ mathjax: true
 
 <p><a href="https://drive.google.com/file/d/1nKnQRhT6EaXK_fZhh6jgq5znRCx3mm03/view?usp=sharing" target="_blank">A uniform limit of continuous functions is continuous.</a> Numbered steps with accompanying motivations in red.</p>
 
+<p><a href="https://drive.google.com/file/d/1rLni27-4n1u_vpsUaqZsZCMff5HKvvT5/view?usp=sharing" target="_blank">A question about sequences from a past Discrete Mathematics exam for Computer Science students.</a> Contains some interesting discussion about proving an expression is equal to 0 in a motivated way.</p>
 
+<p><a href="https://drive.google.com/file/d/16NnFwTkUNQDkMw5niE5WAc7YS6A5xvj-/view?usp=sharing" target="_blank">A more challenging question from the same source.</a> There are several proofs presented, some being easier to motivate than others.</p>
 
+<p><a href="https://drive.google.com/file/d/1iNRhDlgIzImipIEqD3v9Y4q6Fqo0A2Nu/view?usp=sharing" target="_blank">Some more questions from the same source.</a> This contains a couple of examples of symmetry-based reasoning, namely noticing that the problem has reduced to itself with different values, and using that as a motivation for doing a proof by induction.</p>
 
+<p><a href="https://drive.google.com/file/d/1N7PiwUGW_K_uM46DLE4-DXDmp4xKcpom/view?usp=sharing" target="_blank">A motivated proof of Cantor's Diagonal argument.</a></p>
 
+<p><a href="https://drive.google.com/file/d/1eMA6DaWzLEPsQMoB8ipWWy4SzKKA609g/view?usp=sharing" target="_blank">A Compact subset of a Hausdorff space is closed.</a></p>
+
+<p><a href="https://drive.google.com/file/d/1OxrT3y-9ewLg4_Lt0sVAhGcJrOLSn2Lo/view?usp=sharing" target="_blank">The closure of the interior of the closure of the interior is the same as the closure of the interior.</a> This motivated proof uses the idea of generalising a lemma.</p>
