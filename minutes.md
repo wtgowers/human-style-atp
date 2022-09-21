@@ -13,7 +13,7 @@ This is a partial public record of what is discussed in our meetings, some of wh
 <details>
     <summary><b>Thursday 28th April 2022</b></summary>
     
-### Thursday 28th April 2022
+<!-- ### Thursday 28th April 2022 -->
     
 *Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.*
 
@@ -31,7 +31,7 @@ Not too many firm conclusions were reached. Here are a few scattered thoughts th
 <details>
     <summary><b>Thursday 5th May, 2022</b></summary>
 
-### Thursday 5th May 2022
+<!-- ### Thursday 5th May 2022 -->
 
 *Present (on Zoom): Katie Collins, Timothy Gowers, Mateja Jamnik, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.*
 
@@ -49,7 +49,7 @@ The website was again discussed but the discussion was rather brief and not much
 <details>
     <summary><b>Thursday 12th May 2022</b></summary> 
     
-### Thursday 12th May 2022
+<!-- ### Thursday 12th May 2022 -->
 
 *Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas. Apologies received from Mateja Jamnik.*
 
@@ -72,7 +72,7 @@ AK-A mentioned Nitpick and Quickcheck, two counterexample-finding tools in Isabe
 <details> 
     <summary><b>Friday 20th May 2022</b></summary> 
     
-### Friday 20th May 2022
+<!-- ### Friday 20th May 2022 -->
 
 *Present (in person, at different moments): Katie Collins, Timothy Gowers, Angeliki Kousoukou-Argyraki, Bhavik Mehta, Wills Wynn-Thomas.*
 
@@ -83,7 +83,7 @@ We met in person for the first time. In the late morning Katie Collins, Bhavik M
 <details> 
     <summary><b>Thursday 30th June 2022</b></summary> 
     
-### Thursday 30th June 2022
+<!-- ### Thursday 30th June 2022 -->
 
 *Present (on Zoom): Katie Collins, Timothy Gowers, Angeliki Kousoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas.*
 
@@ -100,7 +100,7 @@ We discussed where we felt we had got to with defining move types. There is work
 <details> 
     <summary><b>Thursday 7th July 2022</b></summary> 
     
-### Thursday 7th July 2022
+<!-- ### Thursday 7th July 2022 -->
 
 *Present (on Zoom): Timothy Gowers, Angeliki Kousoukou-Argyraki, Matei Mandache, Bhavik Mehta, Wills Wynn-Thomas. Apologies received from Katie Collins.*
 
@@ -117,7 +117,7 @@ It was agreed that at this stage the most efficient way to get a program up and 
  <details> 
     <summary><b>Friday 16th September 2022</b></summary> 
     
-### Friday 16th September 2022
+<!-- ### Friday 16th September 2022 -->
 
 *Present (on a Slack huddle): Timothy Gowers, Angeliki Kousoukou-Argyraki, Wills Wynn-Thomas.*
 
@@ -142,7 +142,7 @@ We also discussed other examples of reformulating results to make it easier for 
  <details> 
     <summary><b>Wednesday 21st September 2022</b></summary> 
     
-### Wednesday 21st September 2022
+<!-- ### Wednesday 21st September 2022 -->
 
 *Small in-person meeting with Katie Collins, Timothy Gowers, and Wills Wynn-Thomas.*
 
