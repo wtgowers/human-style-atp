@@ -150,7 +150,7 @@ The main focus was going through (part of) the proof that a uniform limit of con
 We also discussed situations where we have a hypothesis such as
      
 $$ 
-\forall \epsilon (\text{real}(\epsilon)\ \wedge\ \epsilon > 0) => ( \forall x\ x\in X\implies (P(x,epsilon) => Q(x,epsilon)) )
+\forall \epsilon (\text{real}(\epsilon)\ \wedge\ \epsilon > 0) => ( \forall x\ x\in X\implies (P(x,\epsilon) => Q(x,\epsilon)) )
 $$
 
 One approach to a hypothesis like this is to make $\epsilon$ a metavariable and add the statements $\text{real}(\epsilon)$  and  $\epsilon > 0$   as targets (done in such a way that it's clear what hypotheses we're allowed to use). It looks a bit strange to do this, as these targets are somehow not "substantive". But that seems to be a question of presentation/interfaces etc. and not really a question about how the program should work.
