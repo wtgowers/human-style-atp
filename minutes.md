@@ -140,7 +140,7 @@ We also discussed other examples of reformulating results to make it easier for 
 </details>
  
  <details> 
-    <summary><b>Friday 16th September 2022</b></summary> 
+    <summary><b>Wednesday 21st September 2022</b></summary> 
     
 ### Wednesday 21st September 2022
 
