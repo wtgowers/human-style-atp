@@ -127,3 +127,11 @@ Prove that left distributivity implies right distributivity. <em>[This should be
 Prove that if $xy=0$ then $x=0$ or $y=0$. <em>[The proof is easy, but this might be slightly tricky for a program, as it involves splitting into cases -- though the cases are obvious. Here I assume that it's allowed to use the result that anything multiplied by 0 gives 0.]</em>
 
 Define $n.1$ inductively by $0.1=0$ and $(n+1).1=n.1 + 1$ (where $n\in\mathbb N$ and the 1 on the right-hand side of the multiplication is the multiplicative identity element of the field). Suppose that there is a positive integer $n$ such that $n.1=0$. Prove that $n.x=0$ for every element $x$ of the field (defined in a similar way). Prove also that the minimal such $n$ is a prime. <em>[It might be a little bit tricky even to formulate these problems in a nice way. The proofs could be quite hard given the inductive definitions of $n.1$ and $n.x$ and the fact that one has to mix elementary number theory with the algebra.]</em>
+
+<h3>Enumerative combinatorics</h3>
+
+<em>This whole area is well out of reach of the approaches we have developed so far, so seems ripe for exploration.</em>
+
+Let $X$ be a set of size $m$ and let $Y$ be a set of size $n$. Prove that the number of functions from $X$ to $Y$ is $n^m$. <em>[This is a trivial problem for an experienced mathematician, but presents a challenge to a program, as a formal proof looks somewhat different from the kind of "for each $x\in X$ we have $n$ choices for $f(x)$" type argument we might be inclined to give in a human context. The problem is harder still if it simply asks how many functions there are from $X$ to $Y$.]</em> 
+
+The number of subsets of size $m$ of a set of size $n$ is $n!/m!(n-m)!$. <em>[This could be a hard problem, as the idea is needed of doing a double count of the number of permutations instead of going directly for combinations.]</em>
