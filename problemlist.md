@@ -88,6 +88,8 @@ $(A\cap B)^c=A^c\cup B^c$. <em>[Requires splitting into cases, so good test prob
 
 A sequence that is unbounded above has a subsequence that tends to infinity. <em>[Requires building a sequence. Involves induction. This would be quite an ambitious target, though the sort of problem we'll need a system to be able to solve easily if it's going to be able to do even moderately interesting constructions in analysis.]</em>
 
+A sequence of non-negative real numbers that tends to zero has a subsequence that sums to at most 1. <em>[Involves some of the challenges of the previous problem, as well as that of coming up with the idea of getting the $k$th term of the subsequence to be at most $2^{-k}$ (or something similar).]</em>
+
 <h3>Groups.</h3>
 
 Lagrange's theorem. <em>[Probably hard for a fully automatic prover. But one could start with a motivated proof and take things from there.]</em>
