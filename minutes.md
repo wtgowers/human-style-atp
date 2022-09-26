@@ -171,7 +171,7 @@ Another question that came up concerned peeling. If we have a box within a box, 
 
 *Slack huddle with Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki and Wills Wynn-Thomas, with Bill Hart attending in an unofficial capacity.* 
 
-The informal agenda of the meeting was effectively set in a Slack comment of Wills Wynn-Thomas, who wanted to talk about three "attackable issues", as he called them, that have arisen during his work on creating a first program. They are the nature of the library and how it should be searched, how the program should cope with easy existence problems (such as finding two positive numbers that add up to at most a given positive number), and what we should do about types.
+<p>The informal agenda of the meeting was effectively set in a Slack comment of Wills Wynn-Thomas, who wanted to talk about three "attackable issues", as he called them, that have arisen during his work on creating a first program. They are the nature of the library and how it should be searched, how the program should cope with easy existence problems (such as finding two positive numbers that add up to at most a given positive number), and what we should do about types.</p>
      
 Before we got on to discussing those issues, WWT showed us the current state of the interface he is building, and the main thing the other participants took away from the meeting was how attractive it was. At the moment it lacks a lot of functionality that we would eventually want -- in particular, it has no automation, and although the user can choose some moves by simply clicking on appropriate buttons, some of them have to be typed in, and library search has to be done by had, also with typing in. However, there is every reason to think that these deficiencies will be remedied soon, and in the meantime the display of problem states and the implementation of moves that have been implemented are very impressive and a shot in the arm for the project. The interface is web based, so once it is sufficiently easy to use, we will think about deploying it publicly.
      
@@ -180,5 +180,6 @@ We reached a plan for starting the library, which was for AKA to create a docume
 For the moment, the plan with easy existence problems is to have a repertoire of very easy problems -- ones that humans instantly know the answer to and that we don't want the program to have to keep on and on solving -- in the library, and for slightly harder existence problems to be solved by the program by means of metavariables and simplification of problem states. However, we are likely to have to revisit this question soon.
      
 We agreed that it would be interesting to see how far we could get without an explicit type system. It's clear that we want the program to have some idea of types, so that it doesn't for instance see the statement 2+3=5 and consider trying to deduce from it that dim(5) is at most dim(2)+dim(3). This particular problem won't arise, as the program gives different names to different kinds of addition (in the background, though the interface will use the addition symbol for all of them). However, it may be that if we store results in the library with type declarations treated as hypotheses, then the program will simply not be able to make type errors of this kind unless its input already contains type errors.
-    </details>
- </div> 
+</details>
+
+</div> 
