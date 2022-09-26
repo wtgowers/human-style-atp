@@ -169,7 +169,7 @@ Another question that came up concerned peeling. If we have a box within a box, 
     
 <!-- ### Monday 26th September 2022 -->
 
-*Slack huddle with Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki and Wills Wynn-Thomas, with Bill Hart attending in an unofficial capacity.*   
+*Slack huddle with Katie Collins, Timothy Gowers, Angeliki Koutsoukou-Argyraki and Wills Wynn-Thomas, with Bill Hart attending in an unofficial capacity.* 
 
 The informal agenda of the meeting was effectively set in a Slack comment of Wills Wynn-Thomas, who wanted to talk about three "attackable issues", as he called them, that have arisen during his work on creating a first program. They are the nature of the library and how it should be searched, how the program should cope with easy existence problems (such as finding two positive numbers that add up to at most a given positive number), and what we should do about types.
      
