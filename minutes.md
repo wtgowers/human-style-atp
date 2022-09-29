@@ -181,5 +181,19 @@ For the moment, the plan with easy existence problems is to have a repertoire of
      
 We agreed that it would be interesting to see how far we could get without an explicit type system. It's clear that we want the program to have some idea of types, so that it doesn't for instance see the statement 2+3=5 and consider trying to deduce from it that dim(5) is at most dim(2)+dim(3). This particular problem won't arise, as the program gives different names to different kinds of addition (in the background, though the interface will use the addition symbol for all of them). However, it may be that if we store results in the library with type declarations treated as hypotheses, then the program will simply not be able to make type errors of this kind unless its input already contains type errors.
 </details>
-
+    
+<details> 
+    <summary><b>Thursday 29th September 2022</b></summary>  
+    
+*In-person meeting with Katie Collins, Timothy Gowers, Bill Hart, Matei Mandache, and Wills Wynn Thomas*
+    
+After lunch with Larry Paulson's group, we had more of a work meeeting, mainly to discuss with Wills the next steps for the program. One suggestion was to introduce some very simple automation to it — e.g. a waterfall architecture that prompts the user when it finds more than one top-priority thing it can do. Another was that in the absence of a library, one could simply input the relevant library results (such as basic definitions) as hypotheses, which of course avoids the whole problem of library search but could still be interesting.
+    
+Bill raised an interesting point about whether making the library as efficiently searchable as possible for the program would conflict with making it conveniently searchable by humans — something we would want for the purposes of development. I don’t know whether we came to a firm conclusion on that question.
+    
+We also discussed what it would take to get the program to be able to solve easy algebra problems. Wills mentioned an example he had tried working through, which is to show that every element of a finite group has a non-trivial power equal to the identity. This appears to require an “idea” — to use the pigeonhole principle — which it is not immediately clear how to motivate, since the payoff doesn’t give you straight away a power of x equal to the identity, since you have to do the additional step of translating your two equal powers so that one of them becomes the identity. So what would prompt the program to use the pigeonhole principle in the first place?
+    
+After Katie and Tim had left, the meeting became a more technical one, mostly to go through the code written so far. There was a discussion also about whether we want the Haskell code for an interactive website to be run on a server (as it is at the moment) or to embed it into a Javascript program that executes on the client device. The consensus was that the latter would be preferable, due to security concerns and the risk of the server getting overloaded if there are too many requests.    
+</details>
+    
 </div> 
