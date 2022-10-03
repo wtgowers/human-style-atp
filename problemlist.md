@@ -116,6 +116,10 @@ $A_4$ has no subgroup of index 2. <em>[This needs quite a lot of library reasoni
 
 The orbit-stabilizer theorem. <em>[This is a rather good example of a proof that is essentially routine but is found hard by beginners. So it would be a very good test problem for any algebraic reasoner.]</em>
 
+<h3>Rings</h3>
+
+Let $x$ be a nilpotent element of a commutative ring with identity. Prove that $1+x$ is a unit. <em>[This is an example of a problem that requires some computation. It is also challenging because with a bit of experience one "just knows the answer", so it raises questions such as how that background knowledge should be stored, and whether it is reasonable to expect a program to come up with the answer without having the background. (A possible approach: start by assuming that $x^2=0$ and build up from there. Another approach -- start doing polynomial long division, spot a pattern for how it is going to go, and observe that the process will terminate when you get to $x^n$. But how will something like that be implemented by an algorithm?)</em>
+
 <h3>Fields</h3>
 
 Using just the field axioms, prove that $0x=0$ for every $x$. <em>[Tricky for beginning undergraduates, so likely to be tricky for a non-cheating program.]</em>
