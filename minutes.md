@@ -196,4 +196,16 @@ We also discussed what it would take to get the program to be able to solve easy
 After Katie and Tim had left, the meeting became a more technical one, mostly to go through the code written so far. There was a discussion also about whether we want the Haskell code for an interactive website to be run on a server (as it is at the moment) or to embed it into a Javascript program that executes on the client device. The consensus was that the latter would be preferable, due to security concerns and the risk of the server getting overloaded if there are too many requests.    
 </details>
     
+<details> 
+    <summary><b>Tuesday 4th October 2022</b></summary>  
+    
+*In-person meeting with Michal Buran, Timothy Gowers, Bill Hart, Matei Mandache, and Wills Wynn Thomas*    
+    
+The main aim of the meeeting was to settle, if we could, on a format for library entries. We also had quite a detailed discussion about how a program could search the library without using brute force. Typically, a search will be for library results that have certain features, such as involving groups, or having a certain statement as a target (maybe only after some bound variables have been instantiated), etc. Probably we'll arrange the library in a way that makes it possible to do a tree search, or at least to narrow down the options a lot with a tree search, so that even if we resorted to brute force to do the rest, it would hardly matter from the point of view of running time (though we might want to be a bit subtler for theoretical reasons). 
+    
+We also considered the question of how much of a type system we would need, or how little we could get away with. The current plan is for equivalences to be stored in one way (the type conditions listed first and then a list of statements given that are equivalent under those conditions) and implications in another (all hypotheses, whether "substantive" or not, listed above the line, and conclusions below). WTG suggested a possible definition of a "non-substantive" hypothesis, as being one that one never actually proves except in the trivial way of matching it exactly with an assumption. So backwards reasoning that left a type hypothesis as an unmatched target would not be allowed. It may not be possible to detect this distinction automatically, but it would give a manual way of labelling type hypotheses when inputting library reuslts. 
+    
+We also had quite a lot of more speculative discussion, e.g. about how human memory works in a mathematical context and how we might try to model that. 
+    </details>
+    
 </div> 
