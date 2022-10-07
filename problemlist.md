@@ -66,6 +66,8 @@ If X is compact and $f:X\to X$ is a map such that $d(f(x),f(y)) < d(x,y)$ whenev
 
 Open balls are open. <em>[This requires a slightly tricky choice for the radius of a ball around a point in the open ball. Should be OK with metavariables, but some technical issues concerning dependencies, so a good test problem to check that the program is good on how variables depend on each other.]</em>
 
+An infinite sequentially compact metric space contains a sequence $(a_n)$ that converges to a limit $a$ such that every $a_n$ is distinct from $a$. <em>[The obvious proof needs an inductive construction that uses dependent choice. It also needs the observation that if no term in the original sequence appears infinitely many times, then the same is true of a subsequence, in which case we can throw away all terms that equal the limit.]</em>
+
 <h3>Sets and functions.</h3>
 
 $f^{-1}(A\cup B)\subset f^{-1}(A)\cup f^{-1}(B).$ <em>[Very routine. Should be easily solvable by ROBOT.]</em>
@@ -91,6 +93,10 @@ A sequence that converges is bounded. <em>[Requires induction to prove that the 
 A sequence that is unbounded above has a subsequence that tends to infinity. <em>[Requires building a sequence. Involves induction. This would be quite an ambitious target, though the sort of problem we'll need a system to be able to solve easily if it's going to be able to do even moderately interesting constructions in analysis.]</em>
 
 A sequence of non-negative real numbers that tends to zero has a subsequence that sums to at most 1. <em>[Involves some of the challenges of the previous problem, as well as that of coming up with the idea of getting the $k$th term of the subsequence to be at most $2^{-k}$ (or something similar).]</em>
+
+The squeeze theorem: if $a_n\to a$ and $b_n\to a$ and $a_n\leq c_n\leq a_n$ for every $n$, then $c_n\to a$. <em>[A good test for a basic algorithm.]</em>
+
+If $A$ is a non-empty set of real numbers that is bounded above, then there is a sequence $(a_n)$ such that $a_n\in A$ for every $n$, and $a_n\to\sup(A)$. <em>[Needs countable choice.]</em>
 
 <h3>Groups.</h3>
 
