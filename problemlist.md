@@ -96,7 +96,7 @@ A sequence of non-negative real numbers that tends to zero has a subsequence tha
 
 The squeeze theorem: if $a_n\to a$ and $b_n\to a$ and $a_n\leq c_n\leq a_n$ for every $n$, then $c_n\to a$. <em>[A good test for a basic algorithm.]</em>
 
-If $A$ is a non-empty set of real numbers that is bounded above, then there is a sequence $(a_n)$ such that $a_n\in A$ for every $n$, and $a_n\to\sup(A)$. <em>[Needs countable choice.]</em>
+If $A$ is a non-empty set of real numbers that is bounded above, then there is a sequence $(a_n)$ such that $a_n\in A$ for every $n$, and $a_n\to\sup(A)$. <em>[Needs countable choice. Also needs the program to come up with a strategy for showing that $a_n\to\sup(A)$, such as ensuring that $a_n>\sup(A)-1/n$ for every $n$.]</em>
 
 <h3>Groups.</h3>
 
