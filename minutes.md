@@ -222,4 +222,28 @@ We discussed more general matters, such as how far we thought we would be able t
 TG suggested an approach to the problem of showing that if $x$ is a nilpotent element of an algebra then $1+x$ is invertible. It is to decide first to build an element out of 1 and $x$, since that is all one is given, to note that the most general object one can build out of 1 and $x$ is a polynomial in $x$, to note that if $x^n=0$ then the degree of that polynomial is less than $n$, to write the polynomial out with its coefficients as metavariables, and then to solve the resulting equations for the coefficients, which is easy as they are in triangular form (this ends up just doing the polynomial long division). At the end one would observe that the extra $x^n$ that is left over is equal to zero so doesn't matter. Some scepticism was expressed that this was genuinely a "rabbit-free" presentation of the solution. (The challenging part might be the part where one reasons that it makes sense to go for a polynomial in $x$. We would want that to be a special case of a very general mode of reasoning rather than an ad hoc trick that was fed into the program.)
 </details>
     
+<details>
+    <summary><b>Tuesday 11th October 2022</b></summary>
+    
+*In-person meeting with Michal Buran, Katie Collins, Timothy Gowers, Bill Hart, and Matei Mandache*
+    
+This was mostly a fairly chatty meeting about the longer-term future of the project.
+</details>
+
+<details>
+    <summary><b>Friday 14th October 2022</b></summary>
+    
+*In-person meeting with Michal Buran, Timothy Gowers, Bill Hart, Matei Mandache, and Wills Wynn Thomas*    
+    
+The meeting started with MM describing a technical problem with the way the current program uses de Bruijn indices, which can result in it making mistakes when it expands definitions. The conclusion of the resulting discussion was that there were ways round this problem, though they might be a little tedious to implement.
+    
+Most of the meeting was spent going very carefully through the example of showing that an intersection of two open sets (in a metric space) is open. In a way this was a curious discussion to have, since the problem in question is one that ROBOT was able to do without difficulty. However, it did so by using a waterfall architecture of a kind that fails for other quite simple problems, so we wanted to find a different approach where "I can't find much else to do, so let's do this" would not count as a sufficiently good reason to do a move. 
+   
+The difficulties started from the very beginning. ROBOT's first move is to expand the target "$A\cap B$ is open" using the definition of open sets. But there is no obvious justification of this in terms of syntactic matching. Eventually we realized, thanks to a remark of MM, that subtasks could probably justify it, as follows. We would like to destroy the term $A\cap B$. One way to do that is to use the rule that $x\in A\cap B$ is equivalent to the conjuction of $x\in A$ and $x\in B$. That leads us to formulate a subsubtask -- that of creating the expression $x\in A\cap B$, which can be achieved in one move by expanding the definition of "is open". 
+
+We then spent some time discussing why that particular subtask would be preferred over other "silly" subtasks, coming to the conclusion that it is probably unrealistic to hope for the program to keep zeroing in on the right thing to do, and that what we should be looking for instead is ruthlessly efficient pruning of very small search trees. So silly options might be considered, but they would be quickly rejected on the grounds that they are not "rewarded by something nice happening".  
+    
+The discussion continued in this vein, and while it did not lead to any attempt to design an actual algorithm, it did feel as though it was getting us closer to the point where we might want to try that.     
+    
+</details>    
 </div> 
