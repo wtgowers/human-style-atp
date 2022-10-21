@@ -246,4 +246,36 @@ We then spent some time discussing why that particular subtask would be preferre
 The discussion continued in this vein, and while it did not lead to any attempt to design an actual algorithm, it did feel as though it was getting us closer to the point where we might want to try that.     
     
 </details>    
+    
+<details>
+    <summary><b>Tuesday 18th October 2022</b></summary>   
+    
+*In-person meeting with Timothy Gowers, Bill Hart, Matei Mandache and Wills Wynn-Thomas, with Katie Collins present via Zoom.*
+    
+This was one of our more informal chatty meetings, but it felt quite useful. (Unfortunately I have left it a few days before writing minutes, so I can't now remember what we talked about, though that does not contradict its utility.)
+    
+</details>
+    
+<details>
+    <summary><b>Friday 21st October 2022</b></summary>   
+    
+*In-person meeting with Timothy Gowers, Bill Hart and Matei Mandache*
+    
+MM reported that he had sorted out the difficulty with de Bruijn indices, so now the program correctly expands statements that involve quantifiers. 
+    
+The bulk of the meeting was taken up with a discussion of the moves needed to generate a proof that a compact subset of a Hausdorff topological space is closed. The aim was not to try to explain why a program would choose the moves, but just to understand the logic of the situation well enough to see which moves would be needed. As a result of working through the problem, three moves (or rather move types) were identified as ones that we probably need but do not yet have. 
+    
+The first was Skolemization. When we apply the Hausdorff condition, we have a point $x$ outside a compact set $A$ and for each $y\in A$ we find disjoint open sets $U(y)$ and $V(y)$ with $y\in U(y)$ and $x\in V(y)$. From the statement $\forall y\in A\ \exists U(y)\ \exists V(y) P(U(y),V(y))$ we then (as humans) do a kind of peeling of the existential quantifier, saying "For each $y$ let's take that $U(y)$." More formally, we convert the statement into $latex \exists U,V:A\to\tau\ \forall y\in A\ P(U(y),V(y))$. 
+    
+The passage from the first statement to the second relies on the axiom of choice, but many humans do it without even noticing that they are making infinitely many arbitrary choices, so it makes sense to have this as a move (which the user of a program would have the ability to switch off if they were queasy about using AC). It so happens that for this problem choice is not needed, since one can simply take all possible pairs $(U(y),V(y))$ instead of choosing just one for each $y$. Nevertheless, Skolemization seems like a good move to have.
+    
+The second move type that is useful but that we do not have is "de-peeling". If we wish to prove a statement of the form $\forall x\ P(x)$, then we will happily peel the universal quantifier -- that is, we will attempt to prove $P(x)$ for some arbitrary $x$. However, if we have a statement of the form $latex \exists y\ \forall x\ P(x,y)$ and we make $y$ a metavariable, then the picture changes. We may peel $x$, but it is not enough to establish $P(x,y)$ for a single $x$, even if that $x$ is arbitrary, since we may have made choices that depend on $x$. So we have a situation that is a bit like other situations where we want to prove that some object exists with more than one property, except that here we have infinitely many properties (potentially anyway). What we need to do is simplify the problem but be careful not to commit ourselves too much to one particular $x$. Having simplified, we will with luck end up with a problem $\exists y\ \forall x\ Q(x,y)$, where $Q$ is a simpler statement than $P$, and proceed from there. But for this we sometimes want to bring the $\forall x$ back down into the target, possibly with a view to "de-expanding". As I write this, I realize that de-expanding is something we have not really discussed, though the way expansions are curretly set up, this is not an issue, since they are given as equivalences, without it being explicitly said that one side is defining the other. 
+    
+The third move type is something we called "naming". We got to a point where a term $y(w)$ (in the notation we were using) had the property that its constituent parts $w$ and the function $y$ only ever occurred as part of the term $y(w)$. It was then useful to give it a name, $q$. The reason was the following. We had a function $y:A\to\Delta$, and $\Delta$ had the important property of being finite. We had a target of the form $\forall w\in A\ P(y(w))$, and wanted the program to get from that to seeing that it was sufficient to prove $\forall q\in\Delta\ P(q)$. One way to do that is to peel so that we have a hypothesis $w\in A$ and a target $P(y(w))$. Then from the hypothesis we deduce $y(w)\in\Delta$. Now this new hypothesis and the target have a matching term $y(w)$. We can decide to call that $q$. That would be the naming step. But there is slightly more to it than that, because we also want to quantify over $q$. So the logical move is to go from $\forall w\ w\in A\implies P(y(w))$ to $\forall q\ (\exists w\in A\ y(w)=q)\implies P(q)$, and then we weaken the hypothesis $\exists w\in A\ y(w)=q$ to $q\in\Delta$. I think the first step there is the move we don't have. 
+    
+There was also a fourth step that wasn't exactly a move but it was a library result of a rather special form that needed some discussion. At an early point in the proof one has a point in $A$ and another point not in $A$ and one deduces that they are distinct points and therefore that the Hausdorff condition can be applied to them. The library result in question is the very general statement that if $P(x)$ and $\neg P(y)$, then $x\ne y$. (This follows from the principle that if $x=y$, then $P(x)\implies P(y)$, but for several applications it is a more directly applicable form of the principle.) We discussed how a program would spot a match for this principle. It would be quite natural for it to note that it wanted to prove that $x\ne y$ and to consider trying to find a property that distinguishes them. To search for such a property, it needs to look in the hypotheses for statements that involve $x$. It can do that by looking at nodes of the parse tree (in suitable position) labelled with relations, connectives or quantifiers, and checking whether the relevant subtrees contain leaves. MM suggested that once such a match had been found, the relevant statement should be given a name $P(x)$, so that then the match would be easier to identify. Here one also needs a further step to convert $y\notin A$ into $\neg(y\in A)$, but that can be achieved using subtasks. 
+    
+</details>
+    
 </div> 
+   
