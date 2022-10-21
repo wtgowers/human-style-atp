@@ -100,6 +100,8 @@ If $A$ is a non-empty set of real numbers that is bounded above, then there is a
 
 <h3>Groups.</h3>
 
+Let $x$ and $y$ be invertible elements of a monoid. Prove that $xy$ is invertible. <em>[A good test of mixing an equality problem with very simple logic moves (such as creation of metavariables).]</em>
+
 Lagrange's theorem. <em>[Probably hard for a fully automatic prover. But one could start with a motivated proof and take things from there.]</em>
 
 The kernel of a homomorphism is a normal subgroup. <em>[Should be pretty easy.]</em>
