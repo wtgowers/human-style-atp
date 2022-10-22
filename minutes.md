@@ -252,7 +252,7 @@ The discussion continued in this vein, and while it did not lead to any attempt 
     
 *In-person meeting with Timothy Gowers, Bill Hart, Matei Mandache and Wills Wynn-Thomas, with Katie Collins present via Zoom.*
     
-This was one of our more informal chatty meetings, but it felt quite useful. (Unfortunately I have left it a few days before writing minutes, so I can't now remember what we talked about, though that does not contradict its utility.)
+This was one of our more informal chatty meetings, but it felt quite useful. We talked a little about algorithms for efficiently searching, including using hashes of hole expressions that had been substituted, whether we might use a balanced tree and how the search order would be given. (We are using the phrase "hole expression" to refer to a mathematical expression that has "holes" that can be filled in by terms of appropriate types. For example, if $X$ and $Y$ are given sets and $f:X\to Y$, we might write $f(\ )$ to mean $f$ evaluated at some element of $X$ that needs to be filled in -- that is, "placed in the hole".)  
     
 </details>
     
