@@ -151,3 +151,11 @@ Define $n.1$ inductively by $0.1=0$ and $(n+1).1=n.1 + 1$ (where $n\in\mathbb N$
 Let $X$ be a set of size $m$ and let $Y$ be a set of size $n$. Prove that the number of functions from $X$ to $Y$ is $n^m$. <em>[This is a trivial problem for an experienced mathematician, but presents a challenge to a program, as a formal proof looks somewhat different from the kind of "for each $x\in X$ we have $n$ choices for $f(x)$" type argument we might be inclined to give in a human context. The problem is harder still if it simply asks how many functions there are from $X$ to $Y$.]</em> 
 
 The number of subsets of size $m$ of a set of size $n$ is $n!/m!(n-m)!$. <em>[This could be a hard problem, as the idea is needed of doing a double count of the number of permutations instead of going directly for combinations.]</em>
+
+<h3>Natural numbers</h3>
+
+The numbers 3, 5 and 7 are prime. Is there another triple of primes of the form $n, n+2, n+4$? <em>[It is not obvious how one could get a program to consider looking at the reduction mod 3, unless we slightly "cheated" and gave it a heuristic (of a kind that many humans use) that it is often a good idea to consider reductions to small moduli when solving simple number-theoretic problems. Even then one would want it to distinguish between problems for which the heuristic might be useful and problems for which it is obviously not useful at all.]</em>
+
+Let $x$ and $y$ be positive integers with $x$ odd and $y$ even. Prove that $3x^2-4xy+2y^2\ne x^2$. <em>[The subtlety here is that the most natural proof uses two different heuristics for proving that a number are not equal. The first is to prove that one minus the other is strictly positive, and the second is to find some property, such as parity, that distinguishes between them. Here, if we subtract $x^2$ from both sides we find that it is enough to prove that $2(x-y)^2\ne 0$ and hence that $(x-y)^2\ne 0$, and hence that $x-y\ne 0$, and hence that $x\ne y$. For the last step we use the fact that $x$ is odd and $y$ is even. So this becomes a problem about how to choose appropriate heuristics.]</em>
+
+
