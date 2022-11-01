@@ -277,5 +277,27 @@ There was also a fourth step that wasn't exactly a move but it was a library res
     
 </details>
     
+<details>
+    <summary><b>Tuesday 1st November 2022</b></summary>   
+    
+*Mixed Zoom/in-person meeting with Katie Collins, Timothy Gowers, Bill Hart, Matei Mandache, Bhavik Mehta and Wills Wynn Thomas*  
+    
+Some of the topics we discussed were as follows.
+    
+What is needed for us to make progress on the library? Two things we need to do are to devise a mini-language for inputting library results, and to write a parser for that language that will convert those results into syntax trees that the program can process in a convenient way. We ended up taking the view that the most convenient input language would probably be a kind of pseudo-LaTeX. For example, the definition intersection of two subsets of a set might be written as "set(X) \and subset(A,X) \and subset(B,X) \and x \in (A \cap B) \iff x \in A \and x \in B". (We did not decide on an actual format, so this is just an example of the kind of thing we might go for, and it clearly raises all sorts of questions.) 
+    
+It was also mentioned that it would be good to describe carefully and implement a few move types that we do not yet have.
+   
+Should the library be a relational database? 
+    
+When a result is often applied after a small amount of manipulation, should we add a reformulated result to the library that includes the manipulation, so as to make the result show up more readily in searches? An alternative would be to store the result as relevant if certain conditions are satisfied. In the latter case, the result would be added to the problem state as a hypothesis, at which point the program would think about how to use the new hypothesis (a much easier task than identifying the hypothesis out of all the statements in the library). 
+    
+There was a technical discussion about use of GitHub -- forks vs branches, when pull requests should be made, etc.
+    
+How do we represent statements such as that the intersection of two subgroups is a subgroup? In particular, what is a subgroup? If we define it to be a subset that is closed under the group operation, then it is false that a subgroup of a group is a group, since it is just a set. This is, unsurprisingly, a familiar problem to the formalization community, and there are standard ways of dealing with it. We agreed that we would need to address the issue sooner rather than later.
+    
+What makes one result in the library more basic than another? When one thinks about it, there are different orders at play. For instance, one might wish to say that topological spaces are less structured, and therefore more basic, than metric spaces. On the other hand, typically one teaches metric spaces first, so that one has interesting examples of topological spaces before defining them. More generally, it is very common to develop mathematics by abstracting away from more structured objects to less structured ones. It was suggested that to decide what order we want to take, we should focus on what we want the order to achieve for us. Perhaps the main thing is that we don't want the program to assume an "advanced" result in order to prove a "simple" one. Returning to the example, if we are asked to prove that the inverse image of an open set under a continuous function is open in a metric-space context, then we don't want the program to quote the topological-space definition of continuity. But one way of dealing with that is to make the statement that the open sets in a metric space form a topology and that the two definitions of continuity coincide relatively advanced ones. But it is not yet clear to us what the general principle is here.
+</details>
+    
 </div> 
    
