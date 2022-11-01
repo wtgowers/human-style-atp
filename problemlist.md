@@ -158,4 +158,7 @@ The numbers 3, 5 and 7 are prime. Is there another triple of primes of the form 
 
 Let $x$ and $y$ be positive integers with $x$ odd and $y$ even. Prove that $3x^2-4xy+2y^2\ne x^2$. <em>[The subtlety here is that the most natural proof uses two different heuristics for proving that a number are not equal. The first is to prove that one minus the other is strictly positive, and the second is to find some property, such as parity, that distinguishes between them. Here, if we subtract $x^2$ from both sides we find that it is enough to prove that $2(x-y)^2\ne 0$ and hence that $(x-y)^2\ne 0$, and hence that $x-y\ne 0$, and hence that $x\ne y$. For the last step we use the fact that $x$ is odd and $y$ is even. So this becomes a problem about how to choose appropriate heuristics.]</em>
 
+Prove that there is exactly one prime $p$ such that $p^2+44$ is also prime. <em>[This is not a very hard problem, but the question is again how best to get the program to think of reducing mod 3.]</em>
+
+Let $a_1=p$ be a prime and for each positive integer $n$ let $a_{n+1}=2a_n-1$. Prove that there exists $n$ such that $a_n$ is composite. <em>[There are various approaches to this, but they require enough of an idea that the problem is not quite routine, and it is therefore challenging to think how a program might solve it.]</em>
 
