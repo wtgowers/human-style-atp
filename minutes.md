@@ -280,7 +280,7 @@ There was also a fourth step that wasn't exactly a move but it was a library res
 <details>
     <summary><b>Tuesday 1st November 2022</b></summary>   
     
-*Mixed Zoom/in-person meeting with Katie Collins, Timothy Gowers, Bill Hart, Matei Mandache, Bhavik Mehta and Wills Wynn Thomas*  
+*Mixed Zoom/in-person meeting with Katie Collins, Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki Matei Mandache, Bhavik Mehta and Wills Wynn Thomas*  
     
 Some of the topics we discussed were as follows.
     
@@ -297,6 +297,9 @@ There was a technical discussion about use of GitHub -- forks vs branches, when 
 How do we represent statements such as that the intersection of two subgroups is a subgroup? In particular, what is a subgroup? If we define it to be a subset that is closed under the group operation, then it is false that a subgroup of a group is a group, since it is just a set. This is, unsurprisingly, a familiar problem to the formalization community, and there are standard ways of dealing with it. We agreed that we would need to address the issue sooner rather than later.
     
 What makes one result in the library more basic than another? When one thinks about it, there are different orders at play. For instance, one might wish to say that topological spaces are less structured, and therefore more basic, than metric spaces. On the other hand, typically one teaches metric spaces first, so that one has interesting examples of topological spaces before defining them. More generally, it is very common to develop mathematics by abstracting away from more structured objects to less structured ones. It was suggested that to decide what order we want to take, we should focus on what we want the order to achieve for us. Perhaps the main thing is that we don't want the program to assume an "advanced" result in order to prove a "simple" one. Returning to the example, if we are asked to prove that the inverse image of an open set under a continuous function is open in a metric-space context, then we don't want the program to quote the topological-space definition of continuity. But one way of dealing with that is to make the statement that the open sets in a metric space form a topology and that the two definitions of continuity coincide relatively advanced ones. But it is not yet clear to us what the general principle is here.
+
+Do we want a type system for our mini-language and library? We are still unclear on this point. It may be that we can get away without it. We also discussed the possibility that even if our output isn't formally verified, it might be in a form that an LLM would find easy to convert into a proof in a language such as Lean or Isabelle.    
+    
 </details>
     
 </div> 
