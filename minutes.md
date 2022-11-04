@@ -280,7 +280,7 @@ There was also a fourth step that wasn't exactly a move but it was a library res
 <details>
     <summary><b>Tuesday 1st November 2022</b></summary>   
     
-*Mixed Zoom/in-person meeting with Katie Collins, Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki Matei Mandache, Bhavik Mehta and Wills Wynn Thomas*  
+*Mixed Zoom/in-person meeting with Katie Collins, Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki, Matei Mandache, Bhavik Mehta and Wills Wynn Thomas*  
     
 Some of the topics we discussed were as follows.
     
@@ -301,6 +301,15 @@ What makes one result in the library more basic than another? When one thinks ab
 Do we want a type system for our mini-language and library? We are still unclear on this point. It may be that we can get away without it. We also discussed the possibility that even if our output isn't formally verified, it might be in a form that an LLM would find easy to convert into a proof in a language such as Lean or Isabelle.    
     
 </details>
+    
+<details>
+    <summary><b>Friday 4th November 2022</b></summary>  
+    
+*Mixed Zoom/in-person meeting with Katie Collins, Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki, Matei Mandache, and Bhavik Mehta* 
+    
+We had a long discussion about whether we needed a type system, and if so what it should look like. The discussion included details about how Lean's type system works. An example of the kind of difficulty that comes up is that a subgroup $H$ of a group $G$ can be defined either as a group whose underlying set is a subset of the underlying set of $G$ or as a subset of the underlying set that is closed under the group operation of $G$. Lean has a notion of a set that "comes with" extra data such as a binary operation and an identity. Towards the end of the discussion we considered how we might input the statement that if $G$ and $H$ are groups and $\phi:G\to H$ is a surjective homomorphism, then $G/\ker\phi$ is isomorphic to $H$. By the end, we appeared to be arriving at a position where we would like to be able to input library results in a (somewhat restricted) natural language, and for this to be automatically translated into an elaborated parse tree. For example, one might write, "Let $G$ be a group and let $H$ be a group and let $\phi:G\to H$. Suppose that $\phi$ is a homomorphism and $\phi$ is a surjection. Then $G/\ker\phi$ is isomorphic to $H$." The parser would have quite a lot of work to do here, including unfolding the definition of "$G$ is a group" to the point where it became a quadruple (underlying set, binary operation, identity, and inversion function), and similarly for $H$. As for $G/\ker\phi$, that is more complicated still -- it somehow has to know that it is a group, which isn't a triviality but is more like a library statement, or rather a deduction from the fact that $\ker\phi$ is a normal subgroup. Exactly how this should work is not yet clear.
+    
+    </details>
     
 </div> 
    
