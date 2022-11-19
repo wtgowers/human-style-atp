@@ -353,13 +353,13 @@ Unfortunately I have lost my notes for this. Among the topics discussed were the
     
 We tried to take stock of where we are, to think about where we might realistically get by Christmas, and to decide on short-term tasks and who might do them. In the end, enough of us were going to be very busy in the near future that we decided not to set strict assignments for the time being, but we did list a number of short-term goals and points about them.
     
-    1. Populate the library. (Already under way thanks to BH. AK-A is interested in contributing to this, and TG may add to a less formal document that he created a few weeks ago.) 
-    2. Work out a grammar for inputting problems. (BH to take the lead on this.)
-    3. Would the parser for inputs be significantly different from that for library results? (After short reflection, BH thought probably not.)
-    4. Add new moves such as Skolemization and beta reduction (the latter under the hood only). (MM said this would need to wait for the code refactoring that is underway to be finished.) 
-    5. Add buttons for some of the moves that don't have them at the moment.
-    6. Sort out at least a preliminary procedure for library research. (This led to quite a long discussion about how hash tables would work for the library.) 
-    7. Work out a naming convention for library results. We decided we wanted it to be as humanly natural as possible. For instance, we would want to say something like "associativity of addition" rather than something more like "nat_assoc". We considered having a "dial" for the natural-language output that would tell it how much detail the program would give about its reasoning -- e.g. at a very low setting it would bother to tell you that it had just used associativity of addition, whereas at a higher level it would not.
+1. Populate the library. (Already under way thanks to BH. AK-A is interested in contributing to this, and TG may add to a less formal document that he created a few weeks ago.) 
+2. Work out a grammar for inputting problems. (BH to take the lead on this.)
+3. Would the parser for inputs be significantly different from that for library results? (After short reflection, BH thought probably not.)
+4. Add new moves such as Skolemization and beta reduction (the latter under the hood only). (MM said this would need to wait for the code refactoring that is underway to be finished.) 
+5. Add buttons for some of the moves that don't have them at the moment.
+6. Sort out at least a preliminary procedure for library research. (This led to quite a long discussion about how hash tables would work for the library.) 
+7. Work out a naming convention for library results. We decided we wanted it to be as humanly natural as possible. For instance, we would want to say something like "associativity of addition" rather than something more like "nat_assoc". We considered having a "dial" for the natural-language output that would tell it how much detail the program would give about its reasoning -- e.g. at a very low setting it would bother to tell you that it had just used associativity of addition, whereas at a higher level it would not.
     
 We discussed how the program would find the result $(P(x)\ \wedge\ \neg P(y))\implies x\ne y$ in order to use it (e.g. in order to use the Hausdorff condition in some topological space). MM had a suggestion that involved reverse beta reduction.     
     
