@@ -339,6 +339,35 @@ TG pointed out that if we quantify over sets of size 2, then the existential and
     
 </details>    
     
+<details>
+        <summary><b>Tuesday 15th November 2022</b></summary> 
+
+*Zoom meeting with Katie Collins, Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki, and Matei Mandache* 
+    
+Unfortunately I have lost my notes for this. Among the topics discussed were the format for the library -- we are getting close to agreement -- and whether in the long run we should be using Haskell. BH argued that if the project is to become a big one with many contributors, then Python is probably better. The two main reasons were that more people use it, and that there is a far more developed library. The alternative is that we continue with Haskell for now, but guard against the sunk-cost fallacy: that is, we should be open to starting again in another language, ideally before the amount of code gets too large (if we are indeed going to switch). Yet another possibility is that we implement our ideas in more than one language, which might be feasible with more people involved. 
+    
+</details>  
+    
+<details>
+    <summary><b>Friday 18th November 2022</b></summary> 
+    
+*Mixed Zoom/in-person meeting with Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki, Matei Mandache, and Bhavik Mehta* 
+    
+We tried to take stock of where we are, to think about where we might realistically get by Christmas, and to decide on short-term tasks and who might do them. In the end, enough of us were going to be very busy in the near future that we decided not to set strict assignments for the time being, but we did list a number of short-term goals and points about them.
+    
+    1. Populate the library. (Already under way thanks to BH. AK-A is interested in contributing to this, and TG may add to a less formal document that he created a few weeks ago.) 
+    2. Work out a grammar for inputting problems. (BH to take the lead on this.)
+    3. Would the parser for inputs be significantly different from that for library results? (After short reflection, BH thought probably not.)
+    4. Add new moves such as Skolemization and beta reduction (the latter under the hood only). (MM said this would need to wait for the code refactoring that is underway to be finished.) 
+    5. Add buttons for some of the moves that don't have them at the moment.
+    6. Sort out at least a preliminary procedure for library research. (This led to quite a long discussion about how hash tables would work for the library.) 
+    7. Work out a naming convention for library results. We decided we wanted it to be as humanly natural as possible. For instance, we would want to say something like "associativity of addition" rather than something more like "nat_assoc". We considered having a "dial" for the natural-language output that would tell it how much detail the program would give about its reasoning -- e.g. at a very low setting it would bother to tell you that it had just used associativity of addition, whereas at a higher level it would not.
+    
+We discussed how the program would find the result $(P(x)\ \wedge\ \neg P(y))\implies x\ne y$ in order to use it (e.g. in order to use the Hausdorff condition in some topological space). MM had a suggestion that involved reverse beta reduction.     
+    
+We also discussed the following question. Suppose $\phi:G\to H$ is a homomorphism. Find a homomorphism from $\phi(G)$ to $G/\ker\phi$. We would like if possible to avoid the human "Let's define this potential non-function and then check that it's well-defined," as then we have to think about multivalued functions and how the program should handle them. Instead, we generalized a suggestion of BM from an earlier meeting where we discussed the first isomorphism theorem, suggesting that there should be a library result that says that if you have functions $f:X\to Z$ and $g:X\to Y$ and you would like a function $h:Y\to Z$ such that $f=h\circ g$, then there will be a unique one if and only if $g$ is surjective and $f(x_1)=f(x_2)$ whenever $g(x_1)=g(x_2)$. Using this, one ends up checking precisely what needs to be checked when one proves that "pick $x\in X$ such that $g(x)=y$ and define $h(y)$ to be $f(x)$" is well-defined.     
+    
+</details>        
     
 </div> 
    
