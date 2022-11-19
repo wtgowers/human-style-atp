@@ -310,6 +310,35 @@ Do we want a type system for our mini-language and library? We are still unclear
 We had a long discussion about whether we needed a type system, and if so what it should look like. The discussion included details about how Lean's type system works. An example of the kind of difficulty that comes up is that a subgroup $H$ of a group $G$ can be defined either as a group whose underlying set is a subset of the underlying set of $G$ or as a subset of the underlying set that is closed under the group operation of $G$. Lean has a notion of a set that "comes with" extra data such as a binary operation and an identity. Towards the end of the discussion we considered how we might input the statement that if $G$ and $H$ are groups and $\phi:G\to H$ is a surjective homomorphism, then $G/\ker\phi$ is isomorphic to $H$. By the end, we appeared to be arriving at a position where we would like to be able to input library results in a (somewhat restricted) natural language, and for this to be automatically translated into an elaborated parse tree. For example, one might write, "Let $G$ be a group and let $H$ be a group and let $\phi:G\to H$. Suppose that $\phi$ is a homomorphism and $\phi$ is a surjection. Then $G/\ker\phi$ is isomorphic to $H$." The parser would have quite a lot of work to do here, including unfolding the definition of "$G$ is a group" to the point where it became a quadruple (underlying set, binary operation, identity, and inversion function), and similarly for $H$. As for $G/\ker\phi$, that is more complicated still -- it somehow has to know that it is a group, which isn't a triviality but is more like a library statement, or rather a deduction from the fact that $\ker\phi$ is a normal subgroup. Exactly how this should work is not yet clear.
     
 </details>
+
+<details>
+    <summary><b>Tuesday 8th November 2022</b></summary> 
+    
+*Zoom meeting with Katie Collins, Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki, Matei Mandache, and Bhavik Mehta* 
+    
+I'm afraid I don't remember much about this meeting. I think it was a fairly chatty and not too technical one.    
+
+</details>    
+
+<details>
+    <summary><b>Friday 11th November 2022</b></summary> 
+    
+*Mixed Zoom/in-person meeting with Katie Collins, Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki, Matei Mandache, and Bhavik Mehta* 
+    
+1. We discussed the general question of when it is possible to interchange quantifiers, coming to the conclusion that there is probably not a nice criterion. A situation where it is possible is with statements of the form $\forall y\ \exists x\ P(y)\ \wedge\ Q(x)$ or with statements of the form $\forall y\exists x\ P(y)\ \vee\ Q(x)$. MM presented the following more interesting example: $\forall y\ \exists x\ P(y)\ \vee\ (Q(x)\ \wedge\ R(y))$. To see that the quantifiers can be exchanged, first apply distributivity to get $\forall y\ \exists x\ (P(y)\ \vee\ Q(x))\ \wedge\ (P(y)\ \vee R(y)$. This is easily seen to be equivalent to $\forall y\ (P(y)\ \vee\ \exists x\ Q(x))\ \wedge\ (P(y)\ \vee\ R(y))$. Now use the fact that $\forall$ distributes over $\wedge$ to turn this into $(\forall y\ P(y)\ \vee\ \exists x\ Q(x))\ \wedge\ \forall y\ (P(y)\ \vee\ R(y))$. We can now commute the quantifiers in the first bracket, pull out $\exists x$, and then pull out $\forall y$, ending up with them in the reverse order where $x$ is "chosen uniformly". 
+    
+TG pointed out that if we quantify over sets of size 2, then the existential and universal quantifiers become $\vee$ and $\wedge$, and the problem of determining whether they can be exchanged becomes a special case of SAT. We didn't show that this case of SAT is strong enough to be NP-complete, but it seems quite likely. So from a practical point of view, it is probably best that we should consider exchanging quantifiers in very easy cases but not try to make it part of the program to determine things like exactly when we can get away with a bulleted variable depending on another one: the order of quantification will usually be thrown up quite naturally by the problem at hand. 
+
+2. We discussed the format for representing library results. We agreed on aliases. (Unfortunately I have forgotten what that means.) 
+    
+3. We discussed a problem of how the program could "notice finiteness". This is a special case of the problem of "semantic matching" -- noticing that two concepts have closely related meanings -- as opposed to the syntactic matching that we are mainly focusing on. The kind of problem we are worried about is something like this: let $f:\mathbb Z^2\to\mathbb R$ be a function such that $f(x,y)\leq C$ whenever $x^2+y^2\geq M$. Prove that $f$ is bounded above. As humans we would easily spot the proof: the set of $(x,y)\in\mathbb Z^2$ such that $x^2+y^2<M$ is finite, and a function defined on a finite set is bounded, so we can take the maximum of the bound inside the circle with $C$. But how would a program notice that that set is finite? In this case, maybe it would first prove that it is sufficient to prove that $f$ is bounded above inside the circle and then search for library results that might be useful for such a statement. But if we take the 1D version of the problem -- a sequence $(a_n)$ such that $n\geq N\implies a_n\leq C$, then we would typically just _notice_ that the first $N-1$ terms of the sequence form a finite set. 
+
+4. We talked about whether large language models might be useful for handling very easy school-level mathematical facts. 
+
+5. Returning to finiteness, we discussed how a finite subcover should be represented. Many humans would write $\{U_1,\dots,U_n\}$, but that requires the program to "notice the finiteness". It will probably be easier to use a representation such as $\{U_\gamma:\gamma\in\Gamma\}$ together with a hypothesis that $\Gamma$ is finite. (We will also probably in fact go for a function $U:\Gamma\to\tau$, where $\tau$ is the topology, so writing $U(\gamma)$ instead of $U_\gamma$.)
+    
+</details>    
+    
     
 </div> 
    
