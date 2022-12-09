@@ -176,7 +176,7 @@ Let $a_1=p$ be a prime and for each positive integer $n$ let $a_{n+1}=2a_n-1$. P
 
 <h3>Rationality and irrationality</h3>
 
-Prove that $\sqrt 3$ is irrational, having been shown a proof that $\sqrt 2$ is irrational. (This is not really about irrationality but about a very simple process of generalization and abstraction.)
+Prove that $\sqrt 3$ is irrational, having been shown a proof that $\sqrt 2$ is irrational. _[This is not really about irrationality but about a very simple process of generalization and abstraction.]_
 
 Find two irrational numbers that add up to a rational number.
 
