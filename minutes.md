@@ -367,5 +367,37 @@ We also discussed the following question. Suppose $\phi:G\to H$ is a homomorphis
     
 </details>        
     
+<details>
+    <summary><b>Friday 25th November 2022</b></summary>    
+    
+We met virtually because of the industrial action taking place today. I have got behind on these minutes and so cannot remember anything about what was discussed.    
+   
+</details>        
+ 
+<details>
+    <summary><b>Tuesday 29th November 2022</b></summary>    
+    
+Fabian Glöckle was visiting Cambridge for the week, so we welcomed him to the group. I do not remember much about the discussion but I do remember that Fabian made several interesting contributions to it.
+    
+We started at 1:30pm, and then at 3pm we were joined by various members of the computer science department and Fabian gave a presentation of his work and future plans with MetaAI, including a detailed theoretical discussion of what deep learning methods can currently do, what their limitations are, and how those limitations could perhaps be reduced.
+    
+</details> 
+    
+<details>
+    <summary><b>Friday 2nd December 2022</b></summary>    
+    
+ We started with a second presentation by Fabian. We also talked quite a lot about ChatGPT, which was launched on the 30th November.    
+    
+After that, the meeting was mainly devoted to a discussion of the following theoretical question. We can regard finding a proof as searching for a path in a huge tree, where the vertices are problem states and two vertices are joined by a directed edge if there is an allowable move that takes one to the other. However, the general problem of finding a path in a big tree does not have an efficient solution, so it clearly matters a lot that in practice the vertices and edges of the tree are heavily annotated (with the problem states and move types). What is it about these annotations that makes finding at least some paths far easier than it would be in an unannotated graph? Just randomly colouring vertices will obviously be of no help at all, so the annotations must have properties that allow us to do things like knowing that we are making progress towards our goal, etc. But what are those properties, and why do they help? The discussion was interesting, but obvioulsy it's a big question and we were left with many questions still unanswered.    
+
+</details>     
+    
+<details>
+    <summary><b>Tuesday 6th December 2022</b></summary>   
+
+We had brief (and very informal) progress reports from some of us. Bhavik plans to overhaul the way the program currently deals with hole expressions (that is, mathematical expressions with "gaps" that can be filled in by other expressions). He has recently incorporated the "mathematician monad" into the program, which allows it to retain information about what it has been doing rather than just the current problem state. Matei has been reading [the Dreamcoder paper](https://arxiv.org/abs/2106.11053) and thinking about whether ideas from it could help our program decide when a new result is worth adding to the library. Tim has been writing a document about the theoretical question discussed at the previous meeting, and hopes to finish it soon. Bill has been thinking about problems that involve finiteness, and in particular problems where we take certain steps very easily because of our strong intuitions about finiteness. This led to a long discussion, and to a list of challenge problems for the program. The one we discussed most was to prove that a subset of a finite set is finite, which reduces quickly to showing that if A is a finite subset of {1,2,...,n} then there exists k such that A is in bijection with {1,2,...,k}. Many ideas were suggested for how a program might find a proof of this, but none of them was completely satisfactory.
+    
+</details>   
+    
 </div> 
    
