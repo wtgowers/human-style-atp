@@ -164,7 +164,7 @@ Let $X$ be a set of size $m$ and let $Y$ be a set of size $n$. Prove that the nu
 
 The number of subsets of size $m$ of a set of size $n$ is $n!/m!(n-m)!$. <em>[This could be a hard problem, as the idea is needed of doing a double count of the number of permutations instead of going directly for combinations.]</em>
 
-<h3>Natural numbers</h3>
+<h3>Natural numbers and divisibility</h3>
 
 The numbers 3, 5 and 7 are prime. Is there another triple of primes of the form $n, n+2, n+4$? <em>[It is not obvious how one could get a program to consider looking at the reduction mod 3, unless we slightly "cheated" and gave it a heuristic (of a kind that many humans use) that it is often a good idea to consider reductions to small moduli when solving simple number-theoretic problems. Even then one would want it to distinguish between problems for which the heuristic might be useful and problems for which it is obviously not useful at all.]</em>
 
@@ -174,3 +174,12 @@ Prove that there is exactly one prime $p$ such that $p^2+44$ is also prime. <em>
 
 Let $a_1=p$ be a prime and for each positive integer $n$ let $a_{n+1}=2a_n-1$. Prove that there exists $n$ such that $a_n$ is composite. <em>[There are various approaches to this, but they require enough of an idea that the problem is not quite routine, and it is therefore challenging to think how a program might solve it.]</em>
 
+<h3>Rationality and irrationality</h3>
+
+Prove that $\sqrt 3$ is irrational, having been shown a proof that $\sqrt 2$ is irrational. (This is not really about irrationality but about a very simple process of generalization and abstraction.)
+
+Find two irrational numbers that add up to a rational number.
+
+Prove that a rational number plus an irrational number is always irrational.
+
+Prove that $\sqrt 2+\sqrt 3$ is irrational (given that $\sqrt n$ is irrational unless $n$ is a perfect square).
