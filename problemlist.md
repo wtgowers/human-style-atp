@@ -86,6 +86,18 @@ $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$. <em>[Requires splitting into cases, so 
 
 $(A\cap B)^c=A^c\cup B^c$. <em>[Requires splitting into cases, so good test problem for technical reasons.]</em>
 
+<h3>Finiteness, cardinality, and basic use of induction</h3>
+
+If $A$ is a subset of $\{1,2,\dots,n\}$, then there exists $k$ and a bijection from $A$ to $\{1,2,\dots,k\}$. 
+
+There is no infinite chain of subsets of $\{1,2,\dots,n\}$.
+
+There is no injection from $\mathbb N$ to $\{1,2,\dots,n\}$.
+
+Find a surjection from $\mathbb N$ to $\mathbb N^2$.
+
+Every non-empty set of integers that is bounded above has a maximum.
+
 <h3>Sequences and series.</h3>
 
 A sequence that converges is bounded. <em>[Requires induction to prove that the maximum of a finite set exists, or else needs to notice that it has a finite set to which this result applies. The latter would be nice but it's not easy to see how the matching would work.]</em>
