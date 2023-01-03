@@ -10,7 +10,7 @@ mathjax: true
 
 ## Introduction 
 
-It goes without saying that abstraction and generalization are fundamental mathematical activities. From the point of view of automatic theorem proving, it is tempting to regard them as relatively ``advanced" topics, to be worried about only when simpler problem-solving techniques have been thoroughly understood and implemented. But it has been becoming clear that if we do not introduce at least some forms of abstraction and generalization into a program at an early stage, then that program will be quite limited in what it can do. The issue comes to a fore in connection with library search. Our main idea for how to carry out searches in the library for results that could be helpful is to find syntactic matches. However, while that works very well when it works, there are many situations where a useful result does _not_ syntactically match the problem state. And when that happens, it is often also the case that if aspects of the problem state are made more abstract, then we _do_ obtain a syntactic match. So the rough thinking behind this post is that relying on syntactic matching works surprisingly well for a number of problems, but combining it with abstraction will probably make it work a whole lot better.
+It goes without saying that abstraction and generalization are fundamental mathematical activities. From the point of view of automatic theorem proving, it is tempting to regard them as relatively "advanced" topics, to be worried about only when simpler problem-solving techniques have been thoroughly understood and implemented. But it has been becoming clear that if we do not introduce at least some forms of abstraction and generalization into a program at an early stage, then that program will be quite limited in what it can do. The issue comes to a fore in connection with library search. Our main idea for how to carry out searches in the library for results that could be helpful is to find syntactic matches. However, while that works very well when it works, there are many situations where a useful result does _not_ syntactically match the problem state. And when that happens, it is often also the case that if aspects of the problem state are made more abstract, then we _do_ obtain a syntactic match. So the rough thinking behind this post is that relying on syntactic matching works surprisingly well for a number of problems, but combining it with abstraction will probably make it work a whole lot better.
 
 I won't try to do everything in one post. Instead, this is meant to be the beginning of a discussion. I shall look at a few examples, and try to identify a few different kinds of generalization that could in principle be automated.
 
@@ -21,12 +21,12 @@ This is a typical example. Zorn's lemma is stated in Wikipedia as follows.
 **Lemma** *Suppose a partially ordered set $P$ has the property that every chain in $P$ has an upper bound in $P$. Then the set $P$ contains at least one maximal element.*
 
 A typical application of the lemma is that every vector space has a basis. The proof is to use Zorn's lemma to prove that there is a maximal independent set and then to prove that a maximal independent set must span the space. However, in order to find that proof we need to identify that we are trying to find a maximal object. Once we have uttered the word "maximal" we have a syntactic match with at least one word in the statement of Zorn's lemma, and though no partially ordered set has been mentioned explicitly, the use of "maximal" strongly suggests that there is one somewhere. But the point is that a process of abstraction is needed. Furthermore, in order to obtain the syntactic match it is important that the lemma is stated using high-level language (as opposed, say, to the conclusion being the statement
-$$\exists x\in P\ \forall y\in P\ \neg(x<y),$$
+$$\exists x\in P\ \forall y\in P\ \neg(x < y),$$
 which would be hard to match with anything).  
 
 Suppose that we are thinking about this problem. We might start trying to build a basis. If we do so, then we will start adding vectors, taking care at each stage not to create a linear dependence. If at any stage we span the space, then we are done, so it is natural to use the hypothesis that the set does not span the space. That provides us with a vector that is not in the span, which implies quite easily that we can add it to our independent set. 
 
-It is at this point that we want to abstract. We have a statement about independent sets in a vector space, which says that if such a set $I$ does not span, then we can find a non-zero element $x$ such that $I\cup\{x\}$ is independent. We now want to make the more general observation that $I$ is not maximal under set-theoretic containment. To enable a syntactic match, there are two things we can do here. One is to restate Zorn's lemma in a way that involves set-theoretic containment rather than an abstract partial order. The other is to forget some of the details about our problem: we don't care that the sets we are interested in are the independent sets -- they are just some family of sets -- and we don't care that $I\cup\{x\}$ is obtained from $I$ by the addition of a singleton -- we just need it to strictly contain $I$. 
+It is at this point that we want to abstract. We have a statement about independent sets in a vector space, which says that if such a set $I$ does not span, then we can find a non-zero element $x$ such that $I\cup\\\{x\\\}$ is independent. We now want to make the more general observation that $I$ is not maximal under set-theoretic containment. To enable a syntactic match, there are two things we can do here. One is to restate Zorn's lemma in a way that involves set-theoretic containment rather than an abstract partial order. The other is to forget some of the details about our problem: we don't care that the sets we are interested in are the independent sets -- they are just some family of sets -- and we don't care that $I\cup\\\{x\\\}$ is obtained from $I$ by the addition of a singleton -- we just need it to strictly contain $I$. 
 
 This second process illustrates one kind of abstraction, namely forgetting hypotheses. 
 
@@ -52,7 +52,7 @@ This is still quite a speculative step, but if we can write $TX$ as a countable 
 
 A set of reals is _perfect_ if it is closed and has no isolated points. Such sets can be shown to be uncountable. Here the trigger for Baire category is very simple: if a perfect set $X$ is countable, then it is a countable union of singletons, so we know we will be done if (i) $X$ is a complete metric space and (ii) every singleton in $X$ is nowhere dense. That is almost a syntactic match but maybe not quite -- there is a small step to take us from saying that $X$ is countable to saying that it is a countable union of singletons, and that step does sometimes hold me up when I try to remember the proof (even when I remember that it is a simple application of the Baire category theorem). 
 
-It's easy to check that $X$ is complete, since it's a closed subset of a complete metric space. Also, if $x$ is a singleton and $U$ is an open subset of $X$, then $U\setminus\{x\}$ is a non-empty (because $x$ is  not isolated) open subset of $X$ that does not intersect $\{x\}$.
+It's easy to check that $X$ is complete, since it's a closed subset of a complete metric space. Also, if $x$ is a singleton and $U$ is an open subset of $X$, then $U\setminus\\\{x\\\}$ is a non-empty (because $x$ is  not isolated) open subset of $X$ that does not intersect $\\\{x\\\}$.
 
 ### A continuous function that is nowhere monotonic
 
@@ -62,7 +62,7 @@ So here one might decide to try to prove that the set of functions that are mono
 
 ### The rationals do not form a $G_\delta$ set
 
-A $G_\delta$ set is a countable intersection of open sets. Can the rationals be expressed in this way? We can certainly write \emph{one} rational as such an intersection: for example, $\{0\}=\bigcup_{n=1}^\infty(-1/n,1/n)$. But what about all rationals at once? 
+A $G_\delta$ set is a countable intersection of open sets. Can the rationals be expressed in this way? We can certainly write \emph{one} rational as such an intersection: for example, $\\\{0\\\}=\bigcup_{n=1}^\infty(-1/n,1/n)$. But what about all rationals at once? 
 
 This is a very easy application of Baire category, since if $\mathbb Q=\bigcap_{n=1}^\infty U_n$ with each $U_n$ open, then each $U_n$ is open and dense, which implies that $\mathbb Q$ has meagre complement. But we also know that $\mathbb Q$ is meagre (since it is a countable union of singletons), which contradicts the Baire category theorem. 
 
@@ -73,17 +73,17 @@ But what is the trigger here? These questions are all quite hard to answer, beca
 Let me quote from [some nice notes I'm looking at](https://www.ucl.ac.uk/~ucahad0/3103_handout_7.pdf): "After spending an hour or two trying to construct such a function, one begins to suspect that no such function can exist. But how to prove it? Once again, the Baire category theorem comes to the rescue."
 
 But how? Well, we could try to think about what sorts of sets can be sets of continuity of a function $f$. So we write down something like this.
-$$X=\{x\in\mathbb R:\forall\epsilon>0\ \exists\delta>0\ \forall y\in\mathbb R\ \ |x-y|<\delta\implies|f(x)-f(y)|<\epsilon\}.$$
-If we want to think about what type of set that is, using standard notions of complexity, then we can observe two things. The first, which is very standard, is that quantifiers inside sets become unions or intersections outside. But also we prefer countable unions, and we notice that in this case it makes no difference if we assume $\e$ and $\d$ to be reciprocals of positive integers. So we can write the set as follows.
-$$X=\bigcap_{n=1}^\infty\bigcup_{m=1}^\infty\{x\in\mathbb R:\forall y\in\mathbb R\ \ |x-y|<1/m\implies|f(x)-f(y)|<1/n\}.$$
+$$X=\\\{x\in\mathbb R:\forall\epsilon>0\ \exists\delta>0\ \forall y\in\mathbb R\ \ |x-y|<\delta\implies|f(x)-f(y)|<\epsilon\\\}.$$
+If we want to think about what type of set that is, using standard notions of complexity, then we can observe two things. The first, which is very standard, is that quantifiers inside sets become unions or intersections outside. But also we prefer countable unions, and we notice that in this case it makes no difference if we assume $\epsilon$ and $\delta$ to be reciprocals of positive integers. So we can write the set as follows.
+$$X=\bigcap_{n=1}^\infty\bigcup_{m=1}^\infty\\\{x\in\mathbb R:\forall y\in\mathbb R\ \ |x-y|<1/m\implies|f(x)-f(y)|<1/n\\\}.$$
 At this point we have a problem, because for a given $m,n$ there is not much we can say topologically about the set
-$$A_{nm}=\{x\in\mathbb R:\forall y\in\mathbb R\ \ |x-y|<1/m\implies|f(x)-f(y)|<1/n\},$$
+$$A_{nm}=\\\{x\in\mathbb R:\forall y\in\mathbb R\ \ |x-y|<1/m\implies|f(x)-f(y)|<1/n\\\},$$
 especially given that $f$ is not continuous. 
 
 However, one thing we can say is that if $x\in A_{nm}$ and $|x'-x|<1/2m$, then $x'\in A_{n/2,2m}$. This suggests a better possible definition of the set of points of continuity, one that leads to open sets. Note that $f$ is continuous at $x$ if and only if for every $\epsilon>0$ there exists $\delta>0$ such that the difference between $\sup f$ and $\inf f$ on the interval $(x-\delta,x+\delta)$ is at most $\epsilon$. Let us write this as $\text{osc}_{(x-\delta,x+\delta)}(f)<\epsilon$. The advantage of this definition is that if we slightly perturb $x$, we get the same $\epsilon$ (for a smaller $\delta$). 
 
 So let
-$$B_{nm}=\{x:\text{osc}_{x-1/m,x+1/m}(f)<1/n\}.$$
+$$B_{nm}=\\\{x:\text{osc}_{x-1/m,x+1/m}(f) < 1/n\\\}.$$
 Then from what we noted above, although $B_{nm}$ isn't open, $\bigcup_{m=1}^\infty B_{nm}$ is open, since if we move $x$ by $1/2m$, we still belong to $B_{n,2m}$. This proves that $X$ is a $G_\delta$ set and therefore that it cannot equal $\mathbb Q$. 
 
 This turned out to be irrelevant to the question of triggers for the Baire category theorem, since it used a _consequence_ of the Baire category theorem.
@@ -98,7 +98,7 @@ This is often the flavour of a consequence of the Baire category theorem -- that
 
 So let's turn things round. We assume that for every $n$ there exist $x$ and $\gamma$ such that $\|T_\gamma x\|>n\|x\|$, and our aim is to interchange the order of quantification, obtaining $x$ such that for every $n$ there exists $\gamma$ with $\|T_\gamma x\|>n\|x\|$, which will contradict pointwise boundedness. To do that, we will want to prove not just that there _exists_ $x$ such that for some $\gamma$ we have $\|T_\gamma x\|>n\|x\|$ but that the set of $x$ such that that can be done is both open and dense.
 
-Now for each $n$ and $\gamma$ the set $\{x:\|T_\gamma x\|>n\|x\|\}$ is open (this is easy to prove, since the map $x\mapsto\|T_\gamma x\|-n\|x\|$ is continuous). Therefore, the union over all $\gamma$ is open, and this union is equal to $U_n=\{x:\exists\gamma\ \ \|T_\gamma x\|>n\|x\|\}$.
+Now for each $n$ and $\gamma$ the set $\\\{x:\|T_\gamma x\|>n\|x\|\\\}$ is open (this is easy to prove, since the map $x\mapsto\|T_\gamma x\|-n\|x\|$ is continuous). Therefore, the union over all $\gamma$ is open, and this union is equal to $U_n=\\\{x:\exists\gamma\ \ \|T_\gamma x\|>n\|x\|\\\}$.
 
 Can we prove that $U_n$ is dense? Yes, fairly easily. Let $x\in X$. I would like to find a point $x'$ close to $x$ and some $\gamma$ such that $\|T_\gamma x'\|>n\|x'\|$. To do that, note first that either I can take $x'$ to equal $x$ or else $\|T_\gamma x\|\leq n\|x\|$ for every $\gamma$. In the second case, for every $C$ I can find $\gamma$ and $z$ such that $\|z\|<\delta\|x\|$ and $\|T_\gamma z\|>3n\|x\|$. Then assuming $\delta\leq 1$, we have that $\|x+z\|<2\|x\|$ and that $\|T_\gamma(x+z)\|>3n\|x\|-n\|x\|=2n\|x\|>n\|x+z\|$. So we have found $x+z$ as close as we like to $x$, and some $\gamma$ that proves that $x+z\in U_n$. 
 
@@ -111,8 +111,8 @@ First of all, recognising that we have a pointwise statement and want a uniform 
 I think that part of the answer has to be to have a version of the Baire category theorem that is closer to what we notice than to the official statement of the theorem. For example, it could read as follows (translated into a suitable formal language).
 
 **Theorem** _Let $P(n,x)$ be a statement involving two variables $n\in\mathbb N$ and $x$ an element of a complete metric space $X$. Suppose that the following conditions hold._
-1. _$\forall n\in\mathbb N\ \{x\in X:P(n,x)\}$ is open._
-2. _$\forall n\in\mathbb N\ \{x\in X:P(n,x)\}$ is dense._
+1. _$\forall n\in\mathbb N\ \\\{x\in X:P(n,x)\\\}$ is open._
+2. _$\forall n\in\mathbb N\ \\\{x\in X:P(n,x)\\\}$ is dense._
 _Then $\exists x\in X\ \forall n\in\mathbb N\ P(n,x)$._
 
 This is obviously equivalent to the Baire category theorem, but because of the way it is stated, it is easier to pick up a syntactic match with the target.
@@ -121,7 +121,7 @@ If we use the closed-sets version, then we can obtain a match without first swit
 
 **Theorem** *Let $P(n,x)$ be a statement involving two variables $n\in\mathbb N$ and $x$, an element of a complete metric space $X$. Suppose that the following conditions hold.*
 1. *$\forall x\in X\ \exists n\in\mathbb N\ P(n,x)$.*
-2. *$\forall n\in\mathbb N\ \{x\in X:P(n,x)\}$ is closed.*
+2. *$\forall n\in\mathbb N\ \\\{x\in X:P(n,x)\\\}$ is closed.*
 *Then there exist $n\in\mathbb N$ and an open set $U\subset X$ such that $\forall x\in U\ P(n,x)$.*
 
 Now we see that we have the first hypothesis, and it becomes worth checking whether we have the second and third, and whether the conclusion, which appears to be weaker than we want (it gives us uniformity on an open set rather than on all of $X$) is in fact sufficient (which it is). 
@@ -132,7 +132,7 @@ Let $X$ be a Banach space and let $T:X\to X$ be a continuous linear operator. Le
 
 Let me try to prove that. Again the trigger is fairly clear here -- we are trying to convert a pointwise statement into a uniform one. So it seems that the same strategy as before should work, namely to assume that $T$ is not nilpotent and deduce that it is not pointwise nilpotent. However, this time I'll go with the closed-sets version. As discussed above, the trigger is simple: we have a hypothesis of the form $\forall x\ \exists n\ P(n,x)$, and it looks as though the relevant sets will be closed since we have an equality sign and a continuous function around the place. 
 
-Let's quickly finish off the proof. From Baire category we get some $n$ such that $\{x:T^nx=0\}$ has non-empty interior. If it contains a ball $B_\delta(y)$, then it also contains $B_\delta(-y)$, by linearity, and then it contains $B_\delta(0)$, by convexity. So $T^nx=0$ for every $x$ of norm less than $\delta$, which of course implies that $T^n=0$. 
+Let's quickly finish off the proof. From Baire category we get some $n$ such that $\\\{x:T^nx=0\\\}$ has non-empty interior. If it contains a ball $B_\delta(y)$, then it also contains $B_\delta(-y)$, by linearity, and then it contains $B_\delta(0)$, by convexity. So $T^nx=0$ for every $x$ of norm less than $\delta$, which of course implies that $T^n=0$. 
 
 ### Conclusion on Baire category triggers
 
@@ -159,33 +159,33 @@ I think the trigger here is simply noting that the target is of the form $\exist
 
 ### Proving that certain sets are closed
 
-Suppose that $f$ and $g$ are continuous functions from $\mathbb R$ to $\mathbb R$ and that you are asked to prove that $\{x\in\mathbb R:f(x)\geq g(x)\}$ is closed. With a bit of experience you will probably reason as follows: since $f$ and $g$ are continuous, so is $h=f-g$, and the set we wish to prove is closed is the set $h^{-1}([0,\infty))$. Since $h$ is continuous and $[0,\infty)$ is closed, we are done. 
+Suppose that $f$ and $g$ are continuous functions from $\mathbb R$ to $\mathbb R$ and that you are asked to prove that $\\\{x\in\mathbb R:f(x)\geq g(x)\\\}$ is closed. With a bit of experience you will probably reason as follows: since $f$ and $g$ are continuous, so is $h=f-g$, and the set we wish to prove is closed is the set $h^{-1}([0,\infty))$. Since $h$ is continuous and $[0,\infty)$ is closed, we are done. 
 
 What triggers the use of the library results that a difference of two continuous functions is continuous and that the inverse image of a closed set under a continuous function is closed? 
 
 Again it seems that it would help to have a reformulation of a familiar fact in the library. Instead of the usual result that says that the inverse image of a closed set by a continuous function is closed, we could have this.
 
-**Lemma** *Let $X$ and $Y$ be topological spaces and let $f:X\to Y$ be continuous. Let $P$ be a property of elements of $Y$ and suppose that the set $\{y\in Y: P(y)\}$ is closed. Then $\{x\in X:P(f(x))\}$ is a closed subset of $X$.*
+**Lemma** *Let $X$ and $Y$ be topological spaces and let $f:X\to Y$ be continuous. Let $P$ be a property of elements of $Y$ and suppose that the set $\\\{y\in Y: P(y)\\\}$ is closed. Then $\\\{x\in X:P(f(x))\\\}$ is a closed subset of $X$.*
 
-If we had that, then we could spot the potential utility of the lemma as follows. First, we abstract the lemma, noting that its conclusion is of the form "$\{x\in X:Q(x)\}$ is closed" for some property $Q$ that satisfies suitable conditions. We then note that we want to prove a statement of that form. So now we have a subtask, which is to rewrite the statement $f(x)\geq g(x)$ in the form $P(h(x))$. For that we need to manipulate the parse tree of the statement $f(x)\geq g(x)$ so that we don't have two occurrences of $x$ in expressions being joined by a relation: we need a single expression that involves $x$. There are in fact two quite natural ways of doing this. One is to note that this is saying that $((f(x),g(x))$ belongs to the set $\{(u,v):u\geq v\}$, and the other is what I did above and replace the inequality by $f(x)-g(x)\geq 0$. Either works. 
+If we had that, then we could spot the potential utility of the lemma as follows. First, we abstract the lemma, noting that its conclusion is of the form "$\\\{x\in X:Q(x)\\\}$ is closed" for some property $Q$ that satisfies suitable conditions. We then note that we want to prove a statement of that form. So now we have a subtask, which is to rewrite the statement $f(x)\geq g(x)$ in the form $P(h(x))$. For that we need to manipulate the parse tree of the statement $f(x)\geq g(x)$ so that we don't have two occurrences of $x$ in expressions being joined by a relation: we need a single expression that involves $x$. There are in fact two quite natural ways of doing this. One is to note that this is saying that $((f(x),g(x))$ belongs to the set $\\\{(u,v):u\geq v\\\}$, and the other is what I did above and replace the inequality by $f(x)-g(x)\geq 0$. Either works. 
 
 But the important point here is that the use of the lemma was triggered by two abstractions, one of the conclusion of the lemma and one of the conclusion we actually wanted. 
 
 More generally, why is this important? Note that the more we abstract in this way, the less likely it is that the result we find in the library will be useful, since we may have abstracted away features that are important. Suppose, for example, that I have a subset $A$ of a metric space $X$, I define $B$ to be the set of limit points of sequences in $A$, and I ask for a proof that $B$ is closed. Then 
-$$B=\big\{x\in X:\exists (a_n)\ (\forall n\ a_n\in A)\ \wedge\ a_n\to x\big\}.$$
-This is a set of the form $\{x\in X:Q(x)\}$, but it isn't of the form $P(f(x))$. 
+$$B=\big\\\{x\in X:\exists (a_n)\ (\forall n\ a_n\in A)\ \wedge\ a_n\to x\big\\\}.$$
+This is a set of the form $\\\{x\in X:Q(x)\\\}$, but it isn't of the form $P(f(x))$. 
 
 Actually, this example makes me dissatisfied with the trigger I suggested above. It seems that there is a bit more going on, since if we don't have any functions $f:X\to Y$ around, it seems unlikely that we are going to be able to build a property of the form $P(h(x))$. And I'm not sure I'd be happy with the lemma above being triggered if we were faced with the example just given. 
 
-Just to confuse things a bit more, here's another problem: prove that $\{x\in\mathbb R:x^3\geq e^x\}$ is a closed set. 
+Just to confuse things a bit more, here's another problem: prove that $\\\{x\in\mathbb R:x^3\geq e^x\\\}$ is a closed set. 
 
 As a human, I think I am triggered to use the lemma by the fact that there is a property involved that applies not to $x$ but to things made out of $x$. But for that it seems that I depend on my mathematical experience to some extent to know that a property of the form $P(f_1(x),\dots,f_k(x))$ can often be transformed into one of the form $Q(f(x))$. Or I could simply regard $(f_1(x),\dots,f_k(x))$ as a function of $x$, but I'm slightly worried about that because I don't want to be forced to go for the product-set approach rather than the subtraction approach in the problem above. 
 
-But maybe the _trigger_ should be simply that we are trying to prove that a set of the form $\{x\in X:Q(f(x))\}$ is closed, where by $f(x)$ I mean any expression of the form "element of a topological space" with the exception of $x$ itself. But that requires us to recognise a sentence such as
+But maybe the _trigger_ should be simply that we are trying to prove that a set of the form $\\\{x\in X:Q(f(x))\\\}$ is closed, where by $f(x)$ I mean any expression of the form "element of a topological space" with the exception of $x$ itself. But that requires us to recognise a sentence such as
 $$\mathtt{is\ greater\ than}(f(x),g(x))$$
 as being of the form $Q(h(x))$, where $h(x)$ belongs to the topological space $\mathbb R^2$. But I think that that ought to be possible.
 
-Then, having sorted out the trigger, one would consider having a separate simplification stage where we did things like replacing $\mathtt{is_greater than}(f(x),g(x))$ by 
+Then, having sorted out the trigger, one would consider having a separate simplification stage where we did things like replacing $\mathtt{is\ greater\ than}(f(x),g(x))$ by 
 $$\mathtt{is\ non-negative}(f(x)-g(x)).$$
 
 ### Two kinds of abstraction
@@ -215,7 +215,7 @@ Suppose we had a point-and-click system. Then one could imagine the following mo
 ### Forgetting internal structure of parse tree nodes}
 
 For this one could click on a node of the parse tree (or a part of a mathematical expression that determines the node) and from a resulting menu choose "forget internal structure". The effect of this would be to replace the expression by a general expression of the same type, which would depend on the same set of free variables. For instance, if one started with the expression 
-$$\mathtt{is\_closed}\Big(\big\{x\in\mathbb R:x^3\geq e^x\big\}\Big),$$
+$$\mathtt{is\_closed}\Big(\big\\\{x\in\mathbb R:x^3\geq e^x\big\\\}\Big),$$
 and one clicked on the '$\geq$' symbol, that would indicate that the subexpression to be abstracted away was the statement $x^3\geq e^x$, which depends on the free variable $x$ (free relative to the statement -- obviously in the entire expression it is bound). The forgetting move would replace it by the generic $P(x)$, to stand for some arbitrary statement that concerns $x$. 
 
 If this were a genuine user interface, one might want to create a copy of the original expression, so that the original was left untouched. Or perhaps the abstracted '$P(x)$' could hover just above the original expression $x^3\geq e^x$.
