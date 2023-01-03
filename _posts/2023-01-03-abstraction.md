@@ -115,6 +115,7 @@ I think that part of the answer has to be to have a version of the Baire categor
 **Theorem** _Let $P(n,x)$ be a statement involving two variables $n\in\mathbb N$ and $x$ an element of a complete metric space $X$. Suppose that the following conditions hold._
 1. _$\forall n\in\mathbb N\ \\\{x\in X:P(n,x)\\\}$ is open._
 2. _$\forall n\in\mathbb N\ \\\{x\in X:P(n,x)\\\}$ is dense._
+
 _Then $\exists x\in X\ \forall n\in\mathbb N\ P(n,x)$._
 
 This is obviously equivalent to the Baire category theorem, but because of the way it is stated, it is easier to pick up a syntactic match with the target.
@@ -124,6 +125,7 @@ If we use the closed-sets version, then we can obtain a match without first swit
 **Theorem** *Let $P(n,x)$ be a statement involving two variables $n\in\mathbb N$ and $x$, an element of a complete metric space $X$. Suppose that the following conditions hold.*
 1. *$\forall x\in X\ \exists n\in\mathbb N\ P(n,x)$.*
 2. *$\forall n\in\mathbb N\ \\\{x\in X:P(n,x)\\\}$ is closed.*
+
 *Then there exist $n\in\mathbb N$ and an open set $U\subset X$ such that $\forall x\in U\ P(n,x)$.*
 
 Now we see that we have the first hypothesis, and it becomes worth checking whether we have the second and third, and whether the conclusion, which appears to be weaker than we want (it gives us uniformity on an open set rather than on all of $X$) is in fact sufficient (which it is). 
