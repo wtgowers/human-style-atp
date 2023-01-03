@@ -36,6 +36,8 @@ What exactly is the difference? The second form of abstraction can be described 
 
 ## Using the Baire category theorem
 
+The Baire category theorem is another result with several applications that are somewhat non-obvious, in the sense that one is often not handed on a plate a countable collection of sets that are open and dense, or alternatively a decomposition of a complete metric space as a union of countably many closed sets. So if a little bit of work is needed to massage the problem state into a form where the Baire category theorem can be applied, what will induce a program to guess that this can be done? I don't yet have a fully satisfactory answer, so instead I shall discuss several examples. 
+
 ### The open mapping theorem
 
 A classic application of the Baire category theorem is the open mapping theorem, which is the following statement.
