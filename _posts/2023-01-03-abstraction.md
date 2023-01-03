@@ -188,11 +188,11 @@ Just to confuse things a bit more, here's another problem: prove that $\\\{x\in\
 As a human, I think I am triggered to use the lemma by the fact that there is a property involved that applies not to $x$ but to things made out of $x$. But for that it seems that I depend on my mathematical experience to some extent to know that a property of the form $P(f_1(x),\dots,f_k(x))$ can often be transformed into one of the form $Q(f(x))$. Or I could simply regard $(f_1(x),\dots,f_k(x))$ as a function of $x$, but I'm slightly worried about that because I don't want to be forced to go for the product-set approach rather than the subtraction approach in the problem above. 
 
 But maybe the _trigger_ should be simply that we are trying to prove that a set of the form $\\\{x\in X:Q(f(x))\\\}$ is closed, where by $f(x)$ I mean any expression of the form "element of a topological space" with the exception of $x$ itself. But that requires us to recognise a sentence such as
-$$\mathtt{is\ greater\ than}(f(x),g(x))$$
+$$\mathtt{is\\\_greater\\\_than}(f(x),g(x))$$
 as being of the form $Q(h(x))$, where $h(x)$ belongs to the topological space $\mathbb R^2$. But I think that that ought to be possible.
 
-Then, having sorted out the trigger, one would consider having a separate simplification stage where we did things like replacing $\mathtt{is\ greater\ than}(f(x),g(x))$ by 
-$$\mathtt{is\ non-negative}(f(x)-g(x)).$$
+Then, having sorted out the trigger, one would consider having a separate simplification stage where we did things like replacing $\mathtt{is\\\_greater\\\_than}(f(x),g(x))$ by 
+$$\mathtt{is\\\_non\\\_negative}(f(x)-g(x)).$$
 
 ### Two kinds of abstraction
 
@@ -221,7 +221,7 @@ Suppose we had a point-and-click system. Then one could imagine the following mo
 ### Forgetting internal structure of parse tree nodes}
 
 For this one could click on a node of the parse tree (or a part of a mathematical expression that determines the node) and from a resulting menu choose "forget internal structure". The effect of this would be to replace the expression by a general expression of the same type, which would depend on the same set of free variables. For instance, if one started with the expression 
-$$\mathtt{is\_closed}\Big(\big\\\{x\in\mathbb R:x^3\geq e^x\big\\\}\Big),$$
+$$\mathtt{is\\\_closed}\Big(\big\\\{x\in\mathbb R:x^3\geq e^x\big\\\}\Big),$$
 and one clicked on the '$\geq$' symbol, that would indicate that the subexpression to be abstracted away was the statement $x^3\geq e^x$, which depends on the free variable $x$ (free relative to the statement -- obviously in the entire expression it is bound). The forgetting move would replace it by the generic $P(x)$, to stand for some arbitrary statement that concerns $x$. 
 
 If this were a genuine user interface, one might want to create a copy of the original expression, so that the original was left untouched. Or perhaps the abstracted '$P(x)$' could hover just above the original expression $x^3\geq e^x$.
@@ -240,6 +240,6 @@ I'm not sure how useful this kind of abstraction move will be for the purposes o
 
 ### Forgetting internal structure but remembering properties
 
-Suppose that we had a subexpression $x^3+x+1$ and thought that what mattered about it was that it was a polynomial of odd degree. We might want to replace the subexpression by $p(x)$, together with the hypotheses "$p$ is a polynomial" and "$\text{deg}(p)$ is odd". How might that be done with a point-and-click system? I think we would have to hard code in a simple polynomial-recognising algorithm, which, when you clicked on the $\mathtt{plus}$ of $\mathtt{plus}(x^3,x,1)$, would offer you the option "forget internal structure" but if you chose that, would offer "Retain properties?" as a follow-up option. If you accepted that, it would give you an automatically generated menu that would have properties such as $\mathtt{is polynomial}$, $\mathtt{is\ continuous}$, $\mathtt{is\ differentiable}$, $\mathtt{is\ increasing}$, and so on. Maybe it would even offer a $\mathtt{derive\ property?}$ option, which would allow you to formulate a subproblem to prove that your object had some given property, which would then be remembered. But I'm not sure how that would work in practice. I'm even less sure how with a point-and-click system one would identify the degree of the polynomial, unless the program offered it automatically as a menu option. 
+Suppose that we had a subexpression $x^3+x+1$ and thought that what mattered about it was that it was a polynomial of odd degree. We might want to replace the subexpression by $p(x)$, together with the hypotheses "$p$ is a polynomial" and "$\text{deg}(p)$ is odd". How might that be done with a point-and-click system? I think we would have to hard code in a simple polynomial-recognising algorithm, which, when you clicked on the $\mathtt{plus}$ of $\mathtt{plus}(x^3,x,1)$, would offer you the option "forget internal structure" but if you chose that, would offer "Retain properties?" as a follow-up option. If you accepted that, it would give you an automatically generated menu that would have properties such as $\mathtt{is\\\_polynomial}$, $\mathtt{is\\\_continuous}$, $\mathtt{is\\\_differentiable}$, $\mathtt{is\\\_increasing}$, and so on. Maybe it would even offer a $\mathtt{derive\ property?}$ option, which would allow you to formulate a subproblem to prove that your object had some given property, which would then be remembered. But I'm not sure how that would work in practice. I'm even less sure how with a point-and-click system one would identify the degree of the polynomial, unless the program offered it automatically as a menu option. 
 
 
