@@ -85,7 +85,7 @@ especially given that $f$ is not continuous.
 However, one thing we can say is that if $x\in A_{nm}$ and $|x'-x|<1/2m$, then $x'\in A_{n/2,2m}$. This suggests a better possible definition of the set of points of continuity, one that leads to open sets. Note that $f$ is continuous at $x$ if and only if for every $\epsilon>0$ there exists $\delta>0$ such that the difference between $\sup f$ and $\inf f$ on the interval $(x-\delta,x+\delta)$ is at most $\epsilon$. Let us write this as $\text{osc}_{(x-\delta,x+\delta)}(f)<\epsilon$. The advantage of this definition is that if we slightly perturb $x$, we get the same $\epsilon$ (for a smaller $\delta$). 
 
 So let
-$$B_{nm}=\\\{x:\text{osc}_{x-1/m,x+1/m}(f) < 1/n\\\}.$$
+$$B_{nm}=\\\{x:\text{osc}\_{(x-1/m,x+1/m)}(f) < 1/n\\\}.$$
 Then from what we noted above, although $B_{nm}$ isn't open, $\bigcup_{m=1}^\infty B_{nm}$ is open, since if we move $x$ by $1/2m$, we still belong to $B_{n,2m}$. This proves that $X$ is a $G_\delta$ set and therefore that it cannot equal $\mathbb Q$. 
 
 This turned out to be irrelevant to the question of triggers for the Baire category theorem, since it used a _consequence_ of the Baire category theorem.
