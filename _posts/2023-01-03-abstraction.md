@@ -64,7 +64,7 @@ So here one might decide to try to prove that the set of functions that are mono
 
 ### The rationals do not form a $G_\delta$ set
 
-A $G_\delta$ set is a countable intersection of open sets. Can the rationals be expressed in this way? We can certainly write \emph{one} rational as such an intersection: for example, $\\\{0\\\}=\bigcup_{n=1}^\infty(-1/n,1/n)$. But what about all rationals at once? 
+A $G_\delta$ set is a countable intersection of open sets. Can the rationals be expressed in this way? We can certainly write _one_ rational as such an intersection: for example, $\\\{0\\\}=\bigcup_{n=1}^\infty(-1/n,1/n)$. But what about all rationals at once? 
 
 This is a very easy application of Baire category, since if $\mathbb Q=\bigcap_{n=1}^\infty U_n$ with each $U_n$ open, then each $U_n$ is open and dense, which implies that $\mathbb Q$ has meagre complement. But we also know that $\mathbb Q$ is meagre (since it is a countable union of singletons), which contradicts the Baire category theorem. 
 
