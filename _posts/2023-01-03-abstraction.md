@@ -151,6 +151,8 @@ Note that sometimes the trigger is quite specific and not much abstraction is ne
 
 ## Some simpler examples where abstraction takes place
 
+Sometimes use of abstraction is considerably simpler than in the examples discussed so far. Here are a couple of examples.
+
 ### Using the nested-intervals property
 
 The use of the nested-intervals property is one where one is often not presented with nested intervals on a plate, but rather one constructs them in order to prove a statement. Typically this works in a Baire-category-ish way: one wishes to prove a statement of the form $\exists x\ \forall n\ \ P(n,x)$, and the strategy is to obtain the properties one by one, but in order not to commit oneself too much to a particular $x$ right at the beginning, one instead finds an interval $I_1=[a_1,b_1]$ such that $P(1,x)$ holds for every $x\in I_1$, and then an interval $I_2=[a_2,b_2]\subset I_1$ such that $P(2,x)$ holds for every $x\in I_2$, and so on. 
