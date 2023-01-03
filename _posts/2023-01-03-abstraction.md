@@ -128,7 +128,7 @@ If we use the closed-sets version, then we can obtain a match without first swit
 
 *Then there exist $n\in\mathbb N$ and an open set $U\subset X$ such that $\forall x\in U\ P(n,x)$.*
 
-Now we see that we have the first hypothesis, and it becomes worth checking whether we have the second and third, and whether the conclusion, which appears to be weaker than we want (it gives us uniformity on an open set rather than on all of $X$) is in fact sufficient (which it is). 
+Now we see that we have the first hypothesis, and it becomes worth checking whether we have the second, and whether the conclusion, which appears to be weaker than we want (it gives us uniformity on an open set rather than on all of $X$), is in fact sufficient (which it is). 
 
 ### A problem about nilpotent operators
 
