@@ -2,7 +2,7 @@
 layout: post
 title: "Automatic abstraction"
 subtitle: " "
-date: 2023-01-03 10:00:00
+date: 2023-01-03 09:40:00
 background: '/img/maths_background.png'
 author: "Timothy Gowers"
 mathjax: true
