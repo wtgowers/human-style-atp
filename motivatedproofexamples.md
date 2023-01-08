@@ -59,3 +59,5 @@ mathjax: true
 <p><a href="https://drive.google.com/file/d/1eMA6DaWzLEPsQMoB8ipWWy4SzKKA609g/view?usp=sharing" target="_blank">A Compact subset of a Hausdorff space is closed.</a></p>
 
 <p><a href="https://drive.google.com/file/d/1OxrT3y-9ewLg4_Lt0sVAhGcJrOLSn2Lo/view?usp=sharing" target="_blank">The closure of the interior of the closure of the interior is the same as the closure of the interior.</a> This motivated proof uses the idea of generalising a lemma.</p>
+
+<p><a href="https://drive.google.com/file/d/1-oBfjbQ5PJN5klJUJXit_UCx3Bo8rmlC/view?usp=sharing" target="_blank">A continuous image of a compact set is compact.</a> This is a fairly detailed discussion of how a program ought to be able to solve this problem, highlighting the work that still needs to be done (as of early January 2023) before we actually have such a program.</p>
