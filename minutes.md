@@ -402,7 +402,7 @@ We had brief (and very informal) progress reports from some of us. Bhavik plans 
 <details>
     <summary><b>Friday 13th January 2023</b></summary>   
     
-    *Present: Jake Bennett-Woolf, Katie Collins, Anshula Gandhi, Fabian Glöckle (by Zoom), Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki, and Matei Mandache* 
+*Present: Jake Bennett-Woolf, Katie Collins, Anshula Gandhi, Fabian Glöckle (by Zoom), Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki, and Matei Mandache*
 
 We welcomed Anshula Gandhi and Jake Bennett-Woolf to the group as new PhD students. Anshula has a background in mathematics, cognitive science and AI, and Jake has a background in algebraic geometry. Both are experienced programmers. 
     
