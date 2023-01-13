@@ -399,5 +399,20 @@ We had brief (and very informal) progress reports from some of us. Bhavik plans 
     
 </details>   
     
+<details>
+    <summary><b>Friday 13th January 2023</b></summary>   
+    
+    *Present: Jake Bennett-Woolf, Katie Collins, Anshula Gandhi, Fabian Glöckle (by Zoom), Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki, and Matei Mandache* 
+
+We welcomed Anshula Gandhi and Jake Bennett-Woolf to the group as new PhD students. Anshula has a background in mathematics, cognitive science and AI, and Jake has a background in algebraic geometry. Both are experienced programmers. 
+    
+The largest part of the meeting was taken up with a demonstration by MM of what the program can currently do. Here there is a distinction between what can be done via the interface and what can be done under the hood. Most of the demonstration was of the part that can be done using the interface, which currently includes buttons for basic tidying moves (including one that simply applies all tidying moves until it cannot do so any further), modus ponens, forwards and backwards library reasoning, peeling, and committing to a hypothesis. The library reasoning is in a crude state at the moment -- you have to tell it what library result you want to use and we basically don't yet have a library (but work is taking place on that) -- but it was encouraging to see the progress that has been made, and a good chance to give Anshula and Jake an idea of what the state of play is at the moment.
+    
+TG briefly reported that there have been several good applicants for PhD positions for October 2023. 
+
+The meeting finished with a presentation by AG of [work she has done in the past](https://openreview.net/forum?id=-gjy2V1ko6t) on [ARC problems](https://www.kaggle.com/c/abstraction-and-reasoning-challenge). The rough idea was to use [Dreamcoder](https://arxiv.org/abs/2006.08381) to build up functional programs out of smaller ones in order to solve them. The initial motivation for the project was ATP, but the group she was working with quickly decided to focus on ARC problems, with a view to taking the lessons learnt and applying them to mathematics. 
+    
+</details>       
+    
 </div> 
    
