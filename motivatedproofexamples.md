@@ -63,3 +63,5 @@ mathjax: true
 <p><a href="https://drive.google.com/file/d/1-oBfjbQ5PJN5klJUJXit_UCx3Bo8rmlC/view?usp=sharing" target="_blank">A continuous image of a compact set is compact.</a> This is a fairly detailed discussion of how a program ought to be able to solve this problem, highlighting the work that still needs to be done (as of early January 2023) before we actually have such a program. Presented as a sequence of tableaux.</p>
 
 <p><a href="https://drive.google.com/file/d/1cbfCteaFU89rr3IxAr7ILQp-HqFKJDvT/view?usp=sharing" target="_blank">A closed subset of a compact topological space is compact.</a> This is similar in style and aims to the previous document. </p>
+
+<p><a href="https://drive.google.com/file/d/1x_Gydc046x20GbKlNcblOXL0uOVEvooZ/view?usp=sharing" target="_blank">If $G$ is a graph, then either it or its complement is connected.</a> An easy combinatorial problem, as a way to start thinking about how such problems might be tackled automatically and what new ingredients might be needed for them.</p>
