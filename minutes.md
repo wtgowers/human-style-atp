@@ -412,7 +412,34 @@ TG briefly reported that there have been several good applicants for PhD positio
 
 The meeting finished with a presentation by AG of [work she has done in the past](https://openreview.net/forum?id=-gjy2V1ko6t) on [ARC problems](https://www.kaggle.com/c/abstraction-and-reasoning-challenge). The rough idea was to use [Dreamcoder](https://arxiv.org/abs/2006.08381) to build up functional programs out of smaller ones in order to solve them. The initial motivation for the project was ATP, but the group she was working with quickly decided to focus on ARC problems, with a view to taking the lessons learnt and applying them to mathematics. 
     
-</details>       
+</details>   
+    
+<details>
+    <summary><b>Monday 16th January 2023</b></summary>   
+    
+*Present: Jake Bennett-Woolf, Katie Collins, Anshula Gandhi, Timothy Gowers, Bill Hart, and Matei Mandache*
+
+We mainly discussed short- and medium-term plans for the project and for those present at the meeeting.
+    
+MM suggested that it would be a good idea to maintain a to-do list, something that TG and KC had already considered doing on the website. However, the idea was raised of using a dedicated web tool that would allow us to add items, put them into columns according to the stage they were at, tag them with who (if anyone) was working on them, and so on. We decided that we would look into this seriously. (In the first instance, BH will see whether [Trello](https://trello.com/?&aceid=&adposition=&adgroup=150132215251&campaign=19250238417&creative=641300559579&device=c&keyword=trello&matchtype=e&network=g&placement=&ds_kids=p74526191747&ds_e=GOOGLE&ds_eid=700000001557344&ds_e1=GOOGLE&gclid=Cj0KCQiAiJSeBhCCARIsAHnAzT_RrrHPj9386UBb-mui_sSL9i2QtWxX0Ov6EZwTLjvP92bdugvGTk8aAviGEALw_wcB&gclsrc=aw.ds) would be a good choice.)
+
+We decided we should be quite careful about what goes on the to-do list. It should not be just a wishlist, but more like a list of tasks that can (barring unexpected difficulties) be done within a shortish time frame and that are feel as though they are among the "next things that need to be done". 
+    
+MM also mentioned the short-term goal of finishing refactoring some of the code, which would then make it possible to write code for new move types. In the more medium term, it would be good to start thinking seriously about how to implement subtasks, and in particular what structure to give to the set of subtasks at any one stage (e.g. it could be a DAG, or perhaps just a simple stack).
+    
+TG mentioned working out in more detail how to define and implement abstraction moves. This probably has both short- and medium-term aspects to it.
+    
+JBW mentioned the possibility of writing a tutorial for people wanting to use the program -- in particular, for what the move types are.
+    
+AG plans in the short term to try to find motivated/justified proofs for some basic graph theory problems.
+
+TG is writing a document about features, and will try to finish it; he plans also to do some work on the library; and if a to-do list is set up, then he will put several items on it. 
+
+KC will look into the possibility of using LLMs to attach to the front end of a program in order to allow users to input problems using natural language. 
+
+BH will think about unification and how it may be possible to use failure of unification to generate good subtasks. He may (or may not) convert an input parser he has written in Python to Haskell. 
+    
+</details>          
     
 </div> 
    
