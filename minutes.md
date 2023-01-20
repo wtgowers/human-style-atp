@@ -439,7 +439,24 @@ KC will look into the possibility of using LLMs to attach to the front end of a 
 
 BH will think about unification and how it may be possible to use failure of unification to generate good subtasks. He may (or may not) convert an input parser he has written in Python to Haskell. 
     
-</details>          
+</details>       
+    
+<details>
+    <summary><b>Friday 20th January 2023</b></summary>   
+    
+*Present: Jake Bennett-Woolf, Anshula Gandhi, Fabian Glöckle (present for part of the meeting by Zoom), Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki and Matei Mandache*
+
+The whole meeting was devoted to questions about the notation, formatting and choice of library results. (Before we started this discussion, MM mentioned that he had been thinking about subtasks: he will report on this at the next meeting.) Some of the points raised were the following.
+    
+1. We decided that as far as possible we would like the notation for the library results to be the same as, or at least very similar to, standard mathematical notation.
+2. We discussed at some length and with reference to several examples whether they should belong to the library. We decided on at least one situation where we felt that a result should *not* be in the library, which is when we could be confident that it would not be used by a program designed along the lines we plan. For instance, one proposed result (which appears in the Isabelle library) was that if $A$ and $B$ are sets, and $c\in A\cap B$, then $c\in A$. However, it is highly likely that any program we write will prefer tidying and reasoning with hypotheses to searching for a suitable result in the library, so if it ever had $c\in A\cap B$ as a hypothesis, it would almost certainly replace that by two hypotheses $c\in A$ and $c\in B$ (especially as this would create a match for the target), before getting desperate and searching the library for help. We also decided that instead of deleting results from the library we would comment them out, so as to make it easy to rstore them if we found taht we needed them after all.
+3. We discussed whether to insist on presenting functions with their ranges and domains, using the notation $f:X\to Y$, or whether instead to state results in terms of arbitrary functions, understanding implicitly that any function has a domain and a range (just as a group has a set, a binary operation, and identity, and an inverse function). We decided to go for the more standard mathematical convention of being clear about the domain and range.
+4. We decided that definitions would be labelled as such.
+5. We decided that equivalences would be tagged as such. (However, there is some question about the extent to which this should affect the program. Although replacing a statement by an equivalent statement is safe from a logical point of view, if one is using the easy direction of an equivalence that has one easy direction and one hard direction, then the step is hard to reverse from a proof-finding point of view, so there is a sense in which one is throwing away information.)
+6. We decided that our subset notation would be $\subseteq$ and that we would use $\subsetneq$ for proper subsets.
+7. We discussed whether to write $f(A)$ or $f$ \` $A$. The first is what mathematicians write, but is harder to parse, as the correct meaning depends on context. We decided for now that we would go for $f$ \` $A$ to save effort on the parser. But we were unable to decide what notation to use for an inverse image $f^{-1}(A)$. 
+   
+</details>           
     
 </div> 
    
