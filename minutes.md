@@ -458,5 +458,22 @@ The whole meeting was devoted to questions about the notation, formatting and ch
    
 </details>           
     
+<details>
+    <summary><b>Monday 23rd January 2023</b></summary>   
+    
+*Present: Jake Bennett-Woolf, Katie Collins (present for part of the meeting by Zoom), Anshula Gandhi, Fabian Glöckle (present for part of the meeting by Zoom), Timothy Gowers, Bill Hart and Matei Mandache*
+
+AG has been looking at some graph theory problems from Béla Bollobás's book Modern Graph Theory. TG has made a start on rewriting parts of the library in line with what was decided at the previous meeting, and also adding to it. It was agreed that it would be too troublesome for the parser to allow formulations such as "$A$ and $B$ are disjoint" and that we should therefore go for formulations more like "are_disjoint(A,B)".
+
+We discussed the size of the library and whether it will be feasible to put everything in manually. An alternative would be to import parts of existing libraries and modify them. For the moment, we will probably proceed manually.
+    
+We discussed whether "cheat" results should belong to the library -- that is, reformulations that are designed to make it easier for the program to spot syntactic matches. FG is against this, as it will encourage us not to develop the subtasks that would be needed to enable the program to work out for itself that a result can be applied even if its formulation does not line up exactly with the problem state. No firm conclusion was reached about this.
+    
+An example of this is the triangle inequality: one usually spots that it is applicable without having a very direct match to any of the inequality as it is usually formulated, because it is combined with simple ordered-field facts. AG suggested that maybe the subtasks algorithm will naturally delineate how it is used without our having to put in "cheat" versions.
+    
+MM arrived shortly after 3pm and gave a presentation of his thoughts about categorizing subtasks according to qualities such as whether they are achievable, whether they are achievable using an obvious sequence of moves, whether they lead to the main goal, etc. etc. 
+    
+</details>   
+    
 </div> 
    
