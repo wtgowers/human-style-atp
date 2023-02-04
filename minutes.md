@@ -475,5 +475,41 @@ MM arrived shortly after 3pm and gave a presentation of his thoughts about categ
     
 </details>   
     
+<details>
+    <summary><b>Friday 27th January 2023</b></summary>   
+    
+*Present: Jonas Bayer, Jake Bennett-Woolf, Katie Collins, Anshula Gandhi, Fabian Glöckle (by Zoom), Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki and Matei Mandache*
+
+Jonas Bayer gave a presentation about his formalization of the Davis-Putnam-Robinson-Matiyasevich theorem, telling us about some of the issues that had arisen (notably, how best to deal with the predicate "is Diophantine", which applies to objects of many different types), and how some of them are relevant to automatic theorem proving. This led to an interesting discussion. 
+    
+Later, MM initiated a discussion about the ethics of the project: was there a danger that we would have ideas that could be generalized to other parts of AI and used by bad actors? We discussed this question at length.
+    
+</details>       
+    
+<details>
+    <summary><b>Monday 30th January 2023</b></summary>   
+    
+*Present: Katie Collins (by Zoom), Anshula Gandhi, Fabian Glöckle (by Zoom), Timothy Gowers, Bill Hart, and Angeliki Koutsoukou-Argyraki*
+
+We had a long discussion about the programming aspect of the project and what it was best to do next. The general mood among those present was that it might be a good idea to try to get the bare bones of a program written as soon as possible, even if that meant not for now having a beautiful web-based interface with buttons that people could play with. FG advocated strongly for developing improved tactics for Lean automation, and several points were made in favour of that proposal: it would be a clearly visible contribution, it would link us with the Lean community, we would be able to use the Lean kernel that does a lot of the boring stuff well already, and so on.
+    
+TG and AK mentioned that they were still working on the library and planned to make further progress in the near future. (With reference to the Lean idea, FG said that it would be perfectly possible to tag results in mathlib as the ones that could be used, so if we wanted the results in our library to be chosen in a different way, that would not be a problem.) 
+    
+</details>           
+    
+<details>
+    <summary><b>Monday 30th January 2023</b></summary>   
+    
+*Present: Jonas Bayer (by Zoom), Katie Collins (by Zoom), Anshula Gandhi, Fabian Glöckle (by Zoom), Timothy Gowers, and Bill Hart*
+
+TG mentioned that he had been trying to specify an algorithm. The first target is a somewhat informal description -- ideally precise enough to test on examples. Then the aim would be to try to convert that description into pseudocode, which could be a difficult process, as there are numerous details that require thought to make precise, even when specifying what the move types are. So far, he is still on the move types part of the process. There will then be sections on subtasks and abstraction, and finally the part where an algorithm is described that uses those three ingredients. 
+    
+AG mentioned that she has been programming some Lean tactics as well as continuing to think about graph theory problems, focusing with the latter on problems where it helps to consider the negation of what one is trying to prove and trying to draw general conclusions from them. 
+    
+BH discussed his thoughts about a simple problem that naturally requires lemma formation. The problem is to show distributivity of intersection over union, given the categorical definitions of intersection and union (which on their own are not enough, as there are non-distributive lattices, as FG pointed out) and also the definition of the subset relation in terms of elements. Crucially, one is *not* given the definitions of intersection and union in terms of elements, and these are the lemmas that the program needs to formulate and prove (but the proving part is easy once one has decided to try to do so). 
+    
+We also made plans for FG to visit some time soon. The main aim of the visit would be to work intensively on subtasks.    
+</details>           
+    
 </div> 
    
