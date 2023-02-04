@@ -498,7 +498,7 @@ TG and AK mentioned that they were still working on the library and planned to m
 </details>           
     
 <details>
-    <summary><b>Monday 30th January 2023</b></summary>   
+    <summary><b>Friday 3rd February 2023</b></summary>   
     
 *Present: Jonas Bayer (by Zoom), Katie Collins (by Zoom), Anshula Gandhi, Fabian Glöckle (by Zoom), Timothy Gowers, and Bill Hart*
 
