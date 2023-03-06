@@ -509,7 +509,40 @@ AG mentioned that she has been programming some Lean tactics as well as continui
 BH discussed his thoughts about a simple problem that naturally requires lemma formation. The problem is to show distributivity of intersection over union, given the categorical definitions of intersection and union (which on their own are not enough, as there are non-distributive lattices, as FG pointed out) and also the definition of the subset relation in terms of elements. Crucially, one is *not* given the definitions of intersection and union in terms of elements, and these are the lemmas that the program needs to formulate and prove (but the proving part is easy once one has decided to try to do so). 
     
 We also made plans for FG to visit some time soon. The main aim of the visit would be to work intensively on subtasks.    
-</details>           
+</details> 
     
+<details>
+    <summary><b>Summary of meetings for the rest of February 2023</b></summary>   
+    
+I fell behind with writing minutes, so am writing this summary instead, which will be a partial record, as I can no longer remember everything we talked about, though it seemed like a good month for the project with useful progress being made. 
+   
+One topic we continued to discuss was whether we should write code in Python or Haskell. Haskell is closer in spirit to what we are trying to do, but Python is more widely used and comes with far more extensive libraries, so would have advantages if the project became bigger and had external collaborators. 
+    
+A similar topic was whether we should concentrate on producing a custom-built system with a nice interface or whether we should think about trying to write improved automation tactics for Lean. Again there are advantages on both sides: a custom-built system can be designed exactly as we want it and can be used by people who do not want to learn a language like Lean. But if we use Lean then we avoid reinventing a number of wheels, since technical problems that everyone has to face when doing formal mathematics on a computer have been thought about hard by other people and solutions found (not all of which would necessarily be exactly to our taste, but it is not clear that we want to put in the work to do things differently). Also, we potentially join up with the Lean community, which could be a big boost to the project.
+    
+Fabian Glöckle made firm plans to visit for a fortnight, so we discussed what we would try to achieve while he was in Cambridge. The plan we came up with was to focus on subtasks and how they would work, with the hope that by the end of his visit we might have an algorithm at least in pseudocode form. 
+    
+He arrived on the 20th, and there followed two weeks of intensive discussions between him and other members of the group, by the end of which we did not have pseudocode, but we did have a much clearer idea of how we wanted our first algorithm to work, and we had also discussed several examples. The main gain in clarity concerned how abstraction and library search would work. At the time of writing, it feels as though we no longer need a new idea, but we do need to put in quite a lot of work to get the existing ideas up and running.
+</details>     
+    
+<details>
+    <summary><b>Friday 3rd March 2023</b></summary>   
+    
+*Present: Jonas Bayer (by Zoom), Anshula Gandhi, Yaël Gillies, Fabian Glöckle, Timothy Gowers, Bill Hart, Angeliki Koutsoukou-Argyraki, Fredy Yip*
+
+The meeting started with a presentation by JB of a system he had put together quickly to demonstrate that it is possible to use existing Lean tools to build an interface that has buttons of the kind we want, to do moves to problem states, and has Lean working under the hood. This was quite exciting to many of us, as it suggested that it might be possible to have the best of both worlds -- an interface that doesn't require people to know Lean, but Lean being visible for those who do, and providing a formal guarantee that the proofs found by the system we create are correct. It will be very interesting to see how this develops.
+    
+We spent some time discussing ideas that had come up in recent discussions between FG and TG concerning how we would like to measure distance between parse trees. Two concepts related to this are tree edit distance and antiunification (or least common generalization). Each seems to work well for some examples but less well for others, and it seems that what we will want is something that mixes and extends these two concepts. However, it looks quite likely that it won't be possible to devise a notion of distance that is easy to compute and that does exactly what we want in all situations: much more probable is that we will want to find an algorithm that is a compromise: it is reasonably simple, it does well most of the time, and when it doesn't do so well it can be supplemented by a small amount of very limited brute-force search.       
+    
+</details> 
+    
+<details>
+    <summary><b>Monday 6th March 2023</b></summary>   
+    
+*Present: Jonas Bayer (by Zoom), Katie Collins (by Zoom), Anshula Gandhi, Fabian Glöckle (by Zoom), Timothy Gowers, Bill Hart, Bhavik Mehta, Mirek Olsak, Fredy Yip*
+
+The meeting was taken up with a presentation by Mirek Olsak of his general thoughts about automatic theorem proving, including his perspective on the dream of an AlphaZero for mathematics, and his more specific thoughts about simpler domains such as puzzle games. The talk included many interesting demonstrations of programs that help with solving puzzles such as Sokoban, Rush Hour, and others. Some of us had long been interested in such games as toy examples of problems where humans tend to use search methods that are much more efficient than brute force, so it was great to see such thoughts explored in more detail.
+    
+</details>     
 </div> 
    
